@@ -3,6 +3,8 @@ import json
 import logging
 import jsonlines
 
+TEST_CMD_TAG="<TEST_CMD>"
+
 def _read_file(path):
     if path.endswith('.jsonl'):
         with jsonlines.open(path, 'r') as reader:
