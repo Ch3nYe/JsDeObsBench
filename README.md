@@ -60,6 +60,10 @@ Unzip the `dataset.7z` stored in `build_dataset` directory, you will have the te
 
 `7z x dataset.7z`
 
+Set PYTHONPATH: 
+
+`export PYTHONPATH="${PYTHONPATH}:/path/to/thisproject"`
+
 ## Deobfuscation
 
 In directory `deobfuscators`:
