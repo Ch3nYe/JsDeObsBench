@@ -57,7 +57,7 @@ class ComplexityEvaluator(Evaluator):
             data.pop("code_complexity")
         obfuscated_code = data.get('obfuscated')
         deobfuscated_code = data.get('deobfuscated')
-        original_code = data.get('code')
+        original_code = data.get('original')
         ori_metrics = self.calc_metrics_with_escomplex(original_code)
         obf_metrics = self.calc_metrics_with_escomplex(obfuscated_code)
         deobf_metrics = self.calc_metrics_with_escomplex(deobfuscated_code)
@@ -78,7 +78,7 @@ class CodeBLEUEvaluator(Evaluator):
     def evaluate(self, data) -> dict:
         if "code_bleu" in data:
             data.pop("code_bleu")
-        reference = data.get('code')
+        reference = data.get('original')
         prediction = data.get('deobfuscated')
         language = data.get('language')
         language = "JavaScript"
@@ -114,7 +114,7 @@ class CodeBertScoreEvaluator(Evaluator):
     def evaluate(self, data) -> dict:
         if "code_bert_score" in data:
             data.pop("code_bert_score")
-        reference = data.get('code')
+        reference = data.get('original')
         prediction = data.get('deobfuscated')
         language = data.get('language')
         language = "JavaScript"
@@ -130,8 +130,7 @@ class CodeBertScoreEvaluator(Evaluator):
         for data in data_list:
             if "code_bert_score" in data:
                 data.pop("code_bert_score")
-        references = [data.get('code') if 'code' in data else data.get('original') 
-                      for data in data_list]
+        references = [data['original'] for data in data_list]
         predictions = [data.get('deobfuscated') for data in data_list]
         language = data_list[0].get('language')
         language = "JavaScript"
@@ -203,7 +202,7 @@ class SafeCodeEvaluator(Evaluator):
             self.exe_js_cnt = 0
 
     def execute_npm_test(self, data):
-        test_cases = data.get('test_case')
+        test_cases = data.get('test_cases')
         test_path = data.get('test_path')
         if test_cases.startswith(TEST_CMD_TAG):
             test_cmd = test_cases.replace(TEST_CMD_TAG, "")
@@ -225,7 +224,7 @@ class SafeCodeEvaluator(Evaluator):
     def execute_node_test(self, data):
         self.maintain_container()
 
-        test_cases = data.get('test_case')
+        test_cases = data.get('test_cases')
         code = data.get('deobfuscated')
         timeout = data.get('timeout', self.default_timeout)
         program_inputs = [t[0] for t in test_cases]
@@ -236,7 +235,7 @@ class SafeCodeEvaluator(Evaluator):
         return res
 
     def evaluate(self, data) -> dict:
-        test_cases = data.get('test_case')
+        test_cases = data.get('test_cases')
         if type(test_cases) == str:
             res = self.execute_npm_test(data)
         elif type(test_cases) == list:
