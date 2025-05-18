@@ -1,0 +1,1 @@
+'use strict';function main(arg){let a=arg['trim']()['split']('\x0a')[0x1]['split']('\x20')['map'](Number);let N=a['length'];let ans=0x0;for(let i=0x0;i<N;i++){if((i+0x1)%0x2===0x0){continue;}if(a[i]%0x2===0x0){continue;}ans++;}console['log'](ans);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

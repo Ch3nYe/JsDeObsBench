@@ -1,0 +1,43 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var a = arr['shift']()['split']('');
+    if (a['join']('') == '-')
+        break;
+    var b = arr['shift']()['split']('');
+    var c = arr['shift']()['split']('');
+    var obj = {};
+    a['forEach'](function (v) {
+        obj[v] = !![];
+    });
+    var str = '';
+    var m = '';
+    c['forEach'](function (v) {
+        var tXQoJd = {
+            'hbkDd': function (x, y) {
+                return x == y;
+            }
+        };
+        if (obj['hasOwnProperty'](v)) {
+            if (tXQoJd['hbkDd'](m, '')) {
+                m = a['shift']();
+                m = a['shift']();
+            } else {
+                m = a['shift']();
+            }
+        } else {
+            while (!![]) {
+                if (m == v) {
+                    m = a['shift']();
+                    break;
+                } else {
+                    str += m;
+                    m = b['shift']();
+                }
+            }
+        }
+    });
+    str += m;
+    str += b['join']('');
+    console['log'](str);
+}

@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');const N=parseInt(input[0x0],0xa);for(var i=0x1;i>0x0;i++){var n=0.5*(Math['sqrt'](0x8*N*i+0x1)-0x1);if(Number['isInteger'](n)==!![]){console['log'](n);break;}}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,19 @@
+'use strict';
+function main(input) {
+    const Reubto = {
+        'xbVOz': function (x, y) {
+            return x < y;
+        }
+    };
+    input = input['split'](/\n/)['map'](v => ~~v);
+    let set = new Set();
+    for (let i = 0x1; Reubto['xbVOz'](i, input['length']); i++) {
+        if (set['has'](input[i])) {
+            set['delete'](input[i]);
+        } else {
+            set['add'](input[i]);
+        }
+    }
+    console['log'](set['size']);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

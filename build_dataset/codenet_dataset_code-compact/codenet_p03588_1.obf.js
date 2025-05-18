@@ -1,0 +1,1 @@
+function Main(input){var max=0x0;var ans=0x0;input=input['split']('\x0a');for(var i=0x1;i<input['length'];i++){var mem=input[i]['split']('\x20')['map'](Number);if(max<mem[0x0]){max=mem[0x0];ans=mem[0x0]+mem[0x1];}}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

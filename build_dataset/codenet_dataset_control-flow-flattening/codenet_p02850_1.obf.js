@@ -1,0 +1,51 @@
+'use strict';
+function main(inp) {
+    const ZFBxnM = {
+        'plFqA': function (callee, param1) {
+            return callee(param1);
+        },
+        'DitoP': function (x, y) {
+            return x === y;
+        },
+        'axvbA': function (x, y) {
+            return x + y;
+        }
+    };
+    inp = inp['trim']()['split']('\x0a');
+    const N = ZFBxnM['plFqA'](Number, inp['shift']());
+    let G = [...new Array(N)]['map'](a => []);
+    let vp = new Array();
+    inp['forEach'](r => {
+        r = r['split']('\x20')['map'](n => n - 0x1);
+        G[r[0x0]]['push'](r[0x1]);
+        G[r[0x1]]['push'](r[0x0]);
+        vp['push'](r[0x0] + '-' + r[0x1]);
+    });
+    let K = 0x0;
+    let I = new Map();
+    let cs = new Array(N)['fill'](0x0);
+    let used = new Array(N)['fill'](0x0);
+    let que = new Array();
+    used[0x0] = 0x1;
+    que['push'](0x0);
+    while (que['length']) {
+        let v = que['shift']();
+        if (K < G[v]['length'])
+            K = G[v]['length'];
+        let cur = 0x1;
+        for (const u of G[v]) {
+            if (used[u])
+                continue;
+            if (ZFBxnM['DitoP'](cur, cs[v]))
+                cur++;
+            cs[u] = I[ZFBxnM['axvbA'](u, '-') + v] = I[ZFBxnM['axvbA'](ZFBxnM['axvbA'](v, '-'), u)] = cur++;
+            used[u] = 0x1;
+            que['push'](u);
+        }
+    }
+    console['log'](K);
+    vp['forEach'](v => {
+        console['log'](I[v]);
+    });
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

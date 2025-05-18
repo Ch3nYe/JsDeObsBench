@@ -1,0 +1,1 @@
+console['log']((args=>{const [[N],A]=args['trim']()['split']('\x0a')['map'](r=>r['split']('\x20')['map'](v=>v|0x0));A['sort']((a,b)=>a-b);let sum=A[0x0],n=0x0;for(let i=0x1;i<N;i++){if(sum*0x2>=A[i])n++;else n=0x0;if(sum+A[i]>=0x3b9aca00)return''+(n+N-i);sum=sum+A[i];}return''+(n+0x1);})(require('fs')['readFileSync']('/dev/stdin','utf8')));

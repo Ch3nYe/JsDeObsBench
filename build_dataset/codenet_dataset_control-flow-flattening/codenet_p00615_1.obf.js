@@ -1,0 +1,27 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['replace'](/\n$/, '')['split']('\x0a');
+while (!![]) {
+    var str = Arr['shift']();
+    if (str == '0\x200')
+        break;
+    var arr = str['split']('\x20');
+    var data = [0x0];
+    if (arr[0x0] > 0x0)
+        data = data['concat'](Arr['shift']()['split']('\x20')['map'](Number));
+    if (arr[0x1] > 0x0)
+        data = data['concat'](Arr['shift']()['split']('\x20')['map'](Number));
+    data['sort'](function (a, b) {
+        return a - b;
+    });
+    var max = 0x0;
+    data['reduce'](function (a, b) {
+        var EaIwKo = {
+            'DszBm': function (x, y) {
+                return x - y;
+            }
+        };
+        max = Math['max'](max, Math['abs'](EaIwKo['DszBm'](a, b)));
+        return b;
+    });
+    console['log'](max);
+}

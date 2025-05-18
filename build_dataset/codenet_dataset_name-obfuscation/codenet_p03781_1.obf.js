@@ -1,0 +1,6 @@
+function Main(_0xe12128) {
+    _0xe12128 = _0xe12128['split']('\x0a');
+    var _0x2030d8 = _0xe12128[0x0] - 0x0;
+    console['log'](Math['ceil']((0x2 * Math['abs'](_0x2030d8) + 0x1 / 0x4) ** (0x1 / 0x2) - 0x1 / 0x2));
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

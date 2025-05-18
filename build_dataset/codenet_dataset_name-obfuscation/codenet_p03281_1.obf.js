@@ -1,0 +1,17 @@
+function main(_0x449f69) {
+    var _0x593075 = _0x449f69[0x0] - 0x0;
+    var _0x5b7bd5 = 0x0;
+    for (var _0x22c96f = 0x69; _0x22c96f <= _0x593075; _0x22c96f += 0x2) {
+        var _0x44feca = 0x0;
+        for (var _0x556ca0 = 0x1; _0x556ca0 <= _0x22c96f; _0x556ca0++) {
+            if (_0x22c96f % _0x556ca0 == 0x0)
+                _0x44feca++;
+            if (_0x44feca > 0x8)
+                break;
+        }
+        if (_0x44feca == 0x8)
+            _0x5b7bd5++;
+    }
+    console['log'](_0x5b7bd5);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']()['split']('\x0a'));

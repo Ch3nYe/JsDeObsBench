@@ -1,0 +1,1 @@
+function*main(){const N=+(yield);let sum=0x0;for(let k=0x1;k<=N;k++)sum+=Math['floor'](k*Math['floor'](0x1+N/k)*Math['floor'](N/k)/0x2);console['log'](sum);}const iter=main();iter['next']();require('readline')['createInterface']({'input':process['stdin']})['on']('line',line=>iter['next'](line));

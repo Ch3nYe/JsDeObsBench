@@ -1,0 +1,4 @@
+const input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+const arr = input['split']('\x0a');
+const regExp = new RegExp(arr[0x1]);
+console['log'](regExp['test'](arr[0x0] + arr[0x0]) ? 'Yes' : 'No');

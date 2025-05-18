@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var arr=input['trim']()['split']('\x0a');var n=arr['shift']()-0x0;var a=[];for(var i=0x0;i<n;i++)a['push'](arr[i]['split']('\x20')['map'](Number));a['sort'](function(a,b){if(a[0x0]!=b[0x0])return a[0x0]-b[0x0];else return a[0x1]-b[0x1];});console['log'](a['join']('\x0a')['replace'](/,/g,'\x20'));

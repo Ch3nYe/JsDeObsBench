@@ -1,0 +1,8 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var [h, r] = input['trim']()['split']('\x20')['map'](Number);
+if (r + h == 0x0)
+    console['log'](0x0);
+else if (r + h > 0x0)
+    console['log'](0x1);
+else
+    console['log'](-0x1);

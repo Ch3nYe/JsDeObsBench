@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');T=input[0x0];var len=T['length'];var p=len%0x2;q=Math['floor'](len/0x2);cnt=0x0;i=0x0;for(i=0x0;i<q;i++){if(T['substr'](i,0x1)==T['substr'](len-0x1-i,0x1)){cnt=cnt+0x0;}else{cnt++;}}console['log'](cnt);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

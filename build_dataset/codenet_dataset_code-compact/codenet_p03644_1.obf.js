@@ -1,0 +1,1 @@
+function main(input){const N=input;var ans=0x1;var cnt=0x0;var maxCnt=0x0;for(var i=0x1;i<=N;i++){cnt=0x0;var tmp=i;while(!![]){if(tmp%0x2===0x0){cnt=cnt+0x1;tmp=tmp/0x2;}else{break;}}if(maxCnt<cnt){maxCnt=cnt;ans=i;}}console['log'](ans);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

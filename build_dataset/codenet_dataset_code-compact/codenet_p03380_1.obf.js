@@ -1,0 +1,1 @@
+function Main(s){s=s['split']('\x0a');var a=s[0x1]['split']('\x20')['map'](a=>+a);const n=+s[0x0];var m=Math['max'](...a);var b=[...a]['sort']((a,b)=>a-b);var c=0x218711a00;for(var i=0x0;i<n-0x1;i++){if(Math['abs'](m/0x2-b[i])<c)c=Math['abs'](m/0x2-b[i]);else break;}console['log']('%d\x20%d',m,b[i-0x1]);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

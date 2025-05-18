@@ -1,0 +1,15 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var [n, m] = arr['shift']()['split']('\x20')['map'](Number);
+    if (n == 0x0 && m == 0x0)
+        break;
+    var h = [];
+    for (var i = 0x0; i < n; i++)
+        h[i] = 0x0;
+    for (var i = 0x0; i < m; i++) {
+        var p = arr['shift']()['split']('\x20')['map'](Number);
+        h = p['map']((v, i) => h[i] + v);
+    }
+    console['log'](Math['max'](...h));
+}

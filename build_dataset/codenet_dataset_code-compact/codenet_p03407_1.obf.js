@@ -1,0 +1,1 @@
+function Main(s){s=s['split']('\x20')['map'](a=>parseInt(a));console['log'](s[0x0]+s[0x1]>=s[0x2]?'Yes':'No');}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

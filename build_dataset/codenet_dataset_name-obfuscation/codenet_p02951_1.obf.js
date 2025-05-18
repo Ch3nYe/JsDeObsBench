@@ -1,0 +1,8 @@
+function Main(_0x4e2303) {
+    var _0x1b0e89, _0x4d4d58, _0xdcc36f;
+    _0x1b0e89 = Number(_0x4e2303['split']('\x0a')[0x0]['split']('\x20')[0x0]);
+    _0x4d4d58 = Number(_0x4e2303['split']('\x0a')[0x0]['split']('\x20')[0x1]);
+    _0xdcc36f = Number(_0x4e2303['split']('\x0a')[0x0]['split']('\x20')[0x2]);
+    console['log'](_0xdcc36f - (_0x1b0e89 - _0x4d4d58) > 0x0 ? _0xdcc36f - (_0x1b0e89 - _0x4d4d58) : 0x0);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

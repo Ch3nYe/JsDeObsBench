@@ -1,0 +1,1 @@
+function Main(input){const inputs=input['split']('\x0a')['filter'](v=>v);const n=Number(inputs[0x0]);const strs=inputs[0x1]['split']('');console['log'](strs['map'](function(s){let c=s['charCodeAt']()+n;if(c>0x5a){c-=0x1a;}return String['fromCharCode'](c);})['join'](''));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

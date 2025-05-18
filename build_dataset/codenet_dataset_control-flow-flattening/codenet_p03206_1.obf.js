@@ -1,0 +1,18 @@
+'use strict';
+const i = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+let r = 'Christmas\x20';
+switch (i) {
+case '22':
+    r = r + 'Eve\x20Eve\x20Eve';
+    break;
+case '23':
+    r = r + 'Eve\x20Eve';
+    break;
+case '24':
+    r = r + 'Eve';
+    break;
+case '25':
+    r = r;
+    break;
+}
+console['log'](r);

@@ -1,0 +1,44 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+var j = 0x0;
+while (!![]) {
+    var v = Arr['shift']() - 0x0;
+    if (v == 0x0)
+        break;
+    var m = Arr['shift']()['split']('\x20')['map'](Number);
+    var money = 0xa * m[0x0] + 0x32 * m[0x1] + 0x64 * m[0x2] + 0x1f4 * m[0x3] - v;
+    var M = [
+        0x0,
+        0x0,
+        0x0,
+        0x0
+    ];
+    while (0x1f4 <= money) {
+        M[0x3]++;
+        money -= 0x1f4;
+    }
+    while (0x64 <= money) {
+        M[0x2]++;
+        money -= 0x64;
+    }
+    while (0x32 <= money) {
+        M[0x1]++;
+        money -= 0x32;
+    }
+    while (0xa <= money) {
+        M[0x0]++;
+        money -= 0xa;
+    }
+    var coin = [
+        0xa,
+        0x32,
+        0x64,
+        0x1f4
+    ];
+    var str = '';
+    m['forEach'](function (_0x4833f4, _0x571173) {
+        if (_0x4833f4 > M[_0x571173])
+            str += coin[_0x571173] + '\x20' + (_0x4833f4 - M[_0x571173]) + '\x0a';
+    });
+    console['log'](str);
+}

@@ -1,0 +1,1 @@
+function Main(input){var result;switch(input){case'SUN':result='7';break;case'MON':result='6';break;case'TUE':result='5';break;case'WED':result='4';break;case'THU':result='3';break;case'FRI':result='2';break;case'SAT':result='1';break;}console['log'](result);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

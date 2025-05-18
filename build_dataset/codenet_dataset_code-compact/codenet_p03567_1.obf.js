@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{arg=arg['trim']()['split']('\x0a');const S=arg[0x0]['split']('');let previous=null;for(let i in S){if(previous==='A'&&S[i]==='C'){console['log']('Yes');return;}previous=S[i];}console['log']('No');};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var Arr=input['trim']()['split']('\x0a');for(var i=0x0;i<0x7;i++){var arr=Arr[i]['split']('\x20')['map'](Number);console['log'](arr[0x0]-arr[0x1]);}

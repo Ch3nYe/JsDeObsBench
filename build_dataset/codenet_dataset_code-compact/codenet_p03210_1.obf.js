@@ -1,0 +1,1 @@
+'use strict';function Main(INPUT){const N=INPUT['split']('\x0a')[0x0];if(N==0x7||N==0x5||N==0x3){console['log']('YES');}else{console['log']('NO');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

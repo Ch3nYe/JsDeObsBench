@@ -1,0 +1,1 @@
+'use strict';const Main=input=>{let xs=input['trim']()['split']('\x0a');let N=Number(xs[0x0]);let S=xs[0x1]['split']('');let ans=0x0;for(let i=0x0;i<=N-0x3;i++){if(S[i]+S[i+0x1]+S[i+0x2]=='ABC'){ans++;}}console['log'](ans);};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

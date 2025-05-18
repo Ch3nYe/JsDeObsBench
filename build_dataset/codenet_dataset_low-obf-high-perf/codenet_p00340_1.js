@@ -1,0 +1,10 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var arr = input.trim().split(" ").map(Number);
+var a = arr[0];
+var b = arr[1];
+var c = arr[2];
+var d = arr[3];
+if (a == b && c == d) console.log("yes");
+else if (a == c && b == d) console.log("yes");
+else if (a == d && b == c) console.log("yes");
+else console.log("no");

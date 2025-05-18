@@ -1,0 +1,27 @@
+'use strict';
+const input = require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']()['split']('\x0a');
+const NM = input[0x0]['split']('\x20')['map'](Number);
+const N = NM[0x0];
+const M = NM[0x1];
+const As = input['slice'](0x1, N + 0x1);
+const Bs = input['slice'](N + 0x1, N + M + 0x1);
+for (let ax = 0x0; ax < N - M; ax++) {
+    for (let ay = 0x0; ay < N - M; ay++) {
+        let flag = !![];
+        for (let bx = 0x0; bx < M; bx++) {
+            for (let by = 0x0; by < M; by++) {
+                if (As[ax + bx][ay + by] !== Bs[bx][by]) {
+                    flag = ![];
+                    break;
+                }
+            }
+            if (!flag)
+                break;
+        }
+        if (flag) {
+            console['log']('Yes');
+            process['exit'](0x0);
+        }
+    }
+}
+console['log']('No');

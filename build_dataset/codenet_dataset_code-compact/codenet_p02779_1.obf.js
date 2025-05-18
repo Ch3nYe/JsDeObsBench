@@ -1,0 +1,1 @@
+'use strict';function Main(input){input=input['trim']()['split']('\x0a');const N=Number(input[0x0]['trim']());const A=input[0x1]['trim']()['split']('\x20')['map'](Number);let ret='YES';for(let i=0x0;i<N;i++){let tmp=A['slice'](i+0x1);let r=tmp['indexOf'](A[i]);if(r!==-0x1){ret='NO';break;}}console['log'](ret);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

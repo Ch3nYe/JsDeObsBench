@@ -1,0 +1,1 @@
+function main(input){var Gusu=0x0;var Kisu=0x0;var Out=0x0;if(input>0x0){if(input%0x2==0x0){Gusu=input/0x2;Kisu=Gusu;Out=Kisu/ input;}else if(input%0x2==0x1){Gusu=parseInt(input/0x2);Kisu=Gusu+0x1;Out=Kisu/ input;}}console['log'](Out['toFixed'](0xa));}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,21 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var n = Arr['shift']() - 0x0;
+    if (n == 0x0)
+        break;
+    var arr = Arr['shift']()['split']('\x20')['map'](Number);
+    var ball = 0x20;
+    var i = 0x0;
+    while (!![]) {
+        ball -= (ball - 0x1) % 0x5;
+        console['log'](ball);
+        if (ball == 0x1) {
+            console['log'](0x0);
+            break;
+        }
+        ball -= arr[i % n];
+        i++;
+        console['log'](ball);
+    }
+}

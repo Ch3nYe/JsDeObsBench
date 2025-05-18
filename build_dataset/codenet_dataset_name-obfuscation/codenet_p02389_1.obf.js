@@ -1,0 +1,6 @@
+(function (_0x3b2ee8) {
+    var _0xf778d4 = _0x3b2ee8['toString']()['split']('\x20');
+    var _0x128175 = parseInt(_0xf778d4[0x0], 0xa);
+    var _0x34ff3c = parseInt(_0xf778d4[0x1], 0xa);
+    console['log'](_0x128175 * _0x34ff3c, (_0x128175 + _0x34ff3c) * 0x2);
+}(require('fs')['readFileSync']('/dev/stdin', 'utf8')));

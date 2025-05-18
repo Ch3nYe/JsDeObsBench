@@ -1,0 +1,1 @@
+const Main=input=>{const tmp=input['split']('\x20');var a=parseInt(tmp[0x0]);var b=parseInt(tmp[0x1]);var c=parseInt(tmp[0x2]);if(a===b&&b!==c||b===c&&c!==a||c===a&&b!==c){console['log']('Yes');}else{console['log']('No');}};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

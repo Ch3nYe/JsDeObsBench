@@ -1,0 +1,10 @@
+function Main(_0x21e21d) {
+    var _0xf6e490 = _0x21e21d['trim']();
+    var _0x5959db = _0xf6e490['split']('\x20');
+    var _0x1fadf1 = _0x5959db[0x0];
+    var _0x3516ca = _0x5959db[0x1];
+    var _0x165cde = 0x0;
+    var _0x165cde = _0x1fadf1 - _0x3516ca + 0x1;
+    console['log'](_0x165cde);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

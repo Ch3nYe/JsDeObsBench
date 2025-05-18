@@ -1,0 +1,33 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var n = Arr['shift']() - 0x0;
+    if (n == 0x0)
+        break;
+    var p = Arr['shift']()['split']('\x20')['map'](Number);
+    var j = Arr['shift']()['split']('\x20')['map'](Number);
+    var sum = p['reduce'](function (a, b) {
+        var SurUlf = {
+            'SyDOg': function (x, y) {
+                return x + y;
+            }
+        };
+        return SurUlf['SyDOg'](a, b);
+    });
+    j['sort'](function (a, b) {
+        var vxjatv = {
+            'QIwHG': function (x, y) {
+                return x - y;
+            }
+        };
+        return vxjatv['QIwHG'](b, a);
+    });
+    var max = sum * n;
+    while (!![]) {
+        if (j['length'] == 0x0)
+            break;
+        n--;
+        max = Math['max'](max, (sum + j['shift']()) * n);
+    }
+    console['log'](max);
+}

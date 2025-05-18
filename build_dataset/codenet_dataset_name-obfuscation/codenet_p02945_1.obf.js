@@ -1,0 +1,8 @@
+'use strict';
+const main = _0x2e1fa9 => {
+    const _0x388e33 = _0x2e1fa9['split']('\x0a')['map'](_0x1a1cfa => _0x1a1cfa['split']('\x20'));
+    const _0x4d9488 = parseInt(_0x388e33[0x0][0x0], 0xa);
+    const _0x1604b8 = parseInt(_0x388e33[0x0][0x1], 0xa);
+    console['log'](Math['max'](_0x4d9488 + _0x1604b8, _0x4d9488 - _0x1604b8, _0x4d9488 * _0x1604b8) + 0x0);
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

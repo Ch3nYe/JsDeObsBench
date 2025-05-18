@@ -1,0 +1,30 @@
+'use strict';
+const main = _0x516bce => {
+    _0x516bce = _0x516bce['trim']()['split']('\x0a');
+    const _0x3a5cf5 = _0x516bce['map'](_0x88c553 => _0x88c553['split']('\x20')['map'](_0xa5a91f => parseInt(_0xa5a91f)));
+    for (let _0x330e00 = 0x0; _0x330e00 <= 0x64; _0x330e00++) {
+        const _0x5bc9d8 = _0x3a5cf5[0x0][0x0] - _0x330e00;
+        const _0x55bf08 = _0x3a5cf5[0x1][0x0] - _0x330e00;
+        const _0x5bed8b = _0x3a5cf5[0x2][0x0] - _0x330e00;
+        for (let _0x333c40 = 0x0; _0x333c40 <= 0x64; _0x333c40++) {
+            if (_0x333c40 + _0x5bc9d8 !== _0x3a5cf5[0x0][0x1])
+                continue;
+            if (_0x333c40 + _0x55bf08 !== _0x3a5cf5[0x1][0x1])
+                continue;
+            if (_0x333c40 + _0x5bed8b !== _0x3a5cf5[0x2][0x1])
+                continue;
+            for (let _0x369b9a = 0x0; _0x369b9a <= 0x64; _0x369b9a++) {
+                if (_0x369b9a + _0x5bc9d8 !== _0x3a5cf5[0x0][0x2])
+                    continue;
+                if (_0x369b9a + _0x55bf08 !== _0x3a5cf5[0x1][0x2])
+                    continue;
+                if (_0x369b9a + _0x5bed8b !== _0x3a5cf5[0x2][0x2])
+                    continue;
+                console['log']('Yes');
+                return;
+            }
+        }
+    }
+    console['log']('No');
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

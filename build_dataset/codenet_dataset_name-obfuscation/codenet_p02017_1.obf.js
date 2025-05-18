@@ -1,0 +1,6 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var [a, b, c, d] = input['trim']()['split']('\x20')['map'](Number);
+if (a * b % 0x2 != 0x0 && (c + d) % 0x2 != 0x0)
+    console['log']('No');
+else
+    console['log']('Yes');

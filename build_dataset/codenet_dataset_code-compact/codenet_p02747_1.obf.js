@@ -1,0 +1,1 @@
+'use strict';const Main=input=>{let xs=input['trim']()['split']('');let len=xs['length'];let ans=0x0;for(let i=0x0;i<=len;i++){if(i%0x2==0x0&&xs[i]=='h'&&[i+0x1]!='h'){ans+=0x1;}else if(i%0x2==0x1&&xs[i]=='i'&&xs[i+0x1]!='i'){ans+=0x1;}else{ans+=0x0;}}if(ans>=0x2){console['log']('Yes');}else{console['log']('No');}};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,20 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']();
+var lines = input['split']('\x0a');
+while (lines['length'] > 0x0) {
+    var path = [];
+    var line;
+    while ((line = lines['shift']()) != '0\x200') {
+        var nums = line['split']('\x20');
+        var from = +nums[0x0];
+        var to = +nums[0x1];
+        path[from] = (path[from] || 0x0) + 0x1;
+        path[to] = (path[to] || 0x0) + 0x1;
+    }
+    var odds = path['filter'](function (_0x3de5f0) {
+        return _0x3de5f0 % 0x2 == 0x1;
+    });
+    if (path[0x1] % 0x2 == 0x1 && path[0x2] % 0x2 == 0x1 && odds['length'] > 0x2)
+        console['log']('NG');
+    else
+        console['log']('OK');
+}

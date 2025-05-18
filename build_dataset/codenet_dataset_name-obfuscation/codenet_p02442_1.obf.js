@@ -1,0 +1,17 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var n = arr['shift']() - 0x0;
+var a = arr['shift']()['split']('\x20')['map'](Number);
+var m = arr['shift']() - 0x0;
+var b = arr['shift']()['split']('\x20')['map'](Number);
+for (var i = 0x0; i < m; i++) {
+    if (a['length'] - 0x1 < i || b[i] > a[i]) {
+        console['log'](0x1);
+        break;
+    } else if (b[i] < a[i]) {
+        console['log'](0x0);
+        break;
+    }
+}
+if (i == m)
+    console['log'](0x0);

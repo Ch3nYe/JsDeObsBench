@@ -1,0 +1,1 @@
+(input=>{const [S,T]=input['trim']()['split']('\x0a');const sl=S['length'];const tl=T['length'];const range=sl-tl;let min=tl;for(let i=0x0;i<range;i++){const target=S['slice'](i,tl+i);let diff=0x0;for(let j=0x0;j<tl;j++){if(target[j]!==T[j])diff+=0x1;}if(min>diff){min=diff;}}console['log'](min);})(require('fs')['readFileSync']('/dev/stdin','utf8'));

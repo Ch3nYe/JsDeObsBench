@@ -1,0 +1,1 @@
+'use strict';function Main(input){input=input['split']('\x0a');const arr=input[0x0]['split']('\x20');if(arr[0x0]%0x3===0x0||arr[0x1]%0x3===0x0||(arr[0x0]+arr[0x1])%0x3===0x0){console['log']('Possible');}else{console['log']('Impossible');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

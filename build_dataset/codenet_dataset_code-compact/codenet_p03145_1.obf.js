@@ -1,0 +1,1 @@
+function Main(input){var inputs=input['split']('\x20');var ab=parseInt(inputs[0x0],0xa);var bc=parseInt(inputs[0x1],0xa);console['log'](ab*bc/0x2);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

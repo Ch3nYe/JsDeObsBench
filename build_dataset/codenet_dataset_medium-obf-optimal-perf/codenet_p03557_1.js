@@ -1,0 +1,41 @@
+'use strict'
+
+function main(input){
+  const lines = input.split('\n');
+  const N  =parseInt(lines.shift());
+  const A = lines.shift().split(' ').map(x => parseInt(x)).sort((a,b) => a-b);
+  const B = lines.shift().split(' ').map(x => parseInt(x)).sort((a,b) => a-b);
+  const C = lines.shift().split(' ').map(x => parseInt(x)).sort((a,b) => a-b);
+
+
+//console.log(A);
+//console.log(B);
+//console.log(C);
+
+  let result = 0;
+
+  for(let b=0;b<N;b++){
+    let current_b = B[b];
+
+    let count_a = N;
+    for(let a=0;a<N;a++){
+      if(current_b <= A[a] ){
+        count_a--;
+      }
+    }
+  
+
+    let count_c = N;
+    for(let c=0;c<N;c++){
+      if(current_b >= C[c]){
+        count_c --;
+      }
+    }
+//console.log([count_a,count_c])
+    result += count_a*count_c
+  }
+
+  console.log(result);
+}
+
+main(require('fs').readFileSync('/dev/stdin', 'utf8'));

@@ -1,0 +1,19 @@
+console['log']((_0x4ed9f2 => {
+    const [[_0x3561ac, _0x23a09b, _0x339294], ..._0x2ca92e] = _0x4ed9f2['trim']()['split']`\n`['map'](_0x309886 => _0x309886['split']` `['map'](_0x2138d4 => _0x2138d4 | 0x0));
+    let _0x5c3b7e = Math['ceil'](0x3b9aca00 / _0x339294), _0x4a0ae9 = 0x0;
+    _0x3593dd:
+        while (_0x5c3b7e > _0x4a0ae9 + 0x1) {
+            let _0x3f5918 = _0x5c3b7e + _0x4a0ae9 >> 0x1, _0x3ed3fb = _0x3f5918;
+            for (let _0xd100e2 = 0x0; _0xd100e2 < _0x3561ac; _0xd100e2++) {
+                let _0x18b658 = _0x2ca92e[_0xd100e2] - _0x3f5918 * _0x339294;
+                if (_0x18b658 <= 0x0)
+                    continue;
+                _0x3ed3fb -= Math['ceil'](_0x18b658 / (_0x23a09b - _0x339294));
+            }
+            if (_0x3ed3fb >= 0x0)
+                _0x5c3b7e = _0x3f5918;
+            else
+                _0x4a0ae9 = _0x3f5918;
+        }
+    return '' + _0x5c3b7e;
+})(require('fs')['readFileSync']('/dev/stdin', 'utf8')));

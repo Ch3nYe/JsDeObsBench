@@ -1,0 +1,1 @@
+'use strict';const main=input=>{input=input['split']('\x0a');const nums=input[0x0]['split']('\x20')['map'](i=>parseInt(i));const K=parseInt(input[0x1]);nums['sort']((a,b)=>a-b);let n=nums['pop']();n=n*Math['pow'](0x2,K);nums['push'](n);console['log'](nums['reduce']((p,c)=>p+c));};main(require('fs')['readFileSync']('/dev/stdin','utf-8'));

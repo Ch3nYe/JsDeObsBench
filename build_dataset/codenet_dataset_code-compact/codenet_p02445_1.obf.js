@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var arr=input['trim']()['split']('\x0a');var n=arr['shift']()-0x0;var a=arr['shift']()['split']('\x20')['map'](Number);var q=arr['shift']()-0x0;for(var i=0x0;i<q;i++){var [b,e,t]=arr[i]['split']('\x20')['map'](Number);var k=e-b;for(var j=0x0;j<k;j++){[a[b+j],a[t+j]]=[a[t+j],a[b+j]];}}console['log'](a['join']('\x20'));

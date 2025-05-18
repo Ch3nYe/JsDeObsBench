@@ -1,0 +1,24 @@
+const Main = _0x35ffc8 => {
+    const _0x11ae0e = _0x35ffc8['trim']()['split']('\x0a');
+    const _0x41fbbd = parseInt(_0x11ae0e[0x0]);
+    const _0x18df74 = _0x11ae0e[0x1]['split']('\x20');
+    const _0x2ddbae = {};
+    const _0x260853 = _0x18df74['filter']((_0x1d5691, _0x1a5c25, _0x6939b6) => _0x6939b6['indexOf'](_0x1d5691) === _0x1a5c25);
+    _0x18df74['forEach'](_0x2ac420 => {
+        _0x2ddbae[_0x2ac420] = _0x2ddbae[_0x2ac420] ? _0x2ddbae[_0x2ac420] + 0x1 : 0x1;
+    });
+    let _0x29c79c = [];
+    _0x260853['forEach'](_0x291c3b => {
+        return _0x29c79c['push'](_0x2ddbae[_0x291c3b]);
+    });
+    const _0x364b46 = _0x41fbbd - _0x260853['length'];
+    if (_0x364b46 > 0x0) {
+        for (let _0xc1b8c4 = 0x0; _0xc1b8c4 < _0x364b46; _0xc1b8c4++) {
+            _0x29c79c['push'](0x0);
+        }
+    }
+    _0x29c79c = _0x29c79c['join']('\x0a');
+    console['log'](_0x29c79c);
+    return _0x29c79c;
+};
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

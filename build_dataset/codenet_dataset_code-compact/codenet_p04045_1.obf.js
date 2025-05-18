@@ -1,0 +1,1 @@
+function main(input){var inputs=input['split']('\x0a');var money=inputs[0x0]['split']('\x20')[0x0];var kRegexp=new RegExp(inputs[0x1]['replace']('\x20','|'));while(kRegexp['test'](String(money))){money++;}return money;}console['log'](main(require('fs')['readFileSync']('/dev/stdin','utf8')));

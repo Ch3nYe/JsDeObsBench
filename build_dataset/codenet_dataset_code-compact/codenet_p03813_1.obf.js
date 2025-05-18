@@ -1,0 +1,1 @@
+'use strict';function main(s){const x=Number(s);const ans=x>=0x4b0?'ARC':'ABC';console['log'](ans);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

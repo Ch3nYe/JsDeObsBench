@@ -1,0 +1,33 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['replace'](/\n$/, '')['split']('\x0a');
+while (!![]) {
+    var x = Arr['shift']()['split']('');
+    if (x[0x0] == '0')
+        break;
+    var y = Arr['shift']()['split']('');
+    var z = Arr['shift']()['split']('');
+    var ans = 'NA';
+    for (var i = 0x0; i < 0x2; i++) {
+        var s = [
+            'b',
+            'w'
+        ][i];
+        if (x[0x0] + x[0x1] + x[0x2] == s + s + s)
+            ans = s;
+        if (y[0x0] + y[0x1] + y[0x2] == s + s + s)
+            ans = s;
+        if (z[0x0] + z[0x1] + z[0x2] == s + s + s)
+            ans = s;
+        if (x[0x0] + y[0x0] + z[0x0] == s + s + s)
+            ans = s;
+        if (x[0x1] + y[0x1] + z[0x1] == s + s + s)
+            ans = s;
+        if (x[0x2] + y[0x2] + z[0x2] == s + s + s)
+            ans = s;
+        if (x[0x0] + y[0x1] + z[0x2] == s + s + s)
+            ans = s;
+        if (x[0x2] + y[0x1] + z[0x0] == s + s + s)
+            ans = s;
+    }
+    console['log'](ans);
+}

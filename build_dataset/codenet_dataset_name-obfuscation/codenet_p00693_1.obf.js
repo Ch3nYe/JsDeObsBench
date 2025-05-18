@@ -1,0 +1,37 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+input = input['replace'](/\?/g, '.');
+var arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var nm = arr['shift']()['split']('\x20')['map'](Number);
+    var n = nm[0x0];
+    var m = nm[0x1];
+    if (n == 0x0 && m == 0x0)
+        break;
+    var rule = [];
+    while (n--) {
+        var ary = arr['shift']()['split']('\x20');
+        var flag = ary[0x0] == 'permit' ? !![] : ![];
+        rule['push']([
+            flag,
+            new RegExp(ary[0x1] + ary[0x2])
+        ]);
+    }
+    var ans = [];
+    while (m--) {
+        var packet = arr['shift']()['split']('\x20');
+        var str = packet[0x0] + packet[0x1];
+        var flag = ![];
+        rule['forEach'](function (_0x2bce2d) {
+            if (_0x2bce2d[0x0] == !![] && _0x2bce2d[0x1]['test'](str))
+                flag = !![];
+            else if (_0x2bce2d[0x0] == ![] && _0x2bce2d[0x1]['test'](str))
+                flag = ![];
+        });
+        if (flag)
+            ans['push'](packet['join']('\x20'));
+    }
+    console['log'](ans['length']);
+    ans['forEach'](function (_0x112009) {
+        console['log'](_0x112009);
+    });
+}

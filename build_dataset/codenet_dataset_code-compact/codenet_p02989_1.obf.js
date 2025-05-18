@@ -1,0 +1,1 @@
+const main=input=>{var d=input[0x1]['split']('\x20')['map'](p=>parseInt(p,0xa))['sort']((p,q)=>p>q?0x1:-0x1);console['log'](d[d['length']/0x2]-d[d['length']/0x2-0x1]);};main(require('fs')['readFileSync']('/dev/stdin','utf8')['split']('\x0a'));

@@ -1,0 +1,22 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var arr=(input.trim()).split("");
+var x="";
+arr.forEach(function(v){
+if(v=="0")x+="w";
+if(v=="1")x+="";
+if(v=="2")x+="k";
+if(v=="3")x+="s";
+if(v=="4")x+="t";
+if(v=="5")x+="n";
+if(v=="6")x+="h";
+if(v=="7")x+="m";
+if(v=="8")x+="y";
+if(v=="9")x+="r";
+if(v=="T")x+="a";
+if(v=="L")x+="i";
+if(v=="U")x+="u";
+if(v=="R")x+="e";
+if(v=="D")x+="o";
+});
+x=x.replace(/wu/g,"nn");
+console.log(x);

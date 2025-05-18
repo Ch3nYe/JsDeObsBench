@@ -1,0 +1,1 @@
+const main=input=>{const data=input['split'](/\n/);const num=data[0x0];const hoge=data[0x1]['split'](/\s/)['map'](a=>parseInt(a,0xa))['sort']((a,b)=>{if(a<b)return 0x1;if(a>b)return-0x1;return 0x0;});var res=0x0;for(i=0x0;i<num;i++){res+=hoge[i*0x2+0x1];}console['log'](res);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

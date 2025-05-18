@@ -1,0 +1,1 @@
+'use strict';function main(arg){const letters=arg['split']('\x0a')['map'](n=>n['split'](''));console['log'](letters[0x0][0x0]+letters[0x1][0x1]+letters[0x2][0x2]);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

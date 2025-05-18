@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');var num=input[0x0];var character=input[0x1];var max=0x0;var x=0x0;for(var i=0x0;i<character['length'];i++){if(character[i]==='I'){x++;}else{x--;}if(max<x){max=x;}}console['log'](max);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

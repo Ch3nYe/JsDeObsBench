@@ -1,0 +1,1 @@
+require("fs").readFileSync("/dev/stdin","utf8").split('\n').map(function(i){j=+i,s=0;if(j){while(j=~~(j/5))s+=j;console.log(s)}})

@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var Arr=input['trim']()['split']('\x0a');Arr['forEach'](function(v){var arr=v['split']('\x20')['map'](Number);var m=Math['max'](arr[0x0],arr[0x1]);var n=Math['min'](arr[0x0],arr[0x1]);while(n!=0x0){var N=n;n=m%n;m=N;}console['log'](m);});

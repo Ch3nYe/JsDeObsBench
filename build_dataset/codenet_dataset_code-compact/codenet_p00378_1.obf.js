@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var [a,b,x]=input['trim']()['split']('\x20')['map'](Number);var min=Infinity;for(var i=0x0;i<=0x14;i++){for(var j=0x0;j<=0x28;j++){if(i*0x3e8+j*0x1f4>=x)min=Math['min'](min,i*a+j*b);}}console['log'](min);

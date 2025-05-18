@@ -1,0 +1,1 @@
+console['log']((args=>{const S=args['trim']()['split']``['map'](c=>c['charCodeAt']()-0x61);const N=S['length'];const a=Array(0x1a)['fill'](-0x1);for(let i=0x0;i<0x1a;i++){let d=0x0;for(let j=0x0;j<N;j++){d=S[j]===i?0x0:d+0x1;if(a[i]<d)a[i]=d;}}return Math['min'](...a['filter'](v=>v>=0x0));})(require('fs')['readFileSync']('/dev/stdin','utf8')));

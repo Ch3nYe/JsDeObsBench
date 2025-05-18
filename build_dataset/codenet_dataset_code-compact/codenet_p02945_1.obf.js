@@ -1,0 +1,1 @@
+'use strict';const main=input=>{const args=input['split']('\x0a')['map'](arg=>arg['split']('\x20'));const A=parseInt(args[0x0][0x0],0xa);const B=parseInt(args[0x0][0x1],0xa);console['log'](Math['max'](A+B,A-B,A*B)+0x0);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

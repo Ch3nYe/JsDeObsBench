@@ -1,0 +1,1 @@
+function Main(input){var joy=0x0;joy+=Math['floor'](input/0x1f4)*0x3e8;joy+=Math['floor'](input%0x1f4/0x5)*0x5;console['log'](joy);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

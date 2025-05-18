@@ -1,0 +1,1 @@
+function median(l){return l['sort']()[Math['floor'](l['length']/0x2)];}function Main(input){input=input['split']('\x0a');N=parseInt(input[0x0]);a=input[0x1]['split']('\x20');m=[];for(var i=0x0;i<N;i++){for(var j=i+0x1;j<N+0x1;j++){m['push'](median(a['slice'](i,j)));}}console['log'](median(m));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

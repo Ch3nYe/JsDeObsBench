@@ -1,0 +1,1 @@
+"use strict";let a=require('fs').readFileSync('/dev/stdin','utf8').trim().split("\n");a.shift();let d = a.map(e => {let r = e.split(" ").map(Number);return [r[0]-r[1],r[1]+r[0]];}).sort((a,b) => {return a[1]-b[1];});let s = 0;let P = Number.MIN_SAFE_INTEGER;for(let i=0;i<d.length;i++){if(P<=d[i][0]){s++;P = d[i][1];}}console.log(s);

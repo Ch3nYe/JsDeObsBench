@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{let X=parseInt(arg);let result=0x168/X;result=String(result);var answer=result['replace']('.','');console['log'](answer);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

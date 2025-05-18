@@ -1,0 +1,1 @@
+const main=input=>{input=input['trim']()['split']('\x0a');const [N,D]=input[0x0]['split']('\x20')['map'](Number);const [,...points]=input;let ans=0x0;for(let v of points){const [x,y]=v['split']('\x20')['map'](Number);if(Math['sqrt'](x**0x2+y**0x2)<=D)ans++;}return console['log'](ans);};process['env']['MYTEST']?test():main(require('fs')['readFileSync']('/dev/stdin','utf8'));

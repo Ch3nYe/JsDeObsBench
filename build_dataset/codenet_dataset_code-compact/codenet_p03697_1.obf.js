@@ -1,0 +1,1 @@
+'use strict';function Main(INPUT){const input=INPUT['split']('\x0a')[0x0]['split']('\x20');const A=parseInt(input[0x0],0xa);const B=parseInt(input[0x1],0xa);console['log'](A+B>=0xa?'error':A+B);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

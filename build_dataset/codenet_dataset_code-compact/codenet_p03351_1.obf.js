@@ -1,0 +1,1 @@
+function Main(input){input=input['split'](/\s/);input['forEach'](function(e,i,a){a[i]=Number(a[i]);});var ans='No';if(Math['abs'](input[0x0]-input[0x2])<=input[0x3]){ans='Yes';}if(Math['abs'](input[0x0]-input[0x1])<=input[0x3]&&Math['abs'](input[0x1]-input[0x2])<=input[0x3]){ans='Yes';}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

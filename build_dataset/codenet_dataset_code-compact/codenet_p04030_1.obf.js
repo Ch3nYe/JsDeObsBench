@@ -1,0 +1,1 @@
+'use strict';function Main(input){const tape=input['split']('\x0a')[0x0]['split']('');const result=[];for(const v of tape){if(v==='B'){result['pop']();}else{result['push'](v);}}console['log'](result['join'](''));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

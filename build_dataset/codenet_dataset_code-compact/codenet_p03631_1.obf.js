@@ -1,0 +1,1 @@
+function Main(input){var tmp=String(input);var truecount=0x0;if(tmp[0x2]==tmp[0x0]){console['log']('Yes');}else{console['log']('No');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

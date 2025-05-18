@@ -1,0 +1,40 @@
+'use strict';
+const main = arg => {
+    const SLlxtt = {
+        'bkxIz': function (callee, param1) {
+            return callee(param1);
+        },
+        'qVWcz': function (x, y) {
+            return x - y;
+        },
+        'DlCwp': function (x, y) {
+            return x === y;
+        },
+        'rYJcP': function (x, y) {
+            return x + y;
+        }
+    };
+    arg = arg['trim']()['split']('\x0a');
+    const N = SLlxtt['bkxIz'](parseInt, arg[0x0]['split']('\x20')[0x0]);
+    const A = arg[0x1]['split']('');
+    const Rsum = A['filter'](n => n === 'E')['length'];
+    const Lsum = N - Rsum;
+    let Rcnt = 0x0;
+    let Lcnt = 0x0;
+    let answer = Infinity;
+    for (let i = 0x0; i < N; i++) {
+        const needMoveLeft = Lcnt;
+        let needMoveRight = SLlxtt['qVWcz'](Rsum, Rcnt);
+        if (SLlxtt['DlCwp'](A[i], 'E')) {
+            needMoveRight--;
+        }
+        answer = Math['min'](answer, SLlxtt['rYJcP'](needMoveLeft, needMoveRight));
+        if (SLlxtt['DlCwp'](A[i], 'W')) {
+            Lcnt++;
+        } else {
+            Rcnt++;
+        }
+    }
+    console['log'](answer);
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

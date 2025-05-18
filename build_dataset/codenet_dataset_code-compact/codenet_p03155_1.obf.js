@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a')['map'](Number);console['log']((input[0x0]+0x1-input[0x1])*(input[0x0]+0x1-input[0x2]));}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

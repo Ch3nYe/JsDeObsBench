@@ -1,0 +1,39 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var nm = Arr['shift']()['split']('\x20')['map'](Number);
+    if (nm[0x0] == 0x0 && nm[0x1] == 0x0)
+        break;
+    var M = nm[0x1];
+    var DP = [];
+    for (var i = 0x0; i < nm[0x0]; i++) {
+        var dp = Arr['shift']()['split']('\x20')['map'](Number);
+        DP['push'](dp);
+    }
+    DP['sort'](function (a, b) {
+        var HwCcGc = {
+            'gWhrX': function (x, y) {
+                return x - y;
+            }
+        };
+        return HwCcGc['gWhrX'](b[0x1], a[0x1]);
+    });
+    var sum = 0x0;
+    DP['forEach'](function (v) {
+        var rJDhqb = {
+            'BHhvi': function (x, y) {
+                return x == y;
+            }
+        };
+        var d = v[0x0];
+        var p = v[0x1];
+        while (!![]) {
+            if (rJDhqb['BHhvi'](M, 0x0) || d == 0x0)
+                break;
+            M--;
+            d--;
+        }
+        sum += d * p;
+    });
+    console['log'](sum);
+}

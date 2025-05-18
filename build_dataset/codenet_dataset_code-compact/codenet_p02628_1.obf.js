@@ -1,0 +1,1 @@
+function main(lines){const [N,K]=parseNumberLine(lines[0x0]);const prices=parseNumberLine(lines[0x1])['sort']((a,b)=>a-b);let total=0x0;for(let i=0x0;i<K;++i){total+=prices[i];}console['log'](total);}function parseNumberLine(line,radix=0xa){return line['split'](/\s+/)['map'](_=>parseInt(_,radix));}main(require('fs')['readFileSync']('/dev/stdin','utf8')['split']('\x0a'));

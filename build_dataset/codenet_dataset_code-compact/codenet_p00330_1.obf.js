@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var x=input['trim']()-0x0;console['log'](x*0x20);

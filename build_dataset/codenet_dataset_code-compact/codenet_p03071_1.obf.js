@@ -1,0 +1,1 @@
+'use strict';function Main(input){input=input['split']('\x0a')[0x0];const numbers=input['split']('\x20')['map'](i=>{return parseInt(i,0xa);});const a=numbers[0x0];const b=numbers[0x1];let result=0x0;if(a>b){result=0x2*a-0x1;}else if(b>a){result=0x2*b-0x1;}else{result=0x2*a;}console['log'](result);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

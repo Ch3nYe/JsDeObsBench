@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');for(var i=0x0;0x1;i++){var n=parseInt(input[i],0xa);var ans=0x0;if(n==0x0)break;for(var j=0x2;j<n;j++){if(n-j*(j-0x1)/0x2>0x0&&(n-j*(j-0x1)/0x2)%j==0x0){ans++;}}console['log'](ans);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

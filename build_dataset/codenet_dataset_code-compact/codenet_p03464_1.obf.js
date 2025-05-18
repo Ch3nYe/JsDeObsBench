@@ -1,0 +1,1 @@
+console['log']((args=>{const [[K],A]=args['trim']()['split']`\n`['map'](r=>r['split']` `['map'](v=>v|0x0));let min=0x2,max=0x3;for(let i=K-0x2;i>=0x0;i--){if(max+A[i+0x1]-0x1<A[i])return'-1';min=Math['ceil'](min/A[i])*A[i];max=Math['floor'](max/A[i])*A[i]+A[i]-0x1;}return min+'\x20'+max;})(require('fs')['readFileSync']('/dev/stdin','utf8')));

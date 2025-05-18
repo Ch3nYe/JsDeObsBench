@@ -1,0 +1,1 @@
+function Main(input){if(input['substr'](0x0,0x4)=='YAKI'){console['log']('Yes');}else{console['log']('No');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

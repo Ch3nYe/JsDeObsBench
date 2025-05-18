@@ -1,0 +1,1 @@
+function Main(input){ans='No';input=input['trim']()['split']('\x0a');rotate=input[0x0];for(i=0x0;i<=input[0x0]['length'];i++){head=rotate['substr'](0x0,0x1);str=rotate['slice'](0x1)+head;if(input[0x1]===str){ans='Yes';break;}rotate=str;}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+'use strict';(function(stdin){var inputs=stdin['toString']()['trim']()['split']('\x0a');(function(x){console['log'](x*x*x);}(parseInt(inputs[0x0],0xa)));}(require('fs')['readFileSync']('/dev/stdin','utf8')));

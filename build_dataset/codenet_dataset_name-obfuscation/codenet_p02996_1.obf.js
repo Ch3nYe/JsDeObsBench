@@ -1,0 +1,21 @@
+'use strict';
+function main(_0x5c2fe1) {
+    const _0xca6ecd = _0x5c2fe1['split']('\x0a');
+    const _0x559914 = parseInt(_0xca6ecd['shift']());
+    const _0x29908b = [];
+    for (let _0x1aace4 = 0x0; _0x1aace4 < _0x559914; _0x1aace4++) {
+        _0x29908b['push'](_0xca6ecd[_0x1aace4]['split']('\x20')['map'](_0x1a7253 => parseInt(_0x1a7253)));
+    }
+    _0x29908b['sort']((_0x279ca4, _0x93eb79) => _0x279ca4[0x1] - _0x93eb79[0x1]);
+    let _0x5901ee = 'Yes';
+    let _0x3d9dc1 = 0x0;
+    for (let _0x2a1854 = 0x0; _0x2a1854 < _0x559914; _0x2a1854++) {
+        _0x3d9dc1 += _0x29908b[_0x2a1854][0x0];
+        if (_0x3d9dc1 > _0x29908b[_0x2a1854][0x1]) {
+            _0x5901ee = 'No';
+            break;
+        }
+    }
+    console['log'](_0x5901ee);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

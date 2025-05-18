@@ -1,0 +1,1 @@
+function Main(input){var data=input['split']('\x0a');var n=data[0x0];var a=data['slice'](0x1);for(var i=0x0;i<n;++i){var b=[];for(var j=0x0;j<a['length'];j+=0x2){if(a[j]>a[j+0x1]){b['push'](a[j]-a[j+0x1]);}else if(a[j]==a[j+0x1]){b['push'](a[j]);}else{b['push'](a[j+0x1]-a[j]);}}a=b;}console['log'](a[0x0]);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,22 @@
+function heron(a,b,c){
+   var s=(a+b+c)/2;
+   var S=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+   return S;
+}
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var Arr=(input.trim()).split("\n");
+for(var i=0;i<Arr.length;i++){
+   var arr=Arr[i].split(",").map(Number);
+   (function(x1,y1,x2,y2,x3,y3,x4,y4){
+      var d12=Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2));
+      var d23=Math.sqrt(Math.pow(x2-x3,2)+Math.pow(y2-y3,2));
+      var d34=Math.sqrt(Math.pow(x3-x4,2)+Math.pow(y3-y4,2));
+      var d41=Math.sqrt(Math.pow(x4-x1,2)+Math.pow(y4-y1,2));
+      var d13=Math.sqrt(Math.pow(x1-x3,2)+Math.pow(y1-y3,2));
+      var d24=Math.sqrt(Math.pow(x2-x4,2)+Math.pow(y2-y4,2));
+      var A=heron(d12,d24,d41)+heron(d23,d34,d24);
+      var B=heron(d12,d23,d13)+heron(d13,d34,d41);
+      var ans=(Math.abs(A-B)<1.0e-5)?"YES":"NO";
+      console.log(ans);
+   }).apply(null,arr);
+}

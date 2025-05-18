@@ -1,0 +1,1 @@
+console.log(Math.pow(parseInt(require('fs').readFileSync('/dev/stdin','utf8'),10),2))

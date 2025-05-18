@@ -1,0 +1,32 @@
+'use strict';
+function main(_0xda5b1b) {
+    let _0x565a73 = parseInt(_0xda5b1b[0x0]);
+    let _0x588465 = _0xda5b1b[0x1];
+    let _0x4fcf16 = parseInt(_0xda5b1b[0x2]);
+    let _0x28cc84 = [];
+    for (let _0x260f37 = 0x0; _0x260f37 < _0x4fcf16; _0x260f37++) {
+        let _0x5de6c4 = _0xda5b1b[_0x260f37 + 0x3]['trim']()['split']('\x20');
+        _0x28cc84[_0x260f37] = parseInt(_0x5de6c4[0x0]);
+        if (_0x28cc84[_0x260f37] === 0x1) {
+            let _0x4bb5a8 = parseInt(_0x5de6c4[0x1]);
+            let _0x30a8ed = _0x5de6c4[0x2];
+            let _0x4daf3f = _0x588465['slice'](0x0, _0x4bb5a8 - 0x1);
+            let _0x4ca639 = _0x588465['slice'](_0x4bb5a8);
+            _0x588465 = _0x4daf3f + _0x30a8ed + _0x4ca639;
+        } else {
+            let _0x2936d4 = parseInt(_0x5de6c4[0x1]);
+            let _0x2e1c4d = parseInt(_0x5de6c4[0x2]);
+            let _0x460d49 = _0x588465['slice'](_0x2936d4 - 0x1, _0x2e1c4d);
+            let _0x347e05 = {};
+            let _0x528473 = 0x0;
+            for (let _0x16d38a = 0x0; _0x16d38a < _0x460d49['length']; _0x16d38a++) {
+                if (_0x347e05[_0x460d49[_0x16d38a]] === undefined) {
+                    _0x528473++;
+                    _0x347e05[_0x460d49[_0x16d38a]] = !![];
+                }
+            }
+            console['log'](_0x528473);
+        }
+    }
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']()['split']('\x0a'));

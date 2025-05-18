@@ -1,0 +1,1 @@
+'use strict';const main=input=>{const args=input['split']('\x0a')['map'](arg=>arg['split']('\x20'));const N=parseInt(args[0x0][0x0],0xa);const p=args['slice'](0x1,N+0x1)['map'](arg=>parseInt(arg[0x0],0xa))['sort']((a,b)=>b-a);let sum=p[0x0]/0x2;for(let i=0x1;i<N;i++){sum+=p[i];}console['log'](sum);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

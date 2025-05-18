@@ -1,0 +1,1 @@
+var x=require('fs')['readFileSync']('/dev/stdin','utf8');x=parseInt(x,0xa);var h=Math['floor'](x/0xe10);var m=Math['floor'](x%0xe10/0x3c);var s=x%0xe10%0x3c;console['log'](h+':'+m+':'+s);

@@ -1,0 +1,40 @@
+var data = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var input = data['trim']()['split']('\x0a');
+var line = 0x0;
+while (!![]) {
+    var nm = input[line]['split']('\x20')['map'](Number);
+    line++;
+    var n = nm[0x0];
+    var m = nm[0x1];
+    if (n == 0x0 && m == 0x0)
+        break;
+    var infected = [];
+    for (var i = 0x0; i < n; i++)
+        infected[i] = !![];
+    infected[0x0] = ![];
+    var tsd = [];
+    for (var i = 0x0; i < m; i++) {
+        var packet = input[line]['split']('\x20')['map'](Number);
+        line++;
+        tsd['push']([
+            packet[0x0],
+            packet[0x1] - 0x1,
+            packet[0x2] - 0x1
+        ]);
+    }
+    tsd['sort'](function (a, b) {
+        return a[0x0] - b[0x0];
+    });
+    tsd['forEach'](function (packet) {
+        var s = packet[0x1];
+        var d = packet[0x2];
+        if (!infected[s])
+            infected[d] = ![];
+    });
+    var answer = 0x0;
+    infected['forEach'](function (packet) {
+        if (!packet)
+            answer++;
+    });
+    console['log'](answer);
+}

@@ -1,0 +1,1 @@
+console['log'](require('fs')['readFileSync']('/dev/stdin','utf8')['replace'](/apple/,'\x09')['replace'](/peach/,'apple')['replace'](/\t/,'peach')['trim']());

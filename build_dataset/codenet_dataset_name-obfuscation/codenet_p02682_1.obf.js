@@ -1,0 +1,28 @@
+'use strict';
+function main(_0x1ae8d8) {
+    let _0x1e6e6b = _0x1ae8d8['trim']()['split']('\x20')[0x3];
+    let _0x16746f = _0x1ae8d8['trim']()['split']('\x20')[0x0];
+    let _0x3a003b = _0x1ae8d8['trim']()['split']('\x20')[0x1];
+    let _0x36ad09 = _0x1ae8d8['trim']()['split']('\x20')[0x2];
+    let _0x197996 = 0x0;
+    if (_0x16746f == 0x0 && _0x3a003b == 0x0 && _0x36ad09 == 0x0) {
+        console['log'](0x0);
+        return;
+    }
+    if (_0x1e6e6b > 0x0) {
+        if (_0x1e6e6b > _0x16746f) {
+            _0x197996 = _0x16746f * 0x1;
+        } else {
+            _0x197996 = _0x1e6e6b * 0x1;
+        }
+        _0x1e6e6b = _0x1e6e6b - _0x16746f;
+    }
+    if (_0x1e6e6b > 0x0) {
+        _0x1e6e6b = _0x1e6e6b - _0x3a003b;
+    }
+    if (_0x1e6e6b > 0x0) {
+        _0x197996 = _0x197996 + _0x1e6e6b * -0x1;
+    }
+    console['log'](_0x197996);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

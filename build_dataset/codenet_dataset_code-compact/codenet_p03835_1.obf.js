@@ -1,0 +1,1 @@
+function Main(input){let inputs=input['split']('\x20');let K=Number(inputs[0x0]);let S=Number(inputs[0x1]);let count=0x0;for(let X=0x0;X<=K;X++){for(let Y=0x0;Y<=K;Y++){for(let Z=0x0;Z<=K;Z++){if(X+Y+Z===S){count++;}}}}console['log'](count);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

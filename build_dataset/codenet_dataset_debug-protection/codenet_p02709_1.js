@@ -1,0 +1,25 @@
+"use strict";
+
+const main = arg => {
+  const input = arg.trim().split("\n");
+
+  const n = parseInt(input[0]);
+  const arr = input[1].split(" ").map(n => parseInt(n));
+
+  function cal(i, dst) {
+    if (i === -1) return 0;
+
+    const results = [];
+    for (const j of dst) {
+      const next_dst = dst.filter(v => v !== j);
+      const abs = i > j ? i - j : j - i;
+      const val = arr[i] * abs + cal(i - 1, next_dst);
+      results.push(val);
+    }
+
+    return Math.max(...results);
+  }
+
+  console.log(cal(n - 1, [...Array(n).keys()]));
+}
+main(require("fs").readFileSync("/dev/stdin", "utf8"));

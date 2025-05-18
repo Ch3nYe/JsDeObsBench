@@ -1,0 +1,1 @@
+'use strict';function Main(input){let lines=input['split']('\x0a');let N=lines['shift']()-0x0;let V=lines['shift']()['split'](/\s/)['map'](v=>v-0x0);let ans=0x0;for(let n=0x0;n<N-0x2;n++){if(V[n]==V[n+0x1])ans+=0x1;if(V[n]!=V[n+0x2])ans+=0x1;}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

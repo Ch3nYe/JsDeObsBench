@@ -1,0 +1,43 @@
+var table = {};
+table[0xb] = 'a';
+table[0xc] = 'b';
+table[0xd] = 'c';
+table[0xe] = 'd';
+table[0xf] = 'e';
+table[0x15] = 'f';
+table[0x16] = 'g';
+table[0x17] = 'h';
+table[0x18] = 'i';
+table[0x19] = 'j';
+table[0x1f] = 'k';
+table[0x20] = 'l';
+table[0x21] = 'm';
+table[0x22] = 'n';
+table[0x23] = 'o';
+table[0x29] = 'p';
+table[0x2a] = 'q';
+table[0x2b] = 'r';
+table[0x2c] = 's';
+table[0x2d] = 't';
+table[0x33] = 'u';
+table[0x34] = 'v';
+table[0x35] = 'w';
+table[0x36] = 'x';
+table[0x37] = 'y';
+table[0x3d] = 'z';
+table[0x3e] = '.';
+table[0x3f] = '?';
+table[0x40] = '!';
+table[0x41] = '\x20';
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['replace'](/\n$/, '')['split']('\x0a');
+Arr['forEach'](function (_0x4ffdee) {
+    _0x4ffdee = _0x4ffdee['replace'](/\d\d/g, function (_0x23b5ad) {
+        if (table['hasOwnProperty'](_0x23b5ad))
+            _0x23b5ad = table[_0x23b5ad];
+        return _0x23b5ad;
+    });
+    if (_0x4ffdee['match'](/\d/))
+        _0x4ffdee = 'NA';
+    console['log'](_0x4ffdee);
+});

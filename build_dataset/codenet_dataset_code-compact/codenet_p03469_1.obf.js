@@ -1,0 +1,1 @@
+'use strict';function Main(input){const date=input['split']('\x0a')[0x0]['replace'](/^.{4}/,0x7e2);console['log'](date);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

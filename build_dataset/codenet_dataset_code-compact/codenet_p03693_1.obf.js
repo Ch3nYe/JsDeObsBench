@@ -1,0 +1,1 @@
+'use strict';function Main(input){const param=Number(input['split']('\x20')['join'](''));if(param%0x4===0x0){console['log']('YES');}else{console['log']('NO');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

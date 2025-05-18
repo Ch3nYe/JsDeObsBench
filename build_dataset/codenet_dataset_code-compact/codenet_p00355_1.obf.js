@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var arr=input['trim']()['split']('\x0a');var [a,b]=arr['shift']()['split']('\x20')['map'](Number);var n=arr['shift']()-0x0;var flag=0x0;while(n--){var [s,f]=arr['shift']()['split']('\x20')['map'](Number);if(f<=a||b<=s)continue;else flag=0x1;}console['log'](flag);

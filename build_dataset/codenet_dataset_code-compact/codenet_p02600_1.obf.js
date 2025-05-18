@@ -1,0 +1,1 @@
+function main(input){console['log'](0xa-Math['floor'](input/0xc8));}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

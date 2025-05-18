@@ -1,0 +1,1 @@
+function Main(input){var input=input['split']('\x0a');const num=input[0x0];const arr=input[0x1]['split']('\x20');var a=0x1;var b=0x0;arr['forEach'](i=>a*=i);for(var i=0x0;i<arr['length'];i++){b+=a/arr[i];}console['log'](a/b);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

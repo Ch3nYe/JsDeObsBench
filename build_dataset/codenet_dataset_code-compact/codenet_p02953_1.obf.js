@@ -1,0 +1,1 @@
+function Main(args){const firstRow=args['split']('\x0a')[0x0];const row=args['split']('\x0a')[0x1]['split']('\x20');for(var i=row['length']-0x1;i>0x0;i--){if(row[i-0x1]>row[i]){row[i-0x1]-=0x1;}if(row[i-0x1]>row[i]){return console['log']('No');}}console['log']('Yes');}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

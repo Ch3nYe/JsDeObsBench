@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{arg=arg['trim']()['split']('\x0a');const N=parseInt(arg[0x0]['split']('\x20')[0x0]);console['log'](N>=0x1e?'Yes':'No');};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

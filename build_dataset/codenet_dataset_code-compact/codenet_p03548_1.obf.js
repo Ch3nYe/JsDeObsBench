@@ -1,0 +1,1 @@
+function Main(input){var X=parseInt(input['split']('\x20')[0x0]);var Y=parseInt(input['split']('\x20')[0x1]);var Z=parseInt(input['split']('\x20')[0x2]);var N=0x1;var x=0x0;while(!![]){x=N*Y+(N+0x1)*Z;if(x>X)break;N++;}console['log'](--N);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

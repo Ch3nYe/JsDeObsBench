@@ -1,0 +1,1 @@
+'use strict';function Main(input){const params=input['split']('\x0a');const n=Number(params[0x0]);let max=0x0;let min=Math['pow'](0xa,0xa);params[0x1]['split']('\x20')['forEach'](val=>{max=Math['max'](max,Number(val));min=Math['min'](min,Number(val));});console['log'](max-min);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

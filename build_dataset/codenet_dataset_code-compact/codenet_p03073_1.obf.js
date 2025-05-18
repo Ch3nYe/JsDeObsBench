@@ -1,0 +1,1 @@
+function Main(input){var cnt=0x0;for(var i=0x0;i<input['length'];i++){if(parseInt(input[i])!=i%0x2)cnt++;}console['log'](parseInt(Math['min'](cnt,input['length']-cnt)));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

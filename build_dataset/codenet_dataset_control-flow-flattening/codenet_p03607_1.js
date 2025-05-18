@@ -1,0 +1,16 @@
+"use strict"
+
+function main(input) {
+  input = input.split(/\n/).map(v => ~~v)
+  let set = new Set()
+  for (let i = 1; i < input.length; i++) {
+    //
+    if (set.has(input[i])) {
+      set.delete(input[i])
+    } else {
+      set.add(input[i])
+    }
+  }
+  console.log(set.size)
+}
+main(require("fs").readFileSync("/dev/stdin", "utf8"))

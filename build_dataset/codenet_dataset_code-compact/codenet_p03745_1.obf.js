@@ -1,0 +1,1 @@
+(function(stdin){input=stdin['split']('\x0a');var n=parseInt(input[0x0],0xa);var a=input[0x1]['split']('\x20');var ans=0x1;var up=![];var down=![];for(var i=0x0;i<n-0x1;i++){if(a[i]<a[i+0x1]){up=!![];}if(a[i]>a[i+0x1]){down=!![];}if(up&&down){up=down=![];ans++;}}console['log']('%d',ans);}(require('fs')['readFileSync']('/dev/stdin','utf8')));

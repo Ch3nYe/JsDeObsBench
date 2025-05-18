@@ -1,0 +1,1 @@
+function Main(input){const hyaku=Number(input)%0x3e8;console['log'](hyaku===0x0?0x0:0x3e8-hyaku);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

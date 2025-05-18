@@ -1,0 +1,14 @@
+function Main(_0xadd320) {
+    _0xadd320 = _0xadd320['split']('\x0a');
+    var _0x5386bf = _0xadd320[0x1]['split']('\x20')['map'](Number);
+    var _0x49e084 = 0x0;
+    var _0xc0f7f6 = 0x0;
+    for (var _0x4df13e = 0x0; _0x4df13e < _0x5386bf['length']; _0x4df13e++) {
+        if (_0x5386bf[_0x4df13e] % 0x2 == 0x0)
+            _0x49e084++;
+        else
+            _0xc0f7f6++;
+    }
+    console['log'](_0xc0f7f6 % 0x2 == 0x0 && (_0xc0f7f6 / 0x2 + _0x49e084) % 0x2 == 0x0 ? 'YES' : 'NO');
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']());

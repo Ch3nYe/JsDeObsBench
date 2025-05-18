@@ -1,0 +1,1 @@
+function Main(input){const n=input['split']('\x0a')[0x0];var ans=0x0;if(n>=0x9dd){ans=0x1;console['log'](ans);}else{for(var i=0x1;i<=0x19;i++){if(n>=i*0x65&&n<=i*0x69){ans=0x1;break;}}}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

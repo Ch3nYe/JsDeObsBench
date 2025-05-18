@@ -1,0 +1,16 @@
+function Main(arg) {
+    var skXuOv = {
+        'LojRJ': function (x, y) {
+            return x - y;
+        }
+    };
+    var a = skXuOv['LojRJ'](arg['split']('\x0a')[0x0]['split']('\x20')[0x0], 0x0);
+    var b = skXuOv['LojRJ'](arg['split']('\x0a')[0x0]['split']('\x20')[0x1], 0x0);
+    if (a < b) {
+        console['log'](a['toString']()['repeat'](b));
+    } else {
+        console['log'](b['toString']()['repeat'](a));
+    }
+    return;
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

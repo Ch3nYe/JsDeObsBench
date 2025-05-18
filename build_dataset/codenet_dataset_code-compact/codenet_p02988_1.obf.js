@@ -1,0 +1,1 @@
+'use strict';const Main=arg=>{let input=arg['trim']()['split']('\x0a');let n=parseInt(input[0x0]);let pArr=input[0x1]['split']('\x20')['map'](Number);let count=0x0;for(let i=0x1;i-0x1<n;i++){if(pArr[i-0x1]<pArr[i]&&pArr[i]<pArr[i+0x1]||pArr[i+0x1]<pArr[i]&&pArr[i]<pArr[i-0x1]){count+=0x1;}}console['log'](count);};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

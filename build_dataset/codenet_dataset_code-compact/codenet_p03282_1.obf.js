@@ -1,0 +1,1 @@
+function main(input){const S=input['split']('\x0a')[0x0]['split']('');const K=parseInt(input['split']('\x0a')[0x0]['split']('\x20')[0x1]);for(var i=0x0;i<S['length'];i++){if(S[i]!='1'){console['log'](S[i]);return;}}console['log'](0x1);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

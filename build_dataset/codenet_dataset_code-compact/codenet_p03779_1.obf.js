@@ -1,0 +1,1 @@
+function main(input){var n=input[0x0]-0x0;var cnt=0x1;var ans=0x0;for(cnt=0x1;ans<n;cnt++){ans+=cnt;}console['log'](cnt-0x1);}main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']()['split']('\x0a'));

@@ -1,0 +1,1 @@
+function main(input){const nums=input['split']('\x20');if(nums['indexOf']('5')!=-0x1){nums['splice'](nums['indexOf']('5'),0x1);}if(nums['indexOf']('5')!=-0x1){nums['splice'](nums['indexOf']('5'),0x1);}if(nums['indexOf']('7')!=-0x1){nums['splice'](nums['indexOf']('7'),0x1);}console['log'](nums[0x0]==null?'YES':'NO');}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

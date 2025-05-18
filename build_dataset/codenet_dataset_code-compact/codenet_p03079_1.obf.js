@@ -1,0 +1,1 @@
+function Main(input){var str=input;var tmp=str['split']('\x20')['map'](Number);if(tmp[0x0]==tmp[0x1]&&tmp[0x1]==tmp[0x2]){console['log']('Yes');}else{console['log']('No');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

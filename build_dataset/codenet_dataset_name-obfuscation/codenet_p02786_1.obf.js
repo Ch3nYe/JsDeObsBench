@@ -1,0 +1,9 @@
+inp = require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']()['split']('\x0a');
+H = inp['shift']() * 0x1;
+c = 0x1;
+h = 0x2;
+while (H >= h) {
+    h *= 0x2;
+    c++;
+}
+console['log'](Math['pow'](0x2, c) - 0x1);

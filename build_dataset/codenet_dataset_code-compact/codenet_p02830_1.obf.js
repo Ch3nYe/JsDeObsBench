@@ -1,0 +1,1 @@
+function Main(input){input=input['trim']()['split']('\x0a');const N=parseInt(input[0x0]);const array=input[0x1]['split']('\x20');const S=array[0x0];const T=array[0x1];let ans='';for(let i=0x0;i<N;++i){ans+=S[i];ans+=T[i];}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

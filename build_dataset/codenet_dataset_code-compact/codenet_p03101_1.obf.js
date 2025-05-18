@@ -1,0 +1,1 @@
+function main(arg){var size=arg['split']('\x0a')[0x0]['split']('\x20');var sel=arg['split']('\x0a')[0x1]['split']('\x20');console['log'](size[0x0]*size[0x1]-size[0x1]*sel[0x0]-(size[0x0]-sel[0x0])*sel[0x1]);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,10 @@
+function Main(_0x50497b) {
+    _0x50497b = _0x50497b['split']('\x20')['map'](_0x5121af => +_0x5121af);
+    var _0x4f01f2 = 'x';
+    if (_0x50497b[0x0] + _0x50497b[0x1] === 0xf)
+        _0x4f01f2 = '+';
+    if (_0x50497b[0x0] * _0x50497b[0x1] === 0xf)
+        _0x4f01f2 = '*';
+    console['log'](_0x4f01f2);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

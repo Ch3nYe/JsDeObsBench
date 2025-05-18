@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x20');const S=parseInt(input[0x0]);const W=parseInt(input[0x1]);const ret=S<=W?'unsafe':'safe';console['log'](ret);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

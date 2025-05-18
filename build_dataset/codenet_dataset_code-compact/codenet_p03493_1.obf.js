@@ -1,0 +1,1 @@
+function Main(input){var args=input['split']('\x20');var num=parseInt(args[0x0],0xa);var str=num['toString'](0xa);var count=0x0;for(var i=0x0;i<str['length'];i++){if(str[i]=='1'){count+=0x1;}}console['log'](count);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

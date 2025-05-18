@@ -1,0 +1,1 @@
+function main(input){var line=input['split'](/\r?\n/g);var arr=line[0x0]['split']('\x20');const H=arr[0x0],N=arr[0x1];var A=line[0x1]['split']('\x20')['map'](Number);A=A['reduce']((A,x)=>A+x);console['log'](0x1<Math['ceil'](H/A)?'No':'Yes');}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

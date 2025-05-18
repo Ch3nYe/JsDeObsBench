@@ -1,0 +1,1 @@
+a=require('fs').readFileSync('/dev/stdin','utf8').match(/\d+/g);console.log(a[0]-a[1]+1)

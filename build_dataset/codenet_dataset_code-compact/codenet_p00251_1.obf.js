@@ -1,0 +1,1 @@
+var plus=function(a,b){return a+b;};var input=require('fs')['readFileSync']('/dev/stdin','utf8');var Arr=input['trim']()['split']('\x0a')['map'](Number);var sum=0x0;console['log'](Arr['reduce'](plus));

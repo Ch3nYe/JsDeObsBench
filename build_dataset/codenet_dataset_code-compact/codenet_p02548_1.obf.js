@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');N=parseInt(input[0x0]['split']('\x20'));var result=0x0;for(var i=0x1;i<N;i++){result+=Math['floor']((N-0x1)/ i);}console['log']('%d',result);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

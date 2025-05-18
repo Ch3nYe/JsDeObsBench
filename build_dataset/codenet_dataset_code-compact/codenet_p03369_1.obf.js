@@ -1,0 +1,1 @@
+function main(s){var add=0x0;for(var i=0x0;i<0x3;i++){if(s[i]=='o'){add++;}}console['log'](0x2bc+add*0x64);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

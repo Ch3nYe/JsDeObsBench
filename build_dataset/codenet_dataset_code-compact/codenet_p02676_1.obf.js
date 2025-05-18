@@ -1,0 +1,1 @@
+const main=arg=>{arg=arg['trim']()['split']('\x0a');const k=arg[0x0];const s=arg[0x1];if(s['length']<=k)console['log'](s);else console['log'](s['slice'](0x0,k)+'...');};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

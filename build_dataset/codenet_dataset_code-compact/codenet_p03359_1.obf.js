@@ -1,0 +1,1 @@
+const input=require('fs')['readFileSync']('/dev/stdin','utf8');const list=input['split']('\x20');const a=Number(list[0x0]);const b=Number(list[0x1]);if(a>b){console['log'](a-0x1);}else{console['log'](a);}

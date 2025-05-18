@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x20')['map'](x=>x*0x1);function gcd(a1,a2){return a2==0x0?a1:gcd(a2,a1%a2);}var result=gcd(input[0x0],input[0x1]);var answer=0x1;for(var i=0x2;i*i<result;i++){if(result%i===0x0){answer++;while(result%i===0x0){result/=i;}}}if(result!==0x1){answer++;}console['log'](answer);}Main(require('fs')['readFileSync']('/dev/stdin','utf-8'));

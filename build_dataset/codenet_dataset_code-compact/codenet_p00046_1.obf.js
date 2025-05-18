@@ -1,0 +1,1 @@
+i=require('fs')['readFileSync']('/dev/stdin','utf8')['trim']()['split'](/\n/)['sort'](function(a,b){return a-b;}),console['log'](i[i['length']-0x1]-i[0x0]);

@@ -1,0 +1,24 @@
+'use strict';
+const main = _0x377b74 => {
+    _0x377b74 = _0x377b74['trim']()['split']('\x0a');
+    const _0x477220 = parseInt(_0x377b74[0x0]['split']('\x20')[0x0]);
+    const _0x5517ff = parseInt(_0x377b74[0x0]['split']('\x20')[0x0]);
+    const _0x504867 = parseInt(_0x377b74[0x0]['split']('\x20')[0x0]);
+    const _0x530368 = _0x377b74[0x1]['split']('\x20')['map'](_0x18126b => parseInt(_0x18126b));
+    const _0x38b0fd = _0x377b74[0x2]['split']('\x20')['map'](_0x1cf639 => parseInt(_0x1cf639));
+    const _0x570578 = _0x377b74['slice'](0x3, _0x504867 + 0x4);
+    const _0x546e51 = Math['min'](..._0x530368);
+    const _0x4f04e4 = Math['min'](..._0x38b0fd);
+    let _0x1241f8 = _0x546e51 + _0x4f04e4;
+    for (let _0x58ca29 in _0x570578) {
+        let _0x209b24 = parseInt(_0x570578[_0x58ca29]['split']('\x20')[0x0]);
+        let _0x5899cf = parseInt(_0x570578[_0x58ca29]['split']('\x20')[0x1]);
+        let _0x49b327 = parseInt(_0x570578[_0x58ca29]['split']('\x20')[0x2]);
+        let _0x228862 = _0x530368[_0x209b24 - 0x1] + _0x38b0fd[_0x5899cf - 0x1] - _0x49b327;
+        if (_0x228862 <= _0x1241f8) {
+            _0x1241f8 = _0x228862;
+        }
+    }
+    console['log'](_0x1241f8);
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

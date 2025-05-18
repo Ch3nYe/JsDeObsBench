@@ -1,0 +1,13 @@
+'use strict';
+const main = _0x2847d6 => {
+    let _0x4c1444 = _0x2847d6['split']('\x0a')[0x0]['split']('\x20')['map'](_0x1ef1ea => Number(_0x1ef1ea));
+    let _0x26a7aa = _0x4c1444[0x0], _0x3c7db7 = _0x4c1444[0x1], _0x35edd0 = _0x4c1444[0x2];
+    let _0x6ac359 = 'NO';
+    for (let _0xb5e6cc = 0x1; _0xb5e6cc <= _0x3c7db7; _0xb5e6cc++) {
+        if (_0x26a7aa * _0xb5e6cc % _0x3c7db7 == _0x35edd0) {
+            _0x6ac359 = 'YES';
+        }
+    }
+    console['log'](_0x6ac359);
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

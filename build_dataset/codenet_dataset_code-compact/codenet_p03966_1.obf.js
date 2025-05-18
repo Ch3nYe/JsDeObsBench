@@ -1,0 +1,1 @@
+function Main(input){TT=0x0;AA=0x0;input=input['split']('\x0a');N=input[0x0];for(i=0x1;i<=N;i++){tmp=input[i]['split']('\x20');T=tmp[0x0]*0x1;A=tmp[0x1]*0x1;if(TT<=T&&AA<=A){TT=T;AA=A;}else{ratioT=TT/T;ratioA=AA/A;ratio=Math['ceil'](Math['max'](ratioT,ratioA));TT=T*ratio;AA=A*ratio;}}console['log'](TT+AA);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

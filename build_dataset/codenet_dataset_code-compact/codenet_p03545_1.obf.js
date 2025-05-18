@@ -1,0 +1,1 @@
+'use strict';var lines=require('fs')['readFileSync'](0x0,'utf8')['split']('\x0a');var str=lines[0x0];var n=str['length']-0x1;var dfs=(i,sum,order)=>{if(i===n)return eval(order+str[n])==0x7?order+str[n]:'';var temp=dfs(i+0x1,sum,order+str[i]+'+');return temp?temp:dfs(i+0x1,sum,order+str[i]+'-');};var ans=dfs(0x0,0x0,'');console['log'](ans?ans+'=7':'');

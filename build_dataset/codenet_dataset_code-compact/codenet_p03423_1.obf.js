@@ -1,0 +1,1 @@
+function main(input){input=input['trim']();const a=parseInt(input['split']('\x20')[0x0],0xa);console['log'](Math['floor'](a/0x3));}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,22 @@
+(function (input) {
+    var mjebJG = {
+        'epjCU': function (x, y) {
+            return x == y;
+        },
+        'naXzh': function (x, y) {
+            return x < y;
+        }
+    };
+    var p = input['replace'](/\n$/, '')['split']('\x0a')['map'](Number);
+    var n = p['length'];
+    for (var i = 0x0; mjebJG['naXzh'](i, n); i++) {
+        var g = p['shift']();
+        var s = [];
+        g['toString'](0x2)['split']('')['reverse']()['map'](function (e, i) {
+            if (mjebJG['epjCU'](e, 0x1)) {
+                s['push'](Math['pow'](0x2, i));
+            }
+        });
+        console['log'](s['join']('\x20'));
+    }
+}(require('fs')['readFileSync']('/dev/stdin', 'utf8')));

@@ -1,0 +1,24 @@
+'use strict';
+function main(_0x46fffb) {
+    _0x46fffb = _0x46fffb['split'](/\r?\n/);
+    _0x46fffb = _0x46fffb[0x1]['split']('\x20')['map'](_0x141e82 => ~~_0x141e82)['sort']((_0x1da187, _0x3fefb6) => _0x3fefb6 - _0x1da187);
+    let _0x20ed29 = 0x0;
+    let _0xeabf60 = [];
+    let _0x59cba8 = _0x46fffb[0x0];
+    for (let _0x1f6de8 = 0x1; _0x1f6de8 < _0x46fffb['length']; _0x1f6de8++) {
+        if (_0x59cba8 == _0x46fffb[_0x1f6de8]) {
+            _0xeabf60['push'](_0x59cba8);
+            _0xeabf60['push'](_0x46fffb[_0x1f6de8]);
+            _0x59cba8 = 0x0;
+        } else {
+            _0x59cba8 = _0x46fffb[_0x1f6de8];
+        }
+    }
+    if (_0xeabf60['length'] >= 0x4) {
+        _0x20ed29 = _0xeabf60[0x0] * _0xeabf60[0x3];
+        console['log'](_0x20ed29);
+    } else {
+        console['log'](0x0);
+    }
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

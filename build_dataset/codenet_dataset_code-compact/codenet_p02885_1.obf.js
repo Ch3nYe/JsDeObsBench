@@ -1,0 +1,1 @@
+function Main(input){var args=input['trim']()['split']('\x20')['map'](Number);var nums=args[0x1]*0x2;var ans=0x0;if(nums<=args[0x0]){ans=args[0x0]-nums;}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var Arr=input['trim']()['split']('\x0a');Arr['forEach'](function(v){v=v['replace'](/@(\d)(.)/g,function(s,s1,s2){return Array(s1-0x0+0x1)['join'](s2);});console['log'](v);});

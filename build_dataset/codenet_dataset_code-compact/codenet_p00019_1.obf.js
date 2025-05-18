@@ -1,0 +1,1 @@
+function main(input){var ans=0x1;var inputNum=toInt(input);for(var i=0x1;i<=input;i++){ans=ans*i;}console['log'](ans);}function toInt(str){return parseInt(str,0xa);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

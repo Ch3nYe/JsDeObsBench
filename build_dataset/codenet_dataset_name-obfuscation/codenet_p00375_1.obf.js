@@ -1,0 +1,3 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var a = input - 0x0;
+console['log']((a - 0x1e) / 0x2);

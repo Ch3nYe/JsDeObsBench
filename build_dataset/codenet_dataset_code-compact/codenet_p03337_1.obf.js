@@ -1,0 +1,1 @@
+function main(input){const a=parseInt(input['split']('\x20')[0x0],0xa);const b=parseInt(input['split']('\x20')[0x1],0xa);ptnAdd=a+b;ptnSub=a-b;ptnMul=a*b;ans=Math['max']['apply'](null,[ptnAdd,ptnSub,ptnMul]);console['log'](ans);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

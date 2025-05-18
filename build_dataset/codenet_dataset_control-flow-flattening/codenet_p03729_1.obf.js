@@ -1,0 +1,20 @@
+'use strict';
+const main = arg => {
+    const nrjVUD = {
+        'wDkHC': function (x, y) {
+            return x == y;
+        }
+    };
+    const S = arg['split']('\x0a')[0x0]['split']('\x20');
+    let tail = S[0x0]['split']('')['pop']();
+    for (let i = 0x1; i < S['length']; i++) {
+        if (nrjVUD['wDkHC'](tail, S[i]['split']('')[0x0])) {
+            tail = S[i]['split']('')['pop']();
+        } else {
+            console['log']('NO');
+            return;
+        }
+    }
+    console['log']('YES');
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

@@ -1,0 +1,29 @@
+'use strict';
+const main = arg => {
+    const jxxGhx = {
+        'TwdgG': function (x, y) {
+            return x < y;
+        },
+        'CBayN': function (x, y) {
+            return x % y;
+        },
+        'ZRObM': function (x, y) {
+            return x % y;
+        }
+    };
+    arg = arg['trim']()['split']('\x0a');
+    const N = ~~arg[0x0];
+    const b = arg[0x1]['split']('\x20')['map'](n => ~~n);
+    let answer = [];
+    for (let i = 0x0; jxxGhx['TwdgG'](i, N); i++) {
+        if (jxxGhx['CBayN'](i, 0x2) === 0x0) {
+            answer['push'](b[i]);
+        } else {
+            answer['unshift'](b[i]);
+        }
+    }
+    if (jxxGhx['ZRObM'](N, 0x2) !== 0x0)
+        answer = answer['reverse']();
+    console['log'](answer['join']('\x20'));
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

@@ -1,0 +1,1 @@
+function main(input){var R=input[0x0]-0x0;if(R<0x4b0)console['log']('ABC');else if(R<0xaf0)console['log']('ARC');else console['log']('AGC');}main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']()['split']('\x0a'));

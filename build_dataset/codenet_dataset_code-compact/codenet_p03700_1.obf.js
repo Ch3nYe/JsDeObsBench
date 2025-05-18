@@ -1,0 +1,1 @@
+console['log']((args=>{const [[N,A,B],...h]=args['trim']()['split']`\n`['map'](r=>r['split']` `['map'](v=>v|0x0));let ok=Math['ceil'](0x3b9aca00/B),ng=0x0;bisect:while(ok>ng+0x1){let m=ok+ng>>0x1,k=m;for(let i=0x0;i<N;i++){let r=h[i]-m*B;if(r<=0x0)continue;k-=Math['ceil'](r/(A-B));}if(k>=0x0)ok=m;else ng=m;}return''+ok;})(require('fs')['readFileSync']('/dev/stdin','utf8')));

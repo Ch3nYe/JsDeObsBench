@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{const input=arg['trim']()['split']('\x0a');let x=Number(input[0x0]['split']('\x20')[0x0]);if(x%0xb>0x6){console['log'](Math['floor'](x/0xb)*0x2+0x2);}else if(x%0xb>0x0){console['log'](Math['floor'](x/0xb)*0x2+0x1);}else{console['log'](Math['floor'](x/0xb)*0x2);}};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

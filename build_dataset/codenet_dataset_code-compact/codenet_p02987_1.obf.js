@@ -1,0 +1,1 @@
+function main(input){const inputList=input['split']('');const list=[];inputList['forEach'](il=>{if(!list['some'](l=>l===il)){list['push'](il);}});const result=list['length']===0x2?'Yes':'No';console['log'](result);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

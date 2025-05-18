@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');var arr=input[0x1]['split']('\x20')['map'](Number);var m=0x0;var n=0x0;for(var i=0x0;i<arr['length'];i++){if(arr[i]%0x2==0x0)m++;else n++;}console['log'](n%0x2==0x0&&(n/0x2+m)%0x2==0x0?'YES':'NO');}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

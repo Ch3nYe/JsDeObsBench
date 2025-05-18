@@ -1,0 +1,1 @@
+main=function(input){var data=input['split']('\x20');var n=parseInt(data[0x0]);var a=parseInt(data[0x1]);var b=parseInt(data[0x2]);var ans=(n-0x2)*(b-a)+0x1;console['log'](Math['max'](ans,0x0));};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

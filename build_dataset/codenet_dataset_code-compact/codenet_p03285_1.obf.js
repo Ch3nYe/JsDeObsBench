@@ -1,0 +1,1 @@
+'use strict';function Main(input){let N=Number(input);const func=()=>{if(N<0x4){console['log']('No');}else if(N%0x4===0x0){console['log']('Yes');}else if(N%0x7===0x0){console['log']('Yes');}else{N-=0x4;func();}};func();};Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

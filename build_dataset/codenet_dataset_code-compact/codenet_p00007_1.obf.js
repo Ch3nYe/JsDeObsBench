@@ -1,0 +1,1 @@
+function main(){var debt=0x186a0;for(var i=0x0;i<input['trim']()-0x0;i++){debt=Math['ceil'](debt*1.05/0x3e8)*0x3e8;}console['log'](debt);}var input='';process['stdin']['resume']();process['stdin']['setEncoding']('utf8');process['stdin']['on']('data',function(chunk){input+=chunk;});process['stdin']['on']('end',function(){main();});

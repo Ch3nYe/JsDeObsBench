@@ -1,0 +1,1 @@
+function Main(input){var data=input['split']('\x0a');var split=parseInt(data[0x0])/0x2;var cdn=[];for(let i=0x0;i<data[0x1]['length'];i+=split){cdn['push'](data[0x1]['slice'](i,i+split));}if(cdn[0x0]==cdn[0x1]){console['log']('Yes');}else{console['log']('No');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

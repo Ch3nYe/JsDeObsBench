@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var Arr=input['trim']()['split']('\x0a');Arr['shift']();var obj={};Arr['forEach'](function(v){var arr=v['split']('\x20');if(arr[0x0]=='insert')obj[arr[0x1]]=!![];if(arr[0x0]=='find')console['log'](obj['hasOwnProperty'](arr[0x1])?'yes':'no');});

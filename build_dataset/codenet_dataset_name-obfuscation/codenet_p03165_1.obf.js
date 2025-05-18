@@ -1,0 +1,36 @@
+function main(_0x19ea5f) {
+    const _0x26d081 = _0x19ea5f['split']('\x0a');
+    const _0xd867a2 = _0x26d081['shift']()['split']('');
+    const _0x30ff66 = _0x26d081['shift']()['split']('');
+    dp = [];
+    for (var _0x121e4f = 0x0; _0x121e4f <= _0xd867a2['length']; _0x121e4f++) {
+        dp['push'](Array(_0x30ff66['length'] + 0x1)['fill'](0x0));
+    }
+    for (var _0x121e4f = 0x1; _0x121e4f <= _0xd867a2['length']; _0x121e4f++) {
+        for (var _0x41a6b0 = 0x1; _0x41a6b0 <= _0x30ff66['length']; _0x41a6b0++) {
+            if (_0xd867a2[_0x121e4f - 0x1] == _0x30ff66[_0x41a6b0 - 0x1]) {
+                dp[_0x121e4f][_0x41a6b0] = Math['max'](dp[_0x121e4f][_0x41a6b0], dp[_0x121e4f - 0x1][_0x41a6b0 - 0x1] + 0x1);
+            } else {
+                dp[_0x121e4f][_0x41a6b0] = Math['max'](dp[_0x121e4f - 0x1][_0x41a6b0], dp[_0x121e4f][_0x41a6b0 - 0x1]);
+            }
+        }
+    }
+    var _0x121e4f = _0xd867a2['length'];
+    var _0x41a6b0 = _0x30ff66['length'];
+    var _0x41bdea = [];
+    while (_0x121e4f != 0x0 && _0x41a6b0 != 0x0) {
+        if (_0xd867a2[_0x121e4f - 0x1] == _0x30ff66[_0x41a6b0 - 0x1]) {
+            _0x41bdea['unshift'](_0xd867a2[_0x121e4f - 0x1]);
+            _0x121e4f--;
+            _0x41a6b0--;
+        } else {
+            if (dp[_0x121e4f - 0x1][_0x41a6b0] < dp[_0x121e4f][_0x41a6b0 - 0x1]) {
+                _0x41a6b0--;
+            } else {
+                _0x121e4f--;
+            }
+        }
+    }
+    console['log'](_0x41bdea['join'](''));
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

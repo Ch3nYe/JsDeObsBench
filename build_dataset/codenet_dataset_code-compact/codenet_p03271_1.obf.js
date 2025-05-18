@@ -1,0 +1,1 @@
+var p=require('fs')['readFileSync']('/dev/stdin','utf8');p=p['split']('\x0a')['map'](a=>+a);console['log'](main());function main(){var N='No';var n=p[0x0];var t=0x0;for(i=0x1;i<=n;i++){while(t>i){if(p[i]!==i)return N;i++;}var j=i;while(p[j]!==i){j++;if(p[j]!==j)return N;j++;}t=j;while(j>i){if(p[j-0x2]<p[j-0x1])return N;p[j]=p[j-0x2];j-=0x2;}}return'Yes';}

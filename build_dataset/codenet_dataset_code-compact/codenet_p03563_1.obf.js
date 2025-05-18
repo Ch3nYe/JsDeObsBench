@@ -1,0 +1,1 @@
+'use strict';function main(s){s=s['split']('\x0a');const r=Number(s[0x0]);const g=Number(s[0x1]);let ans=g+(g-r);console['log'](ans);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

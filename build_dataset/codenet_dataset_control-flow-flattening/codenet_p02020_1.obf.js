@@ -1,0 +1,24 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var [n, arr] = input['trim']()['split']('\x0a');
+arr = arr['split']('\x20')['map'](Number);
+arr['sort'](function (a, b) {
+    var TSGuJI = {
+        'zDqBe': function (x, y) {
+            return x - y;
+        }
+    };
+    return TSGuJI['zDqBe'](a, b);
+});
+var sum = arr['reduce'](function (a, b) {
+    return a + b;
+});
+if (sum % 0x2 == 0x0)
+    console['log'](sum / 0x2);
+else {
+    for (var i = 0x0; i < arr['length']; i++) {
+        if (arr[i] % 0x2 == 0x1) {
+            console['log']((sum - arr[i]) / 0x2);
+            break;
+        }
+    }
+}

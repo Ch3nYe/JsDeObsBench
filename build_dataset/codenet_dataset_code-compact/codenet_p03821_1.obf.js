@@ -1,0 +1,1 @@
+function Main(s){s=s['split']('\x0a');var n=+s[0x0];for(var i=0x0;i<n;i++){s[i]=s[i+0x1]['split']('\x20')['map'](a=>+a);}var ans=0x0;for(i=n-0x1;i>=0x0;i--){var x=(s[i][0x0]+ans)%s[i][0x1];if(x)ans+=s[i][0x1]-x;}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

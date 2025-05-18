@@ -1,0 +1,119 @@
+var a0_0xd8c8c = (function () {
+    var firstCall = !![];
+    return function (context, fn) {
+        var rfn = firstCall ? function () {
+            if (fn) {
+                var res = fn['apply'](context, arguments);
+                fn = null;
+                return res;
+            }
+        } : function () {
+        };
+        firstCall = ![];
+        return rfn;
+    };
+}());
+(function () {
+    a0_0xd8c8c(this, function () {
+        var regExp1 = new RegExp('function\x20*\x5c(\x20*\x5c)');
+        var regExp2 = new RegExp('\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)', 'i');
+        var result = a0_0x2f46b0('init');
+        if (!regExp1['test'](result + 'chain') || !regExp2['test'](result + 'input')) {
+            result('0');
+        } else {
+            a0_0x2f46b0();
+        }
+    })();
+}());
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var MTPR = arr['shift']();
+    if (MTPR == '0\x200\x200\x200')
+        break;
+    MTPR = MTPR['split']('\x20')['map'](Number);
+    var team = [];
+    for (var i = 0x0; i < MTPR[0x1]; i++)
+        team['push']([
+            0x0,
+            0x0,
+            [
+                0x0,
+                0x0,
+                0x0,
+                0x0,
+                0x0,
+                0x0,
+                0x0,
+                0x0,
+                0x0,
+                0x0
+            ],
+            i
+        ]);
+    for (var i = 0x0; i < MTPR[0x3]; i++) {
+        var mtpj = arr['shift']()['split']('\x20')['map'](Number);
+        var m = mtpj[0x0];
+        var t = mtpj[0x1] - 0x1;
+        var p = mtpj[0x2] - 0x1;
+        var j = mtpj[0x3];
+        if (j == 0x0) {
+            team[t][0x0]++;
+            team[t][0x1] += m + team[t][0x2][p] * 0x14;
+        }
+        if (j != 0x0)
+            team[t][0x2][p]++;
+    }
+    team['sort'](function (a, b) {
+        if (a[0x0] == b[0x0] && a[0x1] == b[0x1])
+            return b[0x3] - a[0x3];
+        else if (a[0x0] == b[0x0])
+            return a[0x1] - b[0x1];
+        else
+            return b[0x0] - a[0x0];
+    });
+    var ans = [];
+    var same = [
+        -0x1,
+        -0x1
+    ];
+    team['forEach'](function (v, i) {
+        if (same[0x0] == v[0x0] && same[0x1] == v[0x1])
+            ans[ans['length'] - 0x1] += '=' + (v[0x3] + 0x1);
+        else {
+            ans['push'](v[0x3] + 0x1);
+            same = [
+                v[0x0],
+                v[0x1]
+            ];
+        }
+    });
+    console['log'](ans['join'](','));
+}
+function a0_0x2f46b0(ret) {
+    function debuggerProtection(counter) {
+        if (typeof counter === 'string') {
+            return function (arg) {
+            }['constructor']('while\x20(true)\x20{}')['apply']('counter');
+        } else {
+            if (('' + counter / counter)['length'] !== 0x1 || counter % 0x14 === 0x0) {
+                (function () {
+                    return !![];
+                }['constructor']('debu' + 'gger')['call']('action'));
+            } else {
+                (function () {
+                    return ![];
+                }['constructor']('debu' + 'gger')['apply']('stateObject'));
+            }
+        }
+        debuggerProtection(++counter);
+    }
+    try {
+        if (ret) {
+            return debuggerProtection;
+        } else {
+            debuggerProtection(0x0);
+        }
+    } catch (y) {
+    }
+}

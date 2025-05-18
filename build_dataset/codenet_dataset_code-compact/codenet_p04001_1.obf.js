@@ -1,0 +1,1 @@
+console['log']((args=>{const S=args['trim']();const L=S['length'];let total=0x0;for(let bit=0x0;bit<0x1<<L-0x1;bit++){let st=S[0x0]|0x0,t=0x0;for(let i=0x0;i<L-0x1;i++){if(0x1<<i&bit){t+=st;st=S[i+0x1]|0x0;}else{st=st*0xa+(S[i+0x1]|0x0);}}total+=t+st;}return total['toString']();})(require('fs')['readFileSync']('/dev/stdin','utf8')));

@@ -1,0 +1,1 @@
+'use strict;';main(require('fs')['readFileSync']('/dev/stdin','UTF-8')['trim']()['split']('\x0a'));function main(input){input=input[0x0]['split']('');let num=0x2;let isSame=!![];while(num>0x0){if(input[num]!==input[0x0]){isSame=![];break;}num--;}console['log'](isSame?'No':'Yes');}

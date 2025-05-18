@@ -1,0 +1,15 @@
+'use strict';
+function main(_0x45e872) {
+    const _0x5d7f2a = _0x45e872['split']('\x0a')[0x0];
+    const _0x47ab11 = _0x45e872['split']('\x0a')[0x1];
+    let _0xf7a58c = _0x47ab11['split']('\x20');
+    const _0xfb28fb = Number(_0x5d7f2a['split']('\x20')[0x0]);
+    const _0x54bc2d = Number(_0x5d7f2a['split']('\x20')[0x1]);
+    let _0x116a60 = 0x0;
+    const _0x470260 = Math['floor'](_0xfb28fb / 0x2);
+    for (let _0x1a1072 = 0x0; _0x1a1072 < _0x54bc2d; _0x1a1072++) {
+        _0x116a60 += Math['abs'](0x0 - _0xf7a58c[_0x1a1072]) > Math['abs'](_0x470260 - _0xf7a58c[_0x1a1072]) ? Math['abs'](_0x470260 - _0xf7a58c[_0x1a1072]) : Math['abs'](0x0 - _0xf7a58c[_0x1a1072]);
+    }
+    console['log'](_0x116a60);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

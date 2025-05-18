@@ -1,0 +1,1 @@
+function main(input){input=input['split']('\x0a');var answer=input[0x0];var answerA=input[0x0]['toUpperCase']();if(answer==answerA){console['log']('A');}else{console['log']('a');}}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+function Main(input){let Red=0x0;let Blue=0x0;const input_line=input['split']('\x0a');inputS=input_line[0x1]['split']('');for(i=0x0;i<inputS['length'];i++){if(inputS[i]==='R'){Red++;}else{Blue++;}}console['log'](Red>Blue?'Yes':'No');}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

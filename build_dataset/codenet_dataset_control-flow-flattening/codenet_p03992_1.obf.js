@@ -1,0 +1,6 @@
+function Main(input) {
+    input = input['split']('');
+    input['splice'](0x4, 0x0, '\x20');
+    console['log'](input['join'](''));
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']());

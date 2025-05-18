@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');var N=parseInt(input[0x0],0xa);if(parseInt(N/0xa)===0x0){console['log']('Yes');return;}var Sum=0x0;var Mod=N;for(var i=0x5f5e100;i>=0xa;i=i/0xa){Sum+=parseInt(Mod/ i);Mod=Mod%i;}Sum+=Mod;if(N%Sum===0x0){console['log']('Yes');}else{console['log']('No');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

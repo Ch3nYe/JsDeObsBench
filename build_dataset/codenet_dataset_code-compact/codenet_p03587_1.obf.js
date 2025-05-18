@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{arg=arg['trim']()['split']('\x0a');const S=arg[0x0]['split']('');console['log'](S['filter'](n=>n==='1')['length']);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

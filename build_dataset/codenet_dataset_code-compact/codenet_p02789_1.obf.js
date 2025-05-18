@@ -1,0 +1,1 @@
+function main(input){var args=input['split']('\x20');var n=parseInt(args[0x0],0xa);var m=parseInt(args[0x1],0xa);if(n===m){return'Yes';}else{return'No';}}console['log'](main(require('fs')['readFileSync']('/dev/stdin','utf8')));

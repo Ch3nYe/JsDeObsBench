@@ -1,0 +1,11 @@
+function Main(input) {
+    const numbers = input['split']('\x20')['map'](n => Number(n));
+    const p1 = numbers[0x0] * numbers[0x1];
+    const p2 = numbers[0x2];
+    if (p1 > p2) {
+        console['log'](p2);
+    } else {
+        console['log'](p1);
+    }
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

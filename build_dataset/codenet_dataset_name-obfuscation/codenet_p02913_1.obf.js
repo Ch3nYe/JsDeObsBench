@@ -1,0 +1,22 @@
+const main = _0x464c6f => {
+    var _0x364f48 = _0x464c6f[0x0] - 0x0;
+    var _0x186c75 = _0x464c6f[0x1];
+    var _0x2777a2 = 0x0;
+    var _0x574d54 = 0x0;
+    var _0x578445 = ~~(_0x364f48 / 0x2);
+    _0x2c83e2:
+        while (_0x574d54 <= _0x578445) {
+            var _0x3f18c9 = ~~((_0x574d54 + _0x578445) / 0x2);
+            for (var _0x3f9c7a = 0x0; _0x3f9c7a < _0x364f48 - _0x3f18c9; _0x3f9c7a++) {
+                var _0x363a8d = _0x186c75['substring'](_0x3f9c7a, _0x3f9c7a + _0x3f18c9);
+                if (_0x186c75['lastIndexOf'](_0x363a8d) >= _0x3f9c7a + _0x3f18c9) {
+                    _0x574d54 = _0x3f18c9 + 0x1;
+                    _0x2777a2 = _0x3f18c9;
+                    continue _0x2c83e2;
+                }
+            }
+            _0x578445 = _0x3f18c9 - 0x1;
+        }
+    console['log'](_0x2777a2);
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'UTF-8')['trim']()['split']('\x0a'));

@@ -1,0 +1,31 @@
+function euc(_0x5d7f8a, _0x237796) {
+    var _0x13eace = _0x5d7f8a;
+    var _0x37c0de = _0x237796;
+    var _0x55db5d = 0x1;
+    var _0x1ecd1f = 0x0;
+    var _0x9993d0 = 0x0;
+    var _0x556e23 = 0x1;
+    while (_0x37c0de > 0x0) {
+        var _0x1762f8 = Math['floor'](_0x13eace / _0x37c0de);
+        var _0x47ba81 = _0x13eace % _0x37c0de;
+        var _0x7a804c = _0x55db5d - _0x1762f8 * _0x1ecd1f;
+        var _0x2cffe8 = _0x9993d0 - _0x1762f8 * _0x556e23;
+        _0x13eace = _0x37c0de;
+        _0x37c0de = _0x47ba81;
+        _0x55db5d = _0x1ecd1f;
+        _0x1ecd1f = _0x7a804c;
+        _0x9993d0 = _0x556e23;
+        _0x556e23 = _0x2cffe8;
+    }
+    return [
+        _0x55db5d,
+        _0x9993d0
+    ];
+}
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']();
+var nums = input['split']('\x20')['map'](function (_0x46aede) {
+    return +_0x46aede;
+});
+var a = nums[0x0];
+var b = nums[0x1];
+console['log'](euc(a, b)['join']('\x20'));

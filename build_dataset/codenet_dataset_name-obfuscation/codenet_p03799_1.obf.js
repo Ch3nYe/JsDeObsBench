@@ -1,0 +1,15 @@
+function Main(_0x10d095) {
+    var _0x2b2f34 = _0x10d095['split']('\x20');
+    var _0x72d4fa = Number(_0x2b2f34[0x0]);
+    var _0x4c74a8 = Number(_0x2b2f34[0x1]);
+    var _0x166387 = 0x0;
+    if (_0x72d4fa > _0x4c74a8 / 0x2) {
+        _0x166387 += Math['floor'](_0x4c74a8 / 0x2);
+    } else {
+        _0x166387 += _0x72d4fa;
+        _0x4c74a8 -= _0x166387 * 0x2;
+        _0x166387 += Math['floor'](_0x4c74a8 / 0x4);
+    }
+    console['log'](_0x166387);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

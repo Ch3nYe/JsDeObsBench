@@ -1,0 +1,8 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var inputArray = input['split']('\x20');
+var a = inputArray[0x0];
+var b = inputArray[0x1];
+var c = inputArray[0x2];
+var d = inputArray[0x3];
+var result = a * b > c * d ? a * b : c * d;
+console['log'](result);

@@ -1,0 +1,23 @@
+function main(input) {
+    const aSmWpP = {
+        'RQcfV': function (x, y) {
+            return x < y;
+        },
+        'jfzKx': function (x, y) {
+            return x + y;
+        }
+    };
+    const list = input['split']('\x0a')['slice'](0x1)['map'](s => Array['from'](s)['sort']()['join'](''));
+    let totalCount = 0x0;
+    const map = new Map();
+    for (let i = 0x0; aSmWpP['RQcfV'](i, list['length']); i++) {
+        if (!map['has'](list[i])) {
+            map['set'](list[i], 0x1);
+            continue;
+        }
+        totalCount += map['get'](list[i]);
+        map['set'](list[i], aSmWpP['jfzKx'](map['get'](list[i]), 0x1));
+    }
+    console['log'](totalCount);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

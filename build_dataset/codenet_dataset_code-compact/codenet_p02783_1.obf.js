@@ -1,0 +1,1 @@
+function Main(input){const args=input['split']('\x20');const H=parseInt(args[0x0],0xa);const A=parseInt(args[0x1],0xa);const ans=Math['ceil'](H/A);console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

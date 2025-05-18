@@ -1,0 +1,1 @@
+function Main(input){var dataList=input['split']('\x0a');var data=dataList[0x0]['split']('\x20');var n=data[0x0];var d=data[0x1];var checkNum=d*0x2+0x1;var num=Math['floor'](n/checkNum);var rest=n%checkNum;if(rest>0x0)num+=0x1;console['log'](num);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

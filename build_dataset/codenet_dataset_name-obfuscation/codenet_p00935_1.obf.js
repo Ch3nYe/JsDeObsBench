@@ -1,0 +1,21 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['replace'](/\n/g, '\x20')['split']('\x20');
+var n = arr['shift']() - 0x0;
+var a = [];
+for (var i = 0x0; i < 0x2710; i++)
+    a[i] = ![];
+for (var i = 0x0; i < n; i++) {
+    a[arr[i] - 0x0] = !![];
+    if (i + 0x1 < n)
+        a[arr[i] + arr[i + 0x1] - 0x0] = !![];
+    if (i + 0x2 < n)
+        a[arr[i] + arr[i + 0x1] + arr[i + 0x2] - 0x0] = !![];
+    if (i + 0x3 < n)
+        a[arr[i] + arr[i + 0x1] + arr[i + 0x2] + arr[i + 0x3] - 0x0] = !![];
+}
+for (var i = 0x0; i < 0x2710; i++) {
+    if (a[i] == ![]) {
+        console['log'](i);
+        break;
+    }
+}

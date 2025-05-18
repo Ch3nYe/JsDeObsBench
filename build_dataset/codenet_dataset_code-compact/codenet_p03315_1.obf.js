@@ -1,0 +1,1 @@
+function main(input){var input=input;var sum=0x0;for(var i=0x0;i<0x4;i++){if(input[i]=='+'){sum+=0x1;}else{sum-=0x1;}}console['log'](sum);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,37 @@
+function Main(_0x475026) {
+    _0x475026 = _0x475026['split']('\x0a');
+    const _0x321a98 = +_0x475026[0x0];
+    if (_0x321a98 <= 0x2) {
+        console['log'](0x1);
+        return;
+    }
+    const _0x5409c9 = _0x475026['slice'](0x1)['map'](_0x283641 => _0x283641['split']('\x20')['map'](_0x1c44df => +_0x1c44df));
+    const _0x4a4e02 = {};
+    _0x5409c9['forEach'](_0x3fa8ad => {
+        _0x5409c9['forEach'](_0x257519 => {
+            if (_0x3fa8ad === _0x257519)
+                return;
+            const _0x5ba09a = [
+                _0x257519[0x0] - _0x3fa8ad[0x0],
+                _0x257519[0x1] - _0x3fa8ad[0x1]
+            ];
+            const _0x2fd296 = _0x5ba09a['join']('_');
+            _0x4a4e02[_0x2fd296] = _0x4a4e02[_0x2fd296] == null ? 0x1 : _0x4a4e02[_0x2fd296] + 0x1;
+        });
+    });
+    const _0x5700bc = Object['keys'](_0x4a4e02)['reduce']((_0x45fe5d, _0x226bd7) => {
+        const _0x59ca07 = _0x4a4e02[_0x226bd7];
+        return _0x59ca07 > _0x45fe5d[0x0] ? [
+            _0x59ca07,
+            _0x226bd7
+        ] : [
+            _0x45fe5d[0x0],
+            _0x45fe5d[0x1]
+        ];
+    }, [
+        0x0,
+        ''
+    ]);
+    console['log'](0x1 + (_0x321a98 - 0x1) - _0x5700bc[0x0]);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

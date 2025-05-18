@@ -1,0 +1,17 @@
+function Main(_0x5ef2ba) {
+    _0x5ef2ba = _0x5ef2ba['split']('\x0a');
+    var [_0x898ee0, _0xc77830] = _0x5ef2ba[0x0]['split']('\x20')['map'](_0x1f6648 => parseInt(_0x1f6648, 0xa));
+    var _0x5180f4 = _0x5ef2ba[0x1]['split']('\x20');
+    for (var _0x362128 = 0x0; _0x362128 < _0xc77830; _0x362128++) {
+        var [_0x143200, _0x22aab7] = _0x5ef2ba[_0x362128 + 0x2]['split']('\x20')['map'](_0xf10629 => parseInt(_0xf10629, 0xa));
+        var _0x2b8a08 = [];
+        for (var _0x2ac2d9 = _0x143200 - 0x1; _0x2ac2d9 < _0x22aab7; _0x2ac2d9++) {
+            var _0x53ad22 = _0x5180f4[_0x2ac2d9];
+            if (_0x2b8a08['indexOf'](_0x53ad22) === -0x1) {
+                _0x2b8a08['push'](_0x53ad22);
+            }
+        }
+        console['log'](_0x2b8a08['length']);
+    }
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

@@ -1,0 +1,1 @@
+var x=require('fs')['readFileSync']('/dev/stdin','utf8');var array=x['split']('\x20')['map'](Number);var a=array[0x0];var b=array[0x1];var d=Math['floor'](a/b);var r=a%b;var f=(a/b)['toFixed'](0x5);console['log'](d+'\x20'+r+'\x20'+f);

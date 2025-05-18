@@ -1,0 +1,23 @@
+config = {
+    'input': '/dev/stdin',
+    'newline': '\x0a'
+};
+M = require('fs')['readFileSync'](config['input'], 'ascii')['trim']()['split'](config['newline']);
+M = M['map'](function (line) {
+    return line['split']('\x20')['map'](Number);
+});
+n = M[0x0][0x0];
+min = {};
+for (i = 0x1; i <= n; i++)
+    min[i] = {};
+for (i = 0x1; i <= n; i++)
+    min[i][i] = 0x0;
+for (i = 0x1; i < n; i++) {
+    for (j = 0x1, k = 0x1 + i; k <= n; j++, k++) {
+        min[j][k] = Number['MAX_VALUE'];
+        for (l = j; l < k; l++) {
+            min[j][k] = Math['min'](min[j][k], M[j][0x0] * M[l][0x1] * M[k][0x1] + min[j][l] + min[l + 0x1][k]);
+        }
+    }
+}
+console['log'](min[0x1][n]);

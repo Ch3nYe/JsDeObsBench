@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var arr=input['trim']()['split']('\x0a')['map'](Number);while(!![]){var n=arr['shift']();if(n==0x0)break;var max=0x0;for(var i=0x0;i<=0x36;i++){for(var j=0x0;j<=0x60;j++){var sum=i*i*i+j*(j+0x1)*(j+0x2)/0x6;if(n>=sum)max=Math['max'](max,sum);}}console['log'](max);}

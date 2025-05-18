@@ -1,0 +1,8 @@
+'use strict';
+function main(_0x2fb306) {
+    const _0x2ba171 = _0x2fb306['split']('\x0a')['filter'](_0x2f5cab => _0x2f5cab !== '');
+    const _0x4505bd = _0x2ba171[0x0];
+    const _0x48f236 = _0x4505bd['split']('')['map']((_0x4cd358, _0x3fe69c) => _0x4cd358 === 'W' ? _0x3fe69c : -0x1)['filter'](_0x30e749 => _0x30e749 !== -0x1)['reduce']((_0x34b4f5, _0xf05849, _0x310eee) => _0x34b4f5 + _0xf05849 - _0x310eee, 0x0);
+    console['log'](_0x48f236);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

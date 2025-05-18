@@ -1,0 +1,1 @@
+'use strict';function main(input){var line=input['split']('\x20');console['log'](line[0x2]+'\x20'+line[0x0]+'\x20'+line[0x1]);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+function myout(text){console['log'](text);}function Main(input){input=parseInt(input['trim']());var check=[0x0,0x6f,0xde,0x14d,0x1bc,0x22b,0x29a,0x309,0x378,0x3e7];for(var i=0x0;i<check['length']-0x1;i++){if(check[i]<input&&check[i+0x1]>input){myout(check[i+0x1]);return;}else if(check[i]==input){myout(check[i]);return;}}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

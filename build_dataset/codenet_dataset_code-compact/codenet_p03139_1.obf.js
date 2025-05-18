@@ -1,0 +1,1 @@
+function main(input){input=input['split']('\x20');var max=input[0x1]<input[0x2]?input[0x1]:input[0x2];var min=input[0x0]-input[0x1]>input[0x2]?0x0:input[0x2]-(input[0x0]-input[0x1]);console['log'](max+'\x20'+min);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

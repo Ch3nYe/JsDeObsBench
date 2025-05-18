@@ -1,0 +1,1 @@
+process['stdin']['resume']();process['stdin']['setEncoding']('utf8');var lines=[];var reader=require('readline')['createInterface']({'input':process['stdin'],'output':process['stdout']});reader['on']('line',line=>{lines['push'](line);});reader['on']('close',()=>{const N=+lines[0x0];console['log'](N%0x2?(N-0x1)/0x2:N/0x2-0x1);});

@@ -1,0 +1,31 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var TD = arr['shift']()['split']('\x20')['map'](Number);
+var T = TD[0x0];
+var D = TD[0x1];
+var t = arr['shift']()['split']('\x20')['map'](Number);
+var tA = t[0x0];
+var tB = t[0x1];
+var d = arr['shift']()['split']('\x20')['map'](Number);
+var dA = d[0x0];
+var dB = d[0x1];
+var min = Infinity;
+var i = 0x0;
+while (!![]) {
+    var vA = i * dA;
+    if (vA > D)
+        break;
+    var j = 0x0;
+    while (!![]) {
+        var vB = j * dB;
+        if (vA + vB > D)
+            break;
+        if (vA + vB != 0x0) {
+            var c = T - (tA * vA + tB * vB) / (vA + vB);
+            min = Math['min'](min, Math['abs'](c));
+        }
+        j++;
+    }
+    i++;
+}
+console['log'](min['toFixed'](0xa));

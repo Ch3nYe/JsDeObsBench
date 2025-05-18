@@ -1,0 +1,30 @@
+const input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+const list = input['trim']()['split']('\x0a');
+let [n, m] = list[0x0]['split']('\x20');
+n = Number(n);
+m = Number(m);
+let cm = list[0x1]['trim']()['split']('\x20');
+cm = cm['map'](c => Number(c));
+const dp = new Map();
+for (let i = 0x0; i < m; i++) {
+    dp['set'](cm[i], 0x1);
+}
+const max = n + 0x1;
+for (let i = 0x0; i <= n; i++) {
+    if (dp['has'](i)) {
+        continue;
+    }
+    let min = max;
+    for (let j = 0x0; j < m; j++) {
+        const target = i - cm[j];
+        if (target < 0x0 || !dp['has'](target)) {
+            continue;
+        }
+        const count = dp['get'](target);
+        min = Math['min'](count, min);
+    }
+    if (min < max) {
+        dp['set'](i, min + 0x1);
+    }
+}
+console['log'](dp['get'](n));

@@ -1,0 +1,45 @@
+process['stdin']['resume']();
+process['stdin']['setEncoding']('utf8');
+let input = '';
+process['stdin']['on']('data', function (_0x2ff40d) {
+    input += _0x2ff40d;
+});
+process['stdin']['on']('end', function () {
+    main(input['split']('\x0a'));
+});
+let count = 0x0;
+function merge(_0x70bbe0, _0xd7e45f, _0x3043f7, _0x52ee19) {
+    let _0x2e7b81 = _0x3043f7 - _0xd7e45f;
+    let _0x5ef310 = _0x52ee19 - _0x3043f7;
+    let _0x4430b6 = [];
+    let _0xab693f = [];
+    for (let _0x7e7aed = 0x0; _0x7e7aed < _0x2e7b81; _0x7e7aed++)
+        _0x4430b6['push'](_0x70bbe0[_0xd7e45f + _0x7e7aed]);
+    for (let _0xcf2492 = 0x0; _0xcf2492 < _0x5ef310; _0xcf2492++)
+        _0xab693f['push'](_0x70bbe0[_0x3043f7 + _0xcf2492]);
+    _0x4430b6['push'](Number['MAX_SAFE_INTEGER']);
+    _0xab693f['push'](Number['MAX_SAFE_INTEGER']);
+    let _0x1150dd = 0x0, _0x492a70 = 0x0;
+    for (let _0x52bb49 = _0xd7e45f; _0x52bb49 < _0x52ee19; _0x52bb49++) {
+        if (_0x4430b6[_0x1150dd] < _0xab693f[_0x492a70])
+            _0x70bbe0[_0x52bb49] = _0x4430b6[_0x1150dd++];
+        else
+            _0x70bbe0[_0x52bb49] = _0xab693f[_0x492a70++];
+        count++;
+    }
+}
+function mergeSort(_0x494a6c, _0x1e4aac, _0x152ec2, _0x24cf01) {
+    if (_0x1e4aac + 0x1 >= _0x152ec2)
+        return;
+    let _0x193a48 = Math['floor']((_0x1e4aac + _0x152ec2) / 0x2);
+    mergeSort(_0x494a6c, _0x1e4aac, _0x193a48);
+    mergeSort(_0x494a6c, _0x193a48, _0x152ec2);
+    merge(_0x494a6c, _0x1e4aac, _0x193a48, _0x152ec2);
+}
+function main(_0x7e93dd) {
+    let _0x33d43e = Number(_0x7e93dd[0x0]);
+    let _0x32ee29 = _0x7e93dd[0x1]['split']('\x20')['map'](Number);
+    mergeSort(_0x32ee29, 0x0, _0x33d43e);
+    console['log'](_0x32ee29['join']('\x20'));
+    console['log'](count);
+}

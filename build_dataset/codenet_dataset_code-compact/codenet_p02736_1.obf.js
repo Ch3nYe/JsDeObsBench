@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');for(i=0x0;i<input['length'];i=i+0x2){var N=parseInt(input[i]);var a=input[i+0x1]['split']('');var aa=a['map'](Number);for(j=N;j>0x1;j--){for(k=0x0;k<j;k++){var e=Math['abs'](aa[0x0]-aa[0x1]);aa['push'](e);aa['shift']();}aa['pop']();}console['log'](aa[0x0]);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

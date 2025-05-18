@@ -1,0 +1,1 @@
+'use strict';function Main(inputs){const input=inputs['split']('\x0a');const a=Number(input[0x0]['split']('\x20')[0x0]);const b=Number(input[0x0]['split']('\x20')[0x1]);const k=Number(input[0x0]['split']('\x20')[0x2]);console['log'](a>k?a-k:0x0,a+b>k?a+b-k:0x0);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

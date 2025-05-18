@@ -1,0 +1,1 @@
+console['log']((args=>{const [[N],D,[M],T]=args['trim']()['split']('\x0a')['map'](r=>r['split']('\x20')['map'](v=>v|0x0));D['sort']((a,b)=>a-b);T['sort']((a,b)=>a-b);let j=-0x1;Q:for(let i=0x0;i<M;i++){while(++j<N){if(D[j]>T[i])return'NO';if(D[j]===T[i])continue Q;}return'NO';}return'YES';})(require('fs')['readFileSync']('/dev/stdin','utf8')));

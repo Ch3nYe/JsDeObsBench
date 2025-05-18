@@ -1,0 +1,1 @@
+(stdin=>{var lines=stdin['trim']()['split']('\x0a');var inputs=lines['shift']()['split']('\x20')['map'](Number);console['log'](Math['floor']((inputs[0x0]*0x3+inputs[0x1])/0x2));})(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+var fs=require('fs');var inn=parseInt(fs['readFileSync'](0x0)['toString']());function isPrime(n){if(n<=0x3)return n>0x1;else if(n%0x2===0x0||n%0x3===0x0)return![];var i=0x5;while(Math['pow'](i,0x2)<=n){if(n%i===0x0||n%(i+0x2)===0x0)return![];i+=0x6;}return!![];}while(!isPrime(inn)){inn++;}console['log'](inn);

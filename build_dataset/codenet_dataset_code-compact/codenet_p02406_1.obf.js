@@ -1,0 +1,1 @@
+var readable=process['stdin'];readable['resume']();readable['setEncoding']('utf-8');readable['on']('data',function(chunk){var n=parseInt(chunk);var i=0x1;var output=[];do{var x=i;if(0x0==x%0x3){output['push']('\x20'+i);}else{do{if(0x3==x%0xa){output['push']('\x20'+i);break;}else{x/=0xa;}}while(x);}}while(++i<=n);console['log'](output['join'](''));});

@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var lines=input['trim']()['split']('\x0a');var ret=lines['filter'](function(line){var items=line['split'](',');var w=+items[0x1];var h=+items[0x2];return w/(h*h)>=0x19;});ret['forEach'](function(line){console['log'](line['split'](',')[0x0]);});

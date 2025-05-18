@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x20');var valN=input[0x0];var valK=input[0x1];if(valN<0x3){console['log']('0');return;}var count=0x0;for(var i=0x0;i+0x2<valN;i++){for(var j=0x0;j<0x5;j++){if((i*0x3f+j*0x9+0x51)%0xb==valK){count++;}}}console['log'](count);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

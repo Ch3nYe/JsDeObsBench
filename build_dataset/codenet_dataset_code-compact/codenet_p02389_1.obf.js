@@ -1,0 +1,1 @@
+(function(stdin){var lines=stdin['toString']()['split']('\x20');var x=parseInt(lines[0x0],0xa);var y=parseInt(lines[0x1],0xa);console['log'](x*y,(x+y)*0x2);}(require('fs')['readFileSync']('/dev/stdin','utf8')));

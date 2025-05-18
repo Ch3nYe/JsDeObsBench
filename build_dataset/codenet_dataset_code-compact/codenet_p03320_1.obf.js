@@ -1,0 +1,1 @@
+function Main(s){k=+s;var ans=[];var x=0x1;var y='';for(var i=0x0;i<k;i++){ans[i]=x+y;if(x===0x9){x=0x1;y+='9';}else x++;}console['log'](ans['join']('\x0a'));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

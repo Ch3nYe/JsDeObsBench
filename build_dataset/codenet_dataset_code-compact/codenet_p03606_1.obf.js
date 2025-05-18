@@ -1,0 +1,1 @@
+Main(require('fs')['readFileSync']('/dev/stdin','utf8'));function Main(args){input=args['split']('\x0a');const N=parseInt(input[0x0]);var tmp;var result=0x0;for(var i=0x1;i<=N;i++){tmp=input[i]['split']('\x20');result+=parseInt(tmp[0x1])-parseInt(tmp[0x0])+0x1;}console['log'](result);}

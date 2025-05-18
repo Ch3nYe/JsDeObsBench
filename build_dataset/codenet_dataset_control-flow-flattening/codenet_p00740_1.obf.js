@@ -1,0 +1,31 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var np = Arr['shift']();
+    if (np == '0\x200')
+        break;
+    np = np['split']('\x20')['map'](Number);
+    var n = np[0x0];
+    var p = np[0x1];
+    var sum = p;
+    var arr = [];
+    for (var i = 0x0; i < n; i++)
+        arr['push'](0x0);
+    var j = 0x0;
+    for (var i = 0x0; i < 0xf4240; i++) {
+        if (j == arr['length'])
+            j = 0x0;
+        if (p > 0x0) {
+            p--;
+            arr[j]++;
+            if (p == 0x0 && sum == arr[j]) {
+                console['log'](j);
+                break;
+            }
+        } else {
+            p = arr[j];
+            arr[j] = 0x0;
+        }
+        j++;
+    }
+}

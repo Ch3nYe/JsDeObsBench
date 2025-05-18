@@ -1,0 +1,7 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var [n, c] = arr[0x0]['split']('\x20')['map'](Number);
+var p = arr[0x1]['split']('\x20')['map'](Number);
+var sum = p['reduce']((_0xbf0324, _0x351151) => _0xbf0324 + _0x351151);
+var x = sum % (n + 0x1) == 0x0 ? 0x0 : 0x1;
+console['log'](Math['floor'](sum / (n + 0x1)) + x);

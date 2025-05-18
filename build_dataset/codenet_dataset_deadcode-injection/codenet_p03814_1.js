@@ -1,0 +1,14 @@
+function main(input) {
+  const S = input.split('');
+  let a_idx;
+  let z_idx;
+  
+  for(let i = 0; i < S.length; i++) {
+  	if (S[i] === 'A' && !a_idx) { a_idx = i; }
+    if (S[i] === 'Z') { z_idx = i; }
+  }
+  
+  console.log((z_idx - a_idx) + 1);
+}
+
+main(require('fs').readFileSync('/dev/stdin', 'utf8'));

@@ -1,0 +1,8 @@
+'use strict';
+let input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+let N = input['split']('\x20')[0x0] * 0x1;
+let A = input['split']('\x20')[0x1] * 0x1;
+let B = input['split']('\x20')[0x2] * 0x1;
+let dist = Math['abs'](A - B) % 0x2;
+let ans = dist == 0x0 ? 'Alice' : 'Borys';
+console['log'](ans);

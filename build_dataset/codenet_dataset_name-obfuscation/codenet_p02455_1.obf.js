@@ -1,0 +1,15 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var q = arr['shift']() - 0x0;
+var str = '';
+var set = new Set();
+for (var i = 0x0; i < q; i++) {
+    var [a, b] = arr[i]['split']('\x20');
+    if (a == '0') {
+        set['add'](b);
+        str += set['size'] + '\x0a';
+    } else {
+        str += (set['has'](b) ? 0x1 : 0x0) + '\x0a';
+    }
+}
+console['log'](str['trim']());

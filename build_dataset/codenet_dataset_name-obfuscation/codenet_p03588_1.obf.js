@@ -1,0 +1,14 @@
+function Main(_0x2cef41) {
+    var _0xfd8c68 = 0x0;
+    var _0x6367d4 = 0x0;
+    _0x2cef41 = _0x2cef41['split']('\x0a');
+    for (var _0x4bb91a = 0x1; _0x4bb91a < _0x2cef41['length']; _0x4bb91a++) {
+        var _0x1be063 = _0x2cef41[_0x4bb91a]['split']('\x20')['map'](Number);
+        if (_0xfd8c68 < _0x1be063[0x0]) {
+            _0xfd8c68 = _0x1be063[0x0];
+            _0x6367d4 = _0x1be063[0x0] + _0x1be063[0x1];
+        }
+    }
+    console['log'](_0x6367d4);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']());

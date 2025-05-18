@@ -1,0 +1,20 @@
+function myout(_0x146c4e) {
+    console['log'](_0x146c4e);
+}
+function Main(_0x202877) {
+    _0x202877 = _0x202877['trim']()['split']('\x0a');
+    var _0x1974d9 = parseInt(_0x202877[0x0]);
+    var _0x1f276 = _0x202877[0x1]['split']('\x20')['map'](_0x103547 => Number(_0x103547));
+    var _0x4f80af;
+    var _0x1768c6 = 0x0;
+    var _0x5661b6 = 0x0;
+    for (var _0x2ddaac = 0x0; _0x2ddaac < _0x1f276['length']; _0x2ddaac++) {
+        _0x1768c6 += _0x1f276[_0x2ddaac];
+    }
+    _0x4f80af = Math['round'](_0x1768c6 / _0x1974d9);
+    for (var _0x2ddaac = 0x0; _0x2ddaac < _0x1f276['length']; _0x2ddaac++) {
+        _0x5661b6 += Math['pow'](_0x1f276[_0x2ddaac] - _0x4f80af, 0x2);
+    }
+    myout(_0x5661b6);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']());

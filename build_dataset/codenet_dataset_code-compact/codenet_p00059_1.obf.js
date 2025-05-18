@@ -1,0 +1,1 @@
+for(j=0x0,i=require('fs')['readFileSync']('/dev/stdin','utf8')['split'](/\s/);a=+i[j++],b=+i[j++],c=+i[j++],d=+i[j++],e=+i[j++],f=+i[j++],g=+i[j++],h=+i[j++];)console['log'](+a<=g&e<=c&b<=h&f<=d?'YES':'NO');

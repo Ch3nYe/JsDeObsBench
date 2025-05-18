@@ -1,0 +1,18 @@
+var abc = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'['split']('');
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var n = Arr['shift']() - 0x0;
+    if (n == 0x0)
+        break;
+    var k = Arr['shift']()['split']('\x20')['map'](Number);
+    var arr = Arr['shift']()['split']('');
+    var j = 0x0;
+    for (var i = 0x0; i < arr['length']; i++) {
+        var num = abc['indexOf'](arr[i]) - k[i % k['length']];
+        if (num < 0x0)
+            num += abc['length'];
+        arr[i] = abc[num];
+    }
+    console['log'](arr['join'](''));
+}

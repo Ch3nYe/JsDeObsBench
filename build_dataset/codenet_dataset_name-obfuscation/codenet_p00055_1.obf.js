@@ -1,0 +1,15 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a')['map'](Number);
+Arr['forEach'](function (_0x3fb4dc) {
+    var _0x31efe6 = [
+        0x0,
+        _0x3fb4dc
+    ];
+    for (var _0x42b564 = 0x2; _0x42b564 <= 0xa; _0x42b564++) {
+        _0x31efe6[_0x42b564] = _0x42b564 % 0x2 == 0x0 ? _0x31efe6[_0x42b564 - 0x1] * 0x2 : _0x31efe6[_0x42b564 - 0x1] / 0x3;
+    }
+    var _0x36d1ff = _0x31efe6['reduce'](function (_0x127076, _0x5c6e41) {
+        return _0x127076 + _0x5c6e41;
+    });
+    console['log'](_0x36d1ff['toFixed'](0x8));
+});

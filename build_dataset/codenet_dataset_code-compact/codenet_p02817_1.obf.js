@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');st=input[0x0]['split']('\x20');console['log'](st[0x1]+st[0x0]);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

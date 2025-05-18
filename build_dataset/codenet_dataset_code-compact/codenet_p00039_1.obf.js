@@ -1,0 +1,1 @@
+r='.IVXLCDM',require('fs')['readFileSync']('/dev/stdin','utf8')['split']('\x0a')['map'](function(i){i?(n=s=p=0x0,i['split']('')['map'](function(c){n=Math['pow'](0xa,~~((n=r['indexOf'](c))/0x2))/(0x2-n%0x2),n>p?s-=p*0x2:0x0,s+=n,p=n;}),console['log'](s)):0x0;});

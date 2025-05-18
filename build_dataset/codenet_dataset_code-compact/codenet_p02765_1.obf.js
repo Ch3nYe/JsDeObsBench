@@ -1,0 +1,1 @@
+function main(input){var marginDelete=input['trim']();var args=marginDelete['split']('\x20');var n=parseInt(args[0x0],0xa);var r=parseInt(args[0x1],0xa);var hiddenRating;if(n>=0xa){hiddenRating=r;}else{var argument=0x64*(0xa-n);hiddenRating=r+argument;}return hiddenRating;}console['log'](main(require('fs')['readFileSync']('/dev/stdin','utf8')));

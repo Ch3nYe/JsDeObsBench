@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{const input=arg['trim']()['split']('\x0a');let a=input[0x0]['split']('');let b=input[0x1]['split']('');let c=input[0x2]['split']('');function shiftCard(man){let out=eval(man)['shift']();if(out===undefined){console['log'](man['toUpperCase']());return;}shiftCard(out);}shiftCard('a');};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

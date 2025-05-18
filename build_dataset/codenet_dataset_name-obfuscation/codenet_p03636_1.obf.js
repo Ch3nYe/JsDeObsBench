@@ -1,0 +1,13 @@
+function Main(_0x142e93) {
+    _0x142e93 = String(_0x142e93);
+    var _0x46c9e4 = _0x142e93['length'];
+    var _0x212bac = _0x142e93['substring'](0x0, 0x1);
+    if (_0x46c9e4 < 0x4) {
+        var _0x35faa3 = 0x1;
+    } else {
+        var _0x35faa3 = _0x46c9e4 - 0x2;
+    }
+    var _0x1a47e6 = _0x142e93['substring'](_0x46c9e4 - 0x1, _0x46c9e4);
+    console['log']('%s', _0x212bac + String(_0x35faa3) + _0x1a47e6);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

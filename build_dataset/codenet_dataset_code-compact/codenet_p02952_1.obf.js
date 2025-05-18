@@ -1,0 +1,1 @@
+function keta(num){for(var i=0x1;i<=0x6;i++){if(num<0xa**i)return i%0x2;}}function Main(input){var ans=0x0;var cnt=0x1;while(cnt<=input){ans+=keta(cnt);cnt++;}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

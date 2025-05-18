@@ -1,0 +1,1 @@
+var lines=[];var reader=require('readline')['createInterface']({'input':process['stdin'],'output':process['stdout']});reader['on']('line',function(line){var a=line['split']('\x20');var b=parseInt(a[0x0],0xa);var c=b*b*Math['PI'];var d=b*0x2*Math['PI'];console['log'](c['toFixed'](0x6)+'\x20'+d['toFixed'](0x6));process['exit']();});process['stdin']['on']('end',function(){});

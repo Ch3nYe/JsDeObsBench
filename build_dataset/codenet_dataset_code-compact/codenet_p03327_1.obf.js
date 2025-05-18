@@ -1,0 +1,1 @@
+'use strict';function Main(input){const N=Number(input);if(N<=0x3e7){console['log']('ABC');}else{console['log']('ABD');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

@@ -1,0 +1,23 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var BR = Arr['shift']();
+    if (BR == '0\x200\x200\x200\x200\x200')
+        break;
+    var br = BR['split']('\x20')['map'](Number);
+    var b = br[0x0];
+    var r = br[0x1];
+    var g = br[0x2];
+    var c = br[0x3];
+    var s = br[0x4];
+    var t = br[0x5];
+    var sum = 0x64;
+    sum += b * 0xf;
+    sum += r * 0xf;
+    sum += (b * 0x5 + r * 0x3) * 0xf;
+    sum += g * 0x7;
+    sum += c * 0x2;
+    sum -= (b * 0x5 + r * 0x3) * 0x2;
+    sum -= (t - s - (b * 0x5 + r * 0x3)) * 0x3;
+    console['log'](sum);
+}

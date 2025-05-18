@@ -1,0 +1,1 @@
+function Main(input){var inp=input['split']('\x20');var a=inp[0x0];var b=inp[0x1];var n=parseInt(a+b);var flsqn=Math['floor'](Math['sqrt'](n));flsqn*flsqn===n?console['log']('Yes'):console['log']('No');}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

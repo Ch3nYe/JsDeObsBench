@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var arr=input['trim']()['split']('\x20')['map'](Number);var a=arr[0x0];var b=arr[0x1];var c=arr[0x2];var d=arr[0x3];if(a==b&&c==d)console['log']('yes');else if(a==c&&b==d)console['log']('yes');else if(a==d&&b==c)console['log']('yes');else console['log']('no');

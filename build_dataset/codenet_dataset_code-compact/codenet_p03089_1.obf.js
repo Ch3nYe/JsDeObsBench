@@ -1,0 +1,1 @@
+input=require('fs')['readFileSync']('/dev/stdin','utf8');lines=input['split']('\x0a');N=lines['shift']()*0x1;b=lines['shift']()['split']('\x20');a=[];for(i=N;i>0x0;i--){found=![];for(j=i;j>0x0;j--){if(b[j-0x1]==j){a['push'](b['splice'](j-0x1,0x1));found=!![];break;}}if(!found){a=[-0x1];break;}}console['log'](a['reverse']()['join']('\x0a'));

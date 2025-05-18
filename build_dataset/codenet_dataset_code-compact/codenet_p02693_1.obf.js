@@ -1,0 +1,1 @@
+function Main(input){var str=input;const n=str['split']('\x0a');var k=Number(n[0x0]);var p=n[0x1]['split']('\x20');var a=Number(p[0x0]);var b=Number(p[0x1]);var ans='';for(var i=a;i<=b;i++){if(i%k===0x0){ans='OK';}}if(ans!=='OK'){ans='NG';}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

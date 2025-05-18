@@ -1,0 +1,1 @@
+process['stdin']['on']('data',function(c,o,m){o={},n=0x0,s='';(c+'')['trim']()['split']('\x20')['some'](function(a){n<(o[a=a['toLowerCase']()]?++o[a]:o[a]=0x1)&&(n=o[m=a]);s['length']<a['length']&&(s=a);});console['log'](m+'\x20'+s);})['resume']();

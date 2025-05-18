@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');var mem=input[0x0]['split']('\x20')['map'](Number);var sum=0x0;for(var i=0x1;i<input['length'];i++){var n=input[i]['split']('\x20')['map'](Number);if(n[0x0]>=mem[0x1]&&n[0x1]>=mem[0x2])sum++;}console['log'](sum);}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

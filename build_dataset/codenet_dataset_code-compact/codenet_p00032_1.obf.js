@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var lines=input['trim']()['split']('\x0a');var line;var rectangles=0x0;var lozenges=0x0;while(line=lines['shift']()){var l=line['split'](',')['map'](function(n){return+n;});var a=l[0x0];var b=l[0x1];var c=l[0x2];if(a*a+b*b==c*c)rectangles++;else if(a==b)lozenges++;}console['log'](rectangles);console['log'](lozenges);

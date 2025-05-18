@@ -1,0 +1,21 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (Arr['length'] > 0x1) {
+    var AL = Arr['shift']();
+    var hash = {};
+    for (var i = 0x0; i < AL; i++) {
+        var arr = Arr[i]['trim']()['split']('\x20');
+        hash[arr[0x0]] = arr[0x1];
+    }
+    Arr = Arr['slice'](AL, Arr['length'] + 0x1);
+    var AL = Arr['shift']();
+    var str = '';
+    for (var i = 0x0; i < AL; i++) {
+        var k = Arr[i]['trim']();
+        str += hash['hasOwnProperty'](k) ? hash[k] : k;
+    }
+    Arr = Arr['slice'](AL, Arr['length'] + 0x1);
+    console['log'](str);
+    if (Arr[0x0] == '0')
+        break;
+}

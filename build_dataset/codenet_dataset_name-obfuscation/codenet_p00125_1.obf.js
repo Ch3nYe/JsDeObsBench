@@ -1,0 +1,60 @@
+function year(_0x5287a5) {
+    var _0x4278c3 = [
+        0x16d,
+        0x1f,
+        0x1c,
+        0x1f,
+        0x1e,
+        0x1f,
+        0x1e,
+        0x1f,
+        0x1f,
+        0x1e,
+        0x1f,
+        0x1e,
+        0x1f
+    ];
+    if (_0x5287a5 % 0x4 == 0x0) {
+        _0x4278c3[0x2] = 0x1d;
+        _0x4278c3[0x0] = 0x16e;
+        if (_0x5287a5 % 0x64 == 0x0) {
+            _0x4278c3[0x2] = 0x1c;
+            _0x4278c3[0x0] = 0x16d;
+        }
+        if (_0x5287a5 % 0x190 == 0x0) {
+            _0x4278c3[0x2] = 0x1d;
+            _0x4278c3[0x0] = 0x16e;
+        }
+    }
+    return _0x4278c3;
+}
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var str = Arr['shift']();
+    if (str == '-1\x20-1\x20-1\x20-1\x20-1\x20-1')
+        break;
+    var arr = str['split']('\x20')['map'](Number);
+    (function (_0x6bbf2a, _0x5c74b4, _0x14d44a, _0x3b9002, _0x47475b, _0x14f608) {
+        var _0x1edb9a = 0x0;
+        var _0xa01ae8 = 0x0;
+        var _0x4298cf = year(_0x6bbf2a);
+        var _0x3dd97e = year(_0x3b9002);
+        _0x1edb9a += _0x4298cf[_0x5c74b4] - _0x14d44a;
+        _0xa01ae8 += _0x3dd97e[_0x47475b] - _0x14f608;
+        while (_0x5c74b4 < 0xc) {
+            _0x5c74b4++;
+            _0x1edb9a += _0x4298cf[_0x5c74b4];
+        }
+        while (_0x47475b < 0xc) {
+            _0x47475b++;
+            _0xa01ae8 += _0x3dd97e[_0x47475b];
+        }
+        var _0x206b04 = _0x1edb9a - _0xa01ae8;
+        while (_0x6bbf2a != _0x3b9002) {
+            _0x6bbf2a++;
+            _0x206b04 += year(_0x6bbf2a)[0x0];
+        }
+        console['log'](_0x206b04);
+    }['apply'](null, arr));
+}

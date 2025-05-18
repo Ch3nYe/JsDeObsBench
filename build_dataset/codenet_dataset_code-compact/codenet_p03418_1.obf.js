@@ -1,0 +1,1 @@
+function Main(input){var line=input['split']('\x0a');var tmp=line[0x0]['split']('\x20');var maxint=Number(tmp[0x0]);var minrest=Number(tmp[0x1]);var ans=0x0;for(var a=minrest||0x1;a<=maxint;a++){for(var b=minrest||0x1;b<=maxint;b++){if(a<b){ans++;}else{if(a%b>=minrest)ans++;}}}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

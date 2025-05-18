@@ -1,0 +1,1 @@
+const main=input=>{input=input['trim']()['split']('\x0a');let n=parseInt(input[0x0],0xa)-0x2;const nums=input[0x1]['split']('\x20')['map'](Number)['sort']((a,b)=>b-a);let r=[0x1];for(n;n>=0x2;n-=0x2)r['push'](0x2);r['push'](n);return console['log'](r['reduce']((a,b,i)=>a+b*nums[i],0x0));};process['env']['MYTEST']?test():main(require('fs')['readFileSync']('/dev/stdin','utf8'));

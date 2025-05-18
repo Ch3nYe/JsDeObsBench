@@ -1,0 +1,1 @@
+const mod=0xa**0x9+0x7;function pow(x,y){var r=0x1;for(var i=0x1;i<=y;i++){r=r*x%mod;}return r;};function Main(input){const [N]=input['trim']()['split']('\x20')['map'](x=>parseInt(x));var count=pow(0xa,N)-pow(0x9,N)*0x2+pow(0x8,N);count=count%mod;count=(count+mod)%mod;console['log'](count);};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

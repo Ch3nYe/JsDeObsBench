@@ -1,0 +1,1 @@
+'use strict';function Main(input){input=input['split']('\x0a');let N=parseInt(input[0x0]);let res='';if(N===0x0){console['log'](0x0);return;}while(N!==0x0){res=String(Math['abs'](N%-0x2))+res;if(N%-0x2<0x0)N+=N<0x0?-0x1:0x1;N=parseInt(N/-0x2);}console['log'](res);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

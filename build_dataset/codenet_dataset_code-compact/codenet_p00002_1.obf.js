@@ -1,0 +1,1 @@
+process['stdin']['resume']();process['stdin']['setEncoding']('utf8');process['stdin']['on']('data',function(chunk){var nums=chunk['trim']()['split']('\x0a');function digit(e){var a=e['split']('\x20');var wa=parseInt(a[0x0])+parseInt(a[0x1]);return wa['toString']()['length'];}console['log'](nums['map'](digit)['join']('\x0a'));});

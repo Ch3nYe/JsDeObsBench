@@ -1,0 +1,26 @@
+'use strict';
+var fs = require('fs');
+var input = Buffer['alloc'](0x10000);
+var length = fs['readSync'](0x0, input, 0x0, 0x10000);
+var text = input['toString']()['slice'](0x0, length)['trim']();
+var dp = Array(text['length'] + 0x1)['fill'](![]);
+dp[0x0] = !![];
+for (var index = 0x5; index <= text['length']; index++) {
+    if (dp[index - 0x5] === !![] && text['slice'](index - 0x5, index) === 'dream') {
+        dp[index] = !![];
+        continue;
+    }
+    if (dp[index - 0x7] === !![] && text['slice'](index - 0x7, index) === 'dreamer') {
+        dp[index] = !![];
+        continue;
+    }
+    if (dp[index - 0x5] === !![] && text['slice'](index - 0x5, index) === 'erase') {
+        dp[index] = !![];
+        continue;
+    }
+    if (dp[index - 0x6] === !![] && text['slice'](index - 0x6, index) === 'eraser') {
+        dp[index] = !![];
+        continue;
+    }
+}
+console['log'](dp[text['length']] ? 'YES' : 'NO');

@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x20');var a=String(input[0x0]);var b=String(input[0x1]);if(a==='H'&&b==='H'||a==='D'&&b==='D'){console['log']('H');}else{console['log']('D');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

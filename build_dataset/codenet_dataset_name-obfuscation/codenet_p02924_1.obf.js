@@ -1,0 +1,12 @@
+function Main(_0x1c6333) {
+    _0x1c6333 = _0x1c6333['split']('\x0a');
+    var _0x8b6e1 = parseInt(_0x1c6333[0x0], 0xa);
+    var _0x122f45 = 0x0;
+    if (_0x8b6e1 != 0x1) {
+        for (var _0x14bb5f = 0x1; _0x14bb5f < _0x8b6e1; _0x14bb5f++) {
+            _0x122f45 += _0x14bb5f % (_0x14bb5f + 0x1);
+        }
+    }
+    console['log']('%s', _0x122f45);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

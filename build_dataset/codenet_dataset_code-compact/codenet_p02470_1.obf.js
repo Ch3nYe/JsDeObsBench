@@ -1,0 +1,1 @@
+function Main(input){var n=parseInt(input,0xa);var count=0x0;for(i=0x1;i<n;i++){if(gcd(n,i)==0x1)count++;}console['log'](count);}function gcd(n,m){var a,b,c;a=Math['max'](n,m);b=Math['min'](n,m);c=a%b;if(c==0x0){return b;}else{return gcd(b,c);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

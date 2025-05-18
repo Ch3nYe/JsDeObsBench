@@ -1,0 +1,1 @@
+const main=inputs=>{var array=inputs[0x0]['split']('\x20');var X=Number(array);var num=0x64;var count=0x0;while(0x1){var risoku=Math['floor'](num*0.01);num=num+risoku;count++;if(X<=num)break;}console['log'](count);};main(require('fs')['readFileSync']('/dev/stdin','UTF-8')['trim']()['split']('\x0a'));

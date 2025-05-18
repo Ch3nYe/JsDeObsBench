@@ -1,0 +1,1 @@
+function Main(input){const N=Number(input);let fn=new Array(N)['fill'](0x0);for(let x=0x1;x**0x2<=N;x++){for(let y=0x1;y**0x2<=N;y++){if(x+y>N)break;for(let z=0x1;z**0x2<=N;z++){const i=x**0x2+y**0x2+z**0x2+x*y+y*z+z*x;if(i>N)break;fn[i-0x1]++;}}}console['log'](fn['join']('\x0a'));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

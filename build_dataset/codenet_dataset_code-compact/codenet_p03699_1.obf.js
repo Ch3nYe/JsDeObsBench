@@ -1,0 +1,1 @@
+function Main(input){input=input['trim']()['split']('\x0a')['map'](input=>Number(input));var len=input[0x0];input['shift']();input['sort'](function(a,b){return a-b;});var sum=0x0;for(var i=0x0;i<input['length'];i++){sum+=input[i];}var count=0x0;while(sum%0xa==0x0&&sum!=0x0){sum-=input[count];count++;}console['log'](sum);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

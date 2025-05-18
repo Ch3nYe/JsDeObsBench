@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{arg=arg['trim']()['split']('\x0a');const N=~~arg[0x0];const b=arg[0x1]['split']('\x20')['map'](n=>~~n);let answer=[];for(let i=0x0;i<N;i++){if(i%0x2===0x0){answer['push'](b[i]);}else{answer['unshift'](b[i]);}}if(N%0x2!==0x0)answer=answer['reverse']();console['log'](answer['join']('\x20'));};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+'use strict';function main(input){input=input['split']('\x0a');input[0x0]=input[0x0]['split']('\x20')['map'](v=>~~v);const h=input[0x0][0x0];const w=input[0x0][0x1];let tmp='#'['repeat'](w+0x2)+'\x0a';for(let i=0x1;i<=h;i++){tmp+='#'+input[i]+'#\x0a';}tmp+='#'['repeat'](w+0x2);console['log'](tmp);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

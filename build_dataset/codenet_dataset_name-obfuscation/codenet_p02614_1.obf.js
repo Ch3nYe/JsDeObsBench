@@ -1,0 +1,28 @@
+const fs = require('fs');
+const [h, w, k, ...m] = fs['readFileSync']('/dev/stdin', 'utf8')['split'](/\s/);
+function solve(_0x48ca33, _0x11421a = 0x0, _0x381b76 = 0x0, _0x3533cf) {
+    if (_0x48ca33['length'] === 0x0 || _0x48ca33[0x0]['length'] === 0x0) {
+        return 0x0;
+    }
+    const _0x2cfc52 = _0x48ca33['join']('')['replace'](/\./g, '')['length'];
+    let _0xc7a861 = 0x0;
+    if (_0x2cfc52 == k) {
+        _0xc7a861++;
+    }
+    if (_0x2cfc52 < k) {
+        return _0xc7a861;
+    }
+    if (!_0x3533cf) {
+        for (let _0x5a35dc = _0x381b76; _0x5a35dc < _0x48ca33['length']; _0x5a35dc++) {
+            _0xc7a861 += solve([
+                ..._0x48ca33['slice'](0x0, _0x5a35dc),
+                ..._0x48ca33['slice'](_0x5a35dc + 0x1)
+            ], _0x11421a, _0x5a35dc < _0x381b76 ? _0x381b76 : _0x5a35dc);
+        }
+    }
+    for (let _0x278be7 = _0x11421a; _0x278be7 < _0x48ca33[0x0]['length']; _0x278be7++) {
+        _0xc7a861 += solve(_0x48ca33['map'](_0x4eaebe => _0x4eaebe['slice'](0x0, _0x278be7) + _0x4eaebe['slice'](_0x278be7 + 0x1)), _0x278be7 < _0x11421a ? _0x11421a : _0x278be7, _0x381b76, !![]);
+    }
+    return _0xc7a861;
+}
+console['log'](solve(m));

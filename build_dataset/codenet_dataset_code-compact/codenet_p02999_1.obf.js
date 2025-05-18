@@ -1,0 +1,1 @@
+function Main(input){var result;const X=parseInt(input[0x0]);const A=parseInt(input[0x1]);result=X<A?0x0:0xa;console['log'](result);}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']()['split'](/\n|\s/));

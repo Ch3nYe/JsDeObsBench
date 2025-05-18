@@ -1,0 +1,1 @@
+require("fs").readFileSync("/dev/stdin","utf8").trim().split('\n\n').map(function(i){c=i.replace(/\s/g,'').split('').join('');console.log(c.indexOf("1111")!=-1?"C":c.indexOf("111")!=-1?"F":c.indexOf("1101")!=-1?"D":c.indexOf("101")!=-1?"B":c.indexOf("1000001")!=-1?"G":c.indexOf("10000001")!=-1?"A":"E")})

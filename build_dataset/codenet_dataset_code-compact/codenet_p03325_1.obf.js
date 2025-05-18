@@ -1,0 +1,1 @@
+'use strict';function main(s){const a=s['split']('\x0a')[0x1]['split']('\x20')['map'](n=>Number(n));let ans=0x0;for(let n of a){while(n%0x2===0x0){n=n/0x2;ans+=0x1;}}console['log'](ans);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

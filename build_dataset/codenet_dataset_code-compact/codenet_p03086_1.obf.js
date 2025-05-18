@@ -1,0 +1,1 @@
+input=require('fs')['readFileSync']('/dev/stdin','utf8');lines=input['split']('\x0a');S=lines['shift']();max=0x0;cnt=0x0;for(i=0x0;i<S['length'];i++){if(/[AGCT]/['test'](S[i])){cnt++;}else{if(max<cnt){max=cnt;}cnt=0x0;}}console['log'](max);

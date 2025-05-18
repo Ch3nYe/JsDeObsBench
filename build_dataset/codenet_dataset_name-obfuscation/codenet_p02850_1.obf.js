@@ -1,0 +1,40 @@
+'use strict';
+function main(_0x110878) {
+    _0x110878 = _0x110878['trim']()['split']('\x0a');
+    const _0x581b48 = Number(_0x110878['shift']());
+    let _0x1eac6c = [...new Array(_0x581b48)]['map'](_0x5d38dc => []);
+    let _0x114b86 = new Array();
+    _0x110878['forEach'](_0x28a23c => {
+        _0x28a23c = _0x28a23c['split']('\x20')['map'](_0x520dd5 => _0x520dd5 - 0x1);
+        _0x1eac6c[_0x28a23c[0x0]]['push'](_0x28a23c[0x1]);
+        _0x1eac6c[_0x28a23c[0x1]]['push'](_0x28a23c[0x0]);
+        _0x114b86['push'](_0x28a23c[0x0] + '-' + _0x28a23c[0x1]);
+    });
+    let _0x361fe5 = 0x0;
+    let _0x395cb8 = new Map();
+    let _0x3c6e66 = new Array(_0x581b48)['fill'](0x0);
+    let _0x10870c = new Array(_0x581b48)['fill'](0x0);
+    let _0xf37375 = new Array();
+    _0x10870c[0x0] = 0x1;
+    _0xf37375['push'](0x0);
+    while (_0xf37375['length']) {
+        let _0x3f06f1 = _0xf37375['shift']();
+        if (_0x361fe5 < _0x1eac6c[_0x3f06f1]['length'])
+            _0x361fe5 = _0x1eac6c[_0x3f06f1]['length'];
+        let _0x2be3d2 = 0x1;
+        for (const _0x1f631d of _0x1eac6c[_0x3f06f1]) {
+            if (_0x10870c[_0x1f631d])
+                continue;
+            if (_0x2be3d2 === _0x3c6e66[_0x3f06f1])
+                _0x2be3d2++;
+            _0x3c6e66[_0x1f631d] = _0x395cb8[_0x1f631d + '-' + _0x3f06f1] = _0x395cb8[_0x3f06f1 + '-' + _0x1f631d] = _0x2be3d2++;
+            _0x10870c[_0x1f631d] = 0x1;
+            _0xf37375['push'](_0x1f631d);
+        }
+    }
+    console['log'](_0x361fe5);
+    _0x114b86['forEach'](_0x2756ce => {
+        console['log'](_0x395cb8[_0x2756ce]);
+    });
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

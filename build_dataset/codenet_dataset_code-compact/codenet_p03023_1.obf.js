@@ -1,0 +1,1 @@
+'use strict';(function(input){input=input['trim']()-0x0;console['log'](0xb4*(input-0x2));}(require('fs')['readFileSync']('/dev/stdin','utf8')));

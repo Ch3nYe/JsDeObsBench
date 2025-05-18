@@ -1,0 +1,1 @@
+function Main(input){const numbers=input['split']('\x20')['map'](n=>Number(n));const l=numbers[0x0]+numbers[0x1];const r=numbers[0x2]+numbers[0x3];if(l>r){console['log']('Left');}else if(l<r){console['log']('Right');}else{console['log']('Balanced');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

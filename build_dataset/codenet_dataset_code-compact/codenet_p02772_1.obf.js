@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');const N=input['shift']();const A=input['map'](v=>parseInt(v));f=![];for(i=0x0;i<A['length'];i++){if(A[i]%0x2==0x0){if(A[i]%0x3!=0x0&&A[i]%0x5!=0x0){f=!![];}}}if(f){console['log']('DENIED');}else{console['log']('APPROVED');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

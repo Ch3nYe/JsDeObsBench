@@ -1,0 +1,1 @@
+function main(input){const args=input['split']('\x20');var A=Number(args[0x0]);var B=Number(args[0x1]);var K=Number(args[0x2]);var cu=0x0;var sum;var count=0x0;for(cu=A;cu>0x0;--cu){if(Number['isInteger'](A/cu)&&Number['isInteger'](B/cu)){count++;if(count===K){sum=cu;break;}}}console['log'](sum);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+process['stdin']['on']('data',function(c){(c+'')['trim']()['split']('\x0a')['some'](function(n){for(var d=+n,i=0x1,a=0x0,t;t=i++*d,t<0x258?a+=t*t*d:0x0;);console['log'](a);});})['resume']();

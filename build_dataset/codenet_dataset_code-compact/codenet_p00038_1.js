@@ -1,0 +1,1 @@
+require("fs").readFileSync("/dev/stdin","utf8").trim().split('\n').map(function(i){f=function(a,b){return b-a};a=[],c=i.split(",").sort(f);c.map(function(j){a[j]?a[j]++:a[j]=1});a.sort(f);l=a[0],n=a[1];console.log(l==4?"four card":l==3?(n==2?"full house":"three card"):l==2?(n==2?"two pair":"one pair"):4==c[0]-c[4]||(c[0]-c[3]==3&&+c[4]==1)?"straight":"null")})

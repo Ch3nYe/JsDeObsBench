@@ -1,0 +1,14 @@
+'use strict';
+const Main = _0x185cac => {
+    let _0xafc51f = _0x185cac['trim']()['split']('\x0a');
+    let _0x3ccfeb = Number(_0xafc51f[0x0]);
+    let _0x34bf03 = _0xafc51f[0x1]['split']('');
+    let _0x2ce590 = 0x0;
+    for (let _0x303ffc = 0x0; _0x303ffc <= _0x3ccfeb - 0x3; _0x303ffc++) {
+        if (_0x34bf03[_0x303ffc] + _0x34bf03[_0x303ffc + 0x1] + _0x34bf03[_0x303ffc + 0x2] == 'ABC') {
+            _0x2ce590++;
+        }
+    }
+    console['log'](_0x2ce590);
+};
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

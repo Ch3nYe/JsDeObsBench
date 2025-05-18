@@ -1,0 +1,1 @@
+'use strict';function main(inp){let ans='No';if(inp[0x2]===inp[0x3]&&inp[0x4]===inp[0x5]){ans='Yes';}console['log'](ans);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

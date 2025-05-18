@@ -1,0 +1,4 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var arr= input.trim().split(" ").map(Number);
+var max=Math.max(...arr);
+console.log(["A","B","C"][arr.indexOf(max)]);

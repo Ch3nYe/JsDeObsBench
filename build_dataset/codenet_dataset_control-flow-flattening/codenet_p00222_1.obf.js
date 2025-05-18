@@ -1,0 +1,52 @@
+function prime(max) {
+    var zFHhQq = {
+        'IkYbO': function (x, y) {
+            return x <= y;
+        },
+        'QREPW': function (x, y) {
+            return x == y;
+        },
+        'WqwaT': function (x, y) {
+            return x + y;
+        },
+        'udkto': function (x, y) {
+            return x !== y;
+        }
+    };
+    var arr = [];
+    for (var i = 0x0; zFHhQq['IkYbO'](i, max); i++)
+        arr[i] = i;
+    arr[0x0] = ![];
+    arr[0x1] = ![];
+    var sqrt = Math['floor'](Math['sqrt'](max));
+    for (var i = 0x2; zFHhQq['IkYbO'](i, sqrt); i++) {
+        if (zFHhQq['QREPW'](arr[i], ![]))
+            continue;
+        for (var j = zFHhQq['WqwaT'](i, i); j <= max; j += i) {
+            arr[j] = ![];
+        }
+    }
+    var result = [];
+    for (var i = 0x0; zFHhQq['IkYbO'](i, max); i++) {
+        if (zFHhQq['udkto'](arr[i], ![]))
+            result['push'](arr[i]);
+    }
+    return result;
+}
+var p = prime(0x98967f);
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a')['map'](Number);
+for (var i = 0x0; i < Arr['length']; i++) {
+    var a = Arr[i];
+    if (a == 0x0)
+        break;
+    var quad = '';
+    for (var j = 0x5; j < p['length']; j++) {
+        if (p[j] > a)
+            break;
+        var x = p[j] - 0x8;
+        if (x == p[j - 0x3] && x + 0x2 == p[j - 0x2] && x + 0x6 == p[j - 0x1])
+            quad = p[j];
+    }
+    console['log'](quad);
+}

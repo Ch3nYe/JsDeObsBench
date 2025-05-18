@@ -1,0 +1,11 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var strA = input['trim']();
+var abc = 'abcdefghijklmnopqrstuvwxyz'['split']('');
+for (var i = 0x0; i < 0x1a; i++) {
+    var strB = strA['replace'](/[a-z]/g, function (s) {
+        return abc[(abc['indexOf'](s) + i) % 0x1a];
+    });
+    if (strB['match'](/the|this|that/))
+        break;
+}
+console['log'](strB);

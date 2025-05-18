@@ -24,7 +24,7 @@ def restart_container(container_name) -> bool:
     raise KeyError(f"[!] Fatal Error: restart failed for container {container_name}")
 
 def create_docker_container(container_name = "eval_js_container", 
-                            docker_image = "node:latest"):
+                            docker_image = "node:18.19.0"):
     # check docker is installed
     check_process = subprocess.run(["docker", "--version"], capture_output=True, text=True)
     if check_process.returncode != 0:
@@ -97,6 +97,48 @@ def compile_and_run_JS_code_in_docker(container_name: str, code: str, program_in
     if os.path.exists(file_name):
         os.remove(file_name)
     return 0 if 0 in results else 1
+
+def run_malware_JS_code_in_docker(container_name: str, code: str, timeout: int = 15):
+    ioc = None
+    try:
+        # Unique ID for the file name to avoid conflicts
+        file_name = f"temp_{uuid.uuid4()}.js"
+        with open(file_name, "w") as file:
+            file.write(code)
+        # Clean cache
+        subprocess.run(f"docker exec {container_name} bash -c 'rm -rf /tmp/program.js*'", shell=True, capture_output=True, check=True)
+        # Copy the Python file to the container
+        subprocess.run(["docker", "cp", file_name, f"{container_name}:/tmp/program.js"], capture_output=True, check=True)
+    except subprocess.CalledProcessError as e:
+        logging.error(f"[!] Error during Docker operations:\n{e}")
+        return ioc
+    finally:
+        # Cleanup: remove the temporary file
+        if os.path.exists(file_name):
+            os.remove(file_name)
+
+    try:
+        ioc_file = f"ioc_{uuid.uuid4()}.json"
+        command = f"bash -c 'timeout {timeout} box-js /tmp/program.js --output-dir /tmp/ ; chmod 777 -R /tmp/program.js.results'"
+        docker_command = f"docker exec {container_name} {command}"
+        subprocess.run(docker_command, shell=True, capture_output=True, text=True)
+
+        # Check the output
+        ret = subprocess.run(["docker", "cp", f"{container_name}:/tmp/program.js.results/IOC.json", ioc_file], capture_output=True, check=True)
+        if ret.returncode != 0:
+            return None
+        if not os.path.exists(ioc_file):
+            return None
+        with open(ioc_file, "r") as file:
+            ioc = json.load(file)
+    except Exception as e:
+        logging.error(f"[-] Error occurred: {str(e)}")
+    finally:
+        # Cleanup: remove the temporary file
+        if os.path.exists(ioc_file):
+            os.remove(ioc_file)
+
+    return ioc
 
 if __name__ == "__main__":
     # Create the Docker container

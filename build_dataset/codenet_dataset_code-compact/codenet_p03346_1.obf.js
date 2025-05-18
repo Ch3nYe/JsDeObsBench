@@ -1,0 +1,1 @@
+console['log']((args=>{const [N,...P]=args['trim']()['split']('\x0a')['map'](v=>v|0x0);const dp=Array(N)['fill'](0x0);for(let i=0x0;i<N;i++)dp[P[i]+0x1]=dp[P[i]]+0x1;return''+(N-dp['reduce']((a,b)=>a>b?a:b,0x0));})(require('fs')['readFileSync']('/dev/stdin','utf8')));

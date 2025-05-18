@@ -1,0 +1,83 @@
+function bomb(y, x) {
+    var FidnZa = {
+        'fkUOR': function (x, y) {
+            return x + y;
+        },
+        'CLxoI': function (x, y) {
+            return x + y;
+        },
+        'EyjUI': function (x, y) {
+            return x < y;
+        },
+        'mawlg': function (x, y) {
+            return x >= y;
+        },
+        'HnlJL': function (x, y) {
+            return x < y;
+        },
+        'OYqos': function (x, y) {
+            return x == y;
+        },
+        'Iahmj': function (callee, param1, param2) {
+            return callee(param1, param2);
+        }
+    };
+    var dy = [
+        -0x1,
+        -0x1,
+        -0x1,
+        0x0,
+        0x0,
+        0x1,
+        0x1,
+        0x1
+    ];
+    var dx = [
+        -0x1,
+        0x0,
+        0x1,
+        -0x1,
+        0x1,
+        -0x1,
+        0x0,
+        0x1
+    ];
+    for (var i = 0x0; i < 0x8; i++) {
+        var yy = FidnZa['fkUOR'](y, dy[i]);
+        var xx = FidnZa['CLxoI'](x, dx[i]);
+        if (FidnZa['EyjUI'](yy, 0x0) || FidnZa['mawlg'](yy, H) || FidnZa['HnlJL'](xx, 0x0) || xx >= W)
+            continue;
+        if (FidnZa['OYqos'](yx[yy][xx], 'a')) {
+            yx[yy][xx] = cnt;
+            FidnZa['Iahmj'](bomb, yy, xx);
+        }
+    }
+}
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var WH = Arr['shift']()['split']('\x20')['map'](Number);
+    var W = WH[0x0];
+    var H = WH[0x1];
+    if (W == 0x0 && H == 0x0)
+        break;
+    var yx = [];
+    var Y, X;
+    for (var i = 0x0; i < H; i++) {
+        var str = Arr['shift']();
+        str = str['replace'](/1/g, 'a');
+        var arr = str['split']('\x20');
+        yx['push'](arr);
+    }
+    var cnt = 0x0;
+    for (var i = 0x0; i < H; i++) {
+        for (var j = 0x0; j < W; j++) {
+            if (yx[i][j] == 'a') {
+                cnt++;
+                yx[i][j] = cnt;
+                bomb(i, j);
+            }
+        }
+    }
+    console['log'](cnt);
+}

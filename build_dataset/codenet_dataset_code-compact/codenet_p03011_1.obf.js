@@ -1,0 +1,1 @@
+'use strict';function Main(input){const P=Number(input['split']('\x0a')[0x0]['split']('\x20')[0x0]);const Q=Number(input['split']('\x0a')[0x0]['split']('\x20')[0x1]);const R=Number(input['split']('\x0a')[0x0]['split']('\x20')[0x2]);const max=Math['max'](P,Q,R);console['log'](P+Q+R-max);}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

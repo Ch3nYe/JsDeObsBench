@@ -1,0 +1,35 @@
+function prime(max){
+   var arr=[];
+   for(var i=0;i<=max;i++)arr[i]=i;
+   arr[0]=false;
+   arr[1]=false;
+   var sqrt=Math.floor(Math.sqrt(max));
+   for(var i=2;i<=sqrt;i++){
+      if(arr[i]==false)continue;
+         for(var j=i+i;j<=max;j+=i){
+            arr[j]=false;
+         }
+   }
+   var result={};
+   for(var i=0;i<=max;i++){
+      if(arr[i]!==false)result[arr[i]]=true;
+   }
+   return result;
+}
+var p=prime(1000000);
+
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var Arr=(input.trim()).split("\n").map(Number);
+for(var I=0;I<Arr.length;I++){
+   var v=Arr[I];
+   if(v==0)break;
+   var cnt=0;
+   var obj={};
+   for(var k in p){
+      if(k>=v)break;
+      if(obj.hasOwnProperty(k))continue;
+      obj[v-k]=true;
+      if(p.hasOwnProperty(v-k))cnt++;
+   }
+   console.log(cnt);
+}

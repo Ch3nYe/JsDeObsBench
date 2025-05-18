@@ -1,0 +1,26 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var lines = input['split']('\x0a');
+var imagine;
+while (imagine = lines['shift']()) {
+    var guess = lines['shift']();
+    var a = imagine['split']('\x20')['map'](function (_0x316558) {
+        return +_0x316558;
+    });
+    var b = guess['split']('\x20')['map'](function (_0x26d889) {
+        return +_0x26d889;
+    });
+    var hit = 0x0;
+    for (var i = 0x0; i < 0x4; i++) {
+        if (a[i] == b[i]) {
+            hit++;
+        }
+    }
+    var blow = 0x0;
+    for (var i = 0x0; i < 0x4; i++) {
+        if (a['indexOf'](b[i]) >= 0x0) {
+            blow++;
+        }
+    }
+    blow -= hit;
+    console['log'](hit + '\x20' + blow);
+}

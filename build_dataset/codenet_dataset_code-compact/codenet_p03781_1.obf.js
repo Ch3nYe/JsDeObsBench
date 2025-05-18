@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');var X=input[0x0]-0x0;console['log'](Math['ceil']((0x2*Math['abs'](X)+0x1/0x4)**(0x1/0x2)-0x1/0x2));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

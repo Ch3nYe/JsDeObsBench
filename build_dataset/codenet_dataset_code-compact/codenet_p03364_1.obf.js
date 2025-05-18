@@ -1,0 +1,1 @@
+var lines=require('fs')['readFileSync']('/dev/stdin','utf8')['split']('\x0a');var n=lines[0x0]|0x0;var s=lines['slice'](0x1);function good(a,b){for(var i=0x0;i<n;++i){for(var j=0x0;j<n;++j){if(s[(i+a)%n][(j+b)%n]!==s[(j+a)%n][(i+b)%n])return 0x0;}}return 0x1;}var ans=0x0;for(var a=0x0;a<n;++a){for(var b=0x0;b<n;++b){ans+=good(a,b);}}console['log'](ans);

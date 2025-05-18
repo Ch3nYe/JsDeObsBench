@@ -1,0 +1,1 @@
+function Main(input){var xs=input['trim']()['split']('\x0a')['map'](v=>parseInt(v,0xa));var A=0x0;if(xs[0x0]<=xs[0x1]){A=A+xs[0x0];}else if(xs[0x0]>=xs[0x1]){A=A+xs[0x1];}var B=0x0;if(xs[0x2]<=xs[0x3]){B=B+xs[0x2];}else if(xs[0x2]>=xs[0x3]){B=B+xs[0x3];}console['log'](A+B);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

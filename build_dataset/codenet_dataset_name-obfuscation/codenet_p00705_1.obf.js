@@ -1,0 +1,29 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var v = Arr['shift']();
+    if (v == '0\x200')
+        break;
+    var NQ = v['split']('\x20')['map'](Number);
+    var arr = [];
+    for (var i = 0x0; i < 0x32; i++)
+        arr[i] = 0x0;
+    for (var i = 0x0; i < NQ[0x0]; i++) {
+        var day = Arr['shift']()['split']('\x20')['map'](Number);
+        var L = day['shift']();
+        for (var j = 0x0; j < L; j++) {
+            arr[day[j]]++;
+        }
+    }
+    var result = 0x0;
+    var max = Math['max']['apply'](null, arr);
+    if (max >= NQ[0x1])
+        NQ[0x1] = max;
+    for (var i = 0x0; i < arr['length']; i++) {
+        if (arr[i] >= NQ[0x1]) {
+            result = i;
+            break;
+        }
+    }
+    console['log'](result);
+}

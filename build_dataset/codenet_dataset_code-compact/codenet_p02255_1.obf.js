@@ -1,0 +1,1 @@
+function main(lines){const n=lines['split']('\x0a')[0x0];const An=lines['split']('\x0a')[0x1]['split']('\x20')['map'](Number);console['log'](An['join']('\x20'));for(let i=0x1;i<n;i++){value=An[i];let j=i-0x1;while(j>=0x0&&value<An[j]){An[j+0x1]=An[j];j--;}An[j+0x1]=value;console['log'](An['join']('\x20'));}}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

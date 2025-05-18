@@ -1,0 +1,1 @@
+function main(input){const n=parseInt(input,0xa);let sum=0x0;for(let i=0x1;i<=n;i++){sum+=i;}console['log'](sum);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

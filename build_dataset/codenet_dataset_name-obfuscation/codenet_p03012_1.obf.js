@@ -1,0 +1,24 @@
+'use strict';
+const INF = 0x3333333333333;
+function mapint(_0x390d0a) {
+    return _0x390d0a['split']('\x20')['map'](_0x450c35 => parseInt(_0x450c35));
+}
+function Main(_0x23e4c4) {
+    let _0x18bc26 = _0x23e4c4['trim']()['split']('\x0a');
+    let _0x30ce1e = parseInt(_0x18bc26[0x0]);
+    let _0x4a1772 = mapint(_0x18bc26[0x1]);
+    let _0x9be89d = _0x4a1772[0x0];
+    let _0x39148e = 0x0;
+    for (let _0x30a55e = 0x1; _0x30a55e < _0x30ce1e; _0x30a55e++) {
+        _0x39148e += _0x4a1772[_0x30a55e];
+    }
+    let _0x24dccb = Math['abs'](_0x9be89d - _0x39148e);
+    let _0xf89d53;
+    for (let _0x29e949 = 0x1; _0x29e949 < _0x30ce1e; _0x29e949++) {
+        _0x9be89d += _0x4a1772[_0x29e949];
+        _0x39148e -= _0x4a1772[_0x29e949];
+        _0x24dccb = Math['min'](_0x24dccb, Math['abs'](_0x9be89d - _0x39148e));
+    }
+    console['log'](_0x24dccb);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

@@ -1,0 +1,11 @@
+fs=require("fs");
+l=fs.readFileSync("/dev/stdin","utf8").split("\n");
+x=[];
+for(i=0;i<6;i++){
+  x.push(parseInt(l[i]));
+}
+if(x[4]-x[0]<=x[5]){
+  console.log('Yay!');
+}else{
+  console.log(':(');
+}

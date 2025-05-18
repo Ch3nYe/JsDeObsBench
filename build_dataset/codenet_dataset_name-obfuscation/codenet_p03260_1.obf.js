@@ -1,0 +1,6 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+input = input['split'](/\s/);
+const A = Number(input[0x0]);
+const B = Number(input[0x1]);
+var result = A === 0x2 || B === 0x2 ? 'No' : 'Yes';
+console['log'](result);

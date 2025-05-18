@@ -1,0 +1,1 @@
+function Main(input){let num=parseInt(input,0xa);let sum=0x0;let tmp=0x0;for(let i=input['length']-0x1;0x0<=i;i--){tmp=Math['floor'](num/Math['pow'](0xa,i));sum+=tmp;num-=tmp*Math['pow'](0xa,i);}const ans=sum%0x9===0x0?'Yes':'No';console['log'](ans);};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

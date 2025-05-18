@@ -1,0 +1,9 @@
+main = function (_0x149246) {
+    var _0x4fc157 = _0x149246['split']('\x20');
+    var _0x297d5e = parseInt(_0x4fc157[0x0]);
+    var _0x419a4c = parseInt(_0x4fc157[0x1]);
+    var _0x4336f2 = parseInt(_0x4fc157[0x2]);
+    var _0xb406c6 = (_0x297d5e - 0x2) * (_0x4336f2 - _0x419a4c) + 0x1;
+    console['log'](Math['max'](_0xb406c6, 0x0));
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

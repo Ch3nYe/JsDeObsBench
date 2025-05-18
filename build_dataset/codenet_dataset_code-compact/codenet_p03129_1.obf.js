@@ -1,0 +1,1 @@
+function main(arg){arg=arg['split']('\x0a')[0x0]['split']('\x20');var N=Number(arg[0x0]);var K=Number(arg[0x1]);var count=0x0;for(var i=0x1;i<=N;i+=0x2){count++;}if(K>count){console['log']('NO');}else{console['log']('YES');}}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

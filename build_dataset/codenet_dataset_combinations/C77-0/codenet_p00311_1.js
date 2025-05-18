@@ -1,0 +1,10 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var arr = input.trim().split("\n");
+var [h1,h2] = arr.shift().split(" ").map(Number);
+var [k1,k2] = arr.shift().split(" ").map(Number);
+var [a,b,c,d] = arr.shift().split(" ").map(Number);
+var h = h1*a + h2*b+Math.floor(h1/10)*c+Math.floor(h2/20)*d;
+var k = k1*a + k2*b+Math.floor(k1/10)*c+Math.floor(k2/20)*d;
+if(h==k)console.log("even");
+else if(h>k)console.log("hiroshi");
+else console.log("kenjiro");

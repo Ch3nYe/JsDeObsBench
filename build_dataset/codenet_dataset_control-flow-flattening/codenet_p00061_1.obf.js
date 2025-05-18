@@ -1,0 +1,25 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a0,0\x0a');
+var inputA = Arr[0x0]['split']('\x0a');
+var inputB = Arr[0x1]['split']('\x0a')['map'](Number);
+var obj = {};
+var s = [];
+inputA['forEach'](function (v) {
+    var arr = v['split'](',')['map'](Number);
+    obj[arr[0x0]] = arr[0x1];
+    s['push'](arr[0x1]);
+});
+s['sort'](function (a, b) {
+    return b - a;
+});
+var s0 = s[0x0];
+var t = [s0];
+for (var i = 0x1; i < s['length']; i++) {
+    if (s0 == s[i])
+        continue;
+    s0 = s[i];
+    t['push'](s[i]);
+}
+inputB['forEach'](function (v) {
+    console['log'](t['indexOf'](obj[v]) + 0x1);
+});

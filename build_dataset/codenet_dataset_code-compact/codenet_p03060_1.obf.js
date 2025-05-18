@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');n=Number(input[0x0]['split']('\x20'));V=input[0x1]['split']('\x20')['map'](Number);C=input[0x2]['split']('\x20')['map'](Number);var Y=0x0;for(var i=0x0;i<n;i++){y=V[i]-C[i];if(y>=0x0){Y=Y+y;}}console['log'](Y);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

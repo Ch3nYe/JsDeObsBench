@@ -1,0 +1,1 @@
+const rl=require('readline')['createInterface']({'input':process['stdin']});rl['on']('line',line=>{const param=line['split']('\x20');solve(Number(param[0x0]),Number(param[0x1]));rl['close']();});function solve(x,y){console['log'](x+y/0x2);}

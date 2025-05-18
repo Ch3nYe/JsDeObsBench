@@ -1,0 +1,1 @@
+function Main(s){const sl=s['length']-0x1;const sa=s['split']('')['map'](a=>parseInt(a));var ans=0x0;for(var i=0x0;i<0x1<<sl;i++){var b=0x0;for(var j=0x0;j<sl;j++){b+=sa[j];if(i&0x1<<j){ans+=b;b=0x0;}else b*=0xa;}ans+=b+sa[sl];}console['log'](ans);}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

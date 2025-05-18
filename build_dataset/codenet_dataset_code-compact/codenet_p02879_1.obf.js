@@ -1,0 +1,1 @@
+function Main(input){var input=input['split']('\x20');var a=Number(input[0x0]);var b=Number(input[0x1]);if(a>0x9||b>0x9){console['log'](-0x1);return;}var result=a*b;console['log'](result);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

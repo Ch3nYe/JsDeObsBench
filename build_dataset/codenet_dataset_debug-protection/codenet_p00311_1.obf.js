@@ -1,0 +1,67 @@
+var a0_0x24b84b = (function () {
+    var firstCall = !![];
+    return function (context, fn) {
+        var rfn = firstCall ? function () {
+            if (fn) {
+                var res = fn['apply'](context, arguments);
+                fn = null;
+                return res;
+            }
+        } : function () {
+        };
+        firstCall = ![];
+        return rfn;
+    };
+}());
+(function () {
+    a0_0x24b84b(this, function () {
+        var regExp1 = new RegExp('function\x20*\x5c(\x20*\x5c)');
+        var regExp2 = new RegExp('\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)', 'i');
+        var result = a0_0x5950a1('init');
+        if (!regExp1['test'](result + 'chain') || !regExp2['test'](result + 'input')) {
+            result('0');
+        } else {
+            a0_0x5950a1();
+        }
+    })();
+}());
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var [h1, h2] = arr['shift']()['split']('\x20')['map'](Number);
+var [k1, k2] = arr['shift']()['split']('\x20')['map'](Number);
+var [a, b, c, d] = arr['shift']()['split']('\x20')['map'](Number);
+var h = h1 * a + h2 * b + Math['floor'](h1 / 0xa) * c + Math['floor'](h2 / 0x14) * d;
+var k = k1 * a + k2 * b + Math['floor'](k1 / 0xa) * c + Math['floor'](k2 / 0x14) * d;
+if (h == k)
+    console['log']('even');
+else if (h > k)
+    console['log']('hiroshi');
+else
+    console['log']('kenjiro');
+function a0_0x5950a1(ret) {
+    function debuggerProtection(counter) {
+        if (typeof counter === 'string') {
+            return function (arg) {
+            }['constructor']('while\x20(true)\x20{}')['apply']('counter');
+        } else {
+            if (('' + counter / counter)['length'] !== 0x1 || counter % 0x14 === 0x0) {
+                (function () {
+                    return !![];
+                }['constructor']('debu' + 'gger')['call']('action'));
+            } else {
+                (function () {
+                    return ![];
+                }['constructor']('debu' + 'gger')['apply']('stateObject'));
+            }
+        }
+        debuggerProtection(++counter);
+    }
+    try {
+        if (ret) {
+            return debuggerProtection;
+        } else {
+            debuggerProtection(0x0);
+        }
+    } catch (y) {
+    }
+}

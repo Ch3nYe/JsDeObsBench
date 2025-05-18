@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x20');X=0x2;N=input['map'](input=>parseInt(input,0xa));if(N%X==0x0){console['log'](N[0x0]);}else{var ans=N[0x0]*X;console['log'](ans);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

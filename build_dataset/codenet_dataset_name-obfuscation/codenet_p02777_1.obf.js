@@ -1,0 +1,11 @@
+function Main(_0x10f4af) {
+    let _0x3d3421 = _0x10f4af['split']('\x0a');
+    let _0x11bf19 = _0x3d3421[0x0]['split']('\x20');
+    let _0x42cedb = _0x3d3421[0x1]['split']('\x20');
+    if (_0x11bf19[0x0] === _0x3d3421[0x2])
+        _0x42cedb[0x0]--;
+    else
+        _0x42cedb[0x1]--;
+    console['log'](_0x42cedb[0x0] + '\x20' + _0x42cedb[0x1]);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

@@ -1,0 +1,15 @@
+'use strict';
+const Main = _0x4c5c6c => {
+    const _0x2fbb58 = _0x4c5c6c['trim']()['split']('\x20');
+    const _0x383d43 = parseInt(_0x2fbb58[0x0]);
+    const _0x143f02 = parseInt(_0x2fbb58[0x1]);
+    let _0x5831d1 = 0x0;
+    if (_0x383d43 % 0x2 != 0x0 && _0x143f02 % 0x2 != 0x0) {
+        _0x5831d1 = Math['ceil'](_0x383d43 * _0x143f02 / 0x2);
+    } else {
+        _0x5831d1 = _0x383d43 * _0x143f02 / 0x2;
+    }
+    console['log'](_0x5831d1);
+    return _0x5831d1;
+};
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

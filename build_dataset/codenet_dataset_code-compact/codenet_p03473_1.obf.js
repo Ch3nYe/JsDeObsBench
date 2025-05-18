@@ -1,0 +1,1 @@
+function Main(input){input=input['trim']();console['log'](0x18+(0x18-input));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

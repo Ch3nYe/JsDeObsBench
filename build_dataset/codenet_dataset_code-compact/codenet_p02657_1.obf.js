@@ -1,0 +1,1 @@
+const main=stdin=>{const [A,B]=stdin['trim']()['split']('\x20')['map'](x=>parseInt(x));console['log'](A*B);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

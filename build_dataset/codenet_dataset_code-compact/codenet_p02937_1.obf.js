@@ -1,0 +1,1 @@
+console['log']((args=>{const [s,t]=args['trim']()['split']`\n`;const sl=s['length'],tl=t['length'];let i=-0x1,cyc=0x0;T:for(let j=0x0;j<tl;j++){for(let k=i+0x1;k<sl;k++){if(s[k]===t[j]){i=k;continue T;}}if(i===-0x1)return'-1';cyc++;i=-0x1;j--;}return''+(cyc*sl+i+0x1);})(require('fs')['readFileSync']('/dev/stdin','utf8')));

@@ -1,0 +1,1 @@
+function main(input){let nums=input['split']('\x20')['map'](item=>parseInt(item));if(nums[0x0]>nums[0x1]){console['log']('a\x20>\x20b');}else if(nums[0x0]<nums[0x1]){console['log']('a\x20<\x20b');}else{console['log']('a\x20==\x20b');}}main(require('fs')['readFileSync']('/dev/stdin','utf-8'));

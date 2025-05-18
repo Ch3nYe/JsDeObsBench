@@ -1,0 +1,1 @@
+function Main(input){var a,b,c;a=Number(input['split']('\x0a')[0x0]['split']('\x20')[0x0]);b=Number(input['split']('\x0a')[0x0]['split']('\x20')[0x1]);c=Number(input['split']('\x0a')[0x0]['split']('\x20')[0x2]);console['log'](c-(a-b)>0x0?c-(a-b):0x0);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

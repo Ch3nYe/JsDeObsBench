@@ -1,0 +1,1 @@
+process['stdin']['resume']();process['stdin']['setEncoding']('utf8');function Main(input){var tmp=input['split']('\x0a');var N=Number(tmp[0x0]);var pow=0x1;for(var i=0x1;i<=N;i++){pow*=i;pow%=0x3b9aca07;}console['log'](pow);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

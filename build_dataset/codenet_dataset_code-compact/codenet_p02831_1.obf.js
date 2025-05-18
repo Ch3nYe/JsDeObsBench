@@ -1,0 +1,1 @@
+'use strict';const Main=input=>{let xs=input['trim']()['split']('\x20')['map'](v=>parseInt(v,0xa));let m=xs[0x0];let n=xs[0x1];let r=0x0;let d=0x0;let x=m;let y=n;if(m>=n){while(n>0x0){let r=m%n;m=n;n=r;}d=m;}else{while(m>0x0){r=n%m;n=m;m=r;}d=n;}let ans=x*y/d;console['log'](ans);};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

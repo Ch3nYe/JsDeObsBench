@@ -1,0 +1,1 @@
+function Main(input){input=input['trim']();input=input['split']('\x0a');var A=input[0x0]['split']('');var B=input[0x1]['split']('');if(A[0x0]==B[0x2]&&A[0x1]==B[0x1]&&A[0x2]==B[0x0])console['log']('YES');else console['log']('NO');}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

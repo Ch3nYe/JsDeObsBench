@@ -1,0 +1,1 @@
+function Main(input){var ab=input[0x0]['split']('\x20');console['log'](ab[0x0]<=0x8&&ab[0x1]<=0x8?'Yay!':':(');}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['split']('\x0a'));

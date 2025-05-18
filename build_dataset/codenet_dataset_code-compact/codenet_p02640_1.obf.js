@@ -1,0 +1,1 @@
+const input=require('fs')['readFileSync']('/dev/stdin','utf-8')['split']('\x0a');const [X,Y]=input[0x0]['split']('\x20')['map'](Number);let ans='No';if(X<Y){const r=Y-X*0x2;if(r%0x2===0x0&&r/0x2<=X)ans='Yes';}console['log'](ans);

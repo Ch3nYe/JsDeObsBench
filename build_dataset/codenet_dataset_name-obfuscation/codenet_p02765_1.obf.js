@@ -1,0 +1,15 @@
+function main(_0x3ee942) {
+    var _0xf89492 = _0x3ee942['trim']();
+    var _0x2b7f1b = _0xf89492['split']('\x20');
+    var _0x41b080 = parseInt(_0x2b7f1b[0x0], 0xa);
+    var _0x206b9b = parseInt(_0x2b7f1b[0x1], 0xa);
+    var _0x48f313;
+    if (_0x41b080 >= 0xa) {
+        _0x48f313 = _0x206b9b;
+    } else {
+        var _0x4fe9bb = 0x64 * (0xa - _0x41b080);
+        _0x48f313 = _0x206b9b + _0x4fe9bb;
+    }
+    return _0x48f313;
+}
+console['log'](main(require('fs')['readFileSync']('/dev/stdin', 'utf8')));

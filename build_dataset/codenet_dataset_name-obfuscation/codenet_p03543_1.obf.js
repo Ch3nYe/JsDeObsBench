@@ -1,0 +1,11 @@
+function Main(_0xba64f3) {
+    _0xba64f3 = _0xba64f3['split']('\x0a');
+    var _0x2306a5 = _0xba64f3[0x0];
+    var _0x2e81f3 = 'No';
+    if (_0x2306a5[0x1] == _0x2306a5[0x2]) {
+        if (_0x2306a5[0x0] == _0x2306a5[0x1] || _0x2306a5[0x2] == _0x2306a5[0x3])
+            _0x2e81f3 = 'Yes';
+    }
+    console['log']('%s', _0x2e81f3);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

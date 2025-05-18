@@ -1,0 +1,1 @@
+'use strict';function Main(input){input=input['split']('\x0a');const line0=input[0x0]['split']('\x20');let N=parseInt(line0[0x0]);let K=parseInt(line0[0x1]);if(K%0x2===0x0){console['log'](Math['floor'](N/K)**0x3+Math['floor']((N+K/0x2)/K)**0x3);}else{console['log'](Math['floor'](N/K)**0x3);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

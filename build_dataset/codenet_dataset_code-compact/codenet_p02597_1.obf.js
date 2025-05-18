@@ -1,0 +1,1 @@
+function MainD(input){const arr=input['split']('\x0a');const N=arr[0x0];const Ci=arr[0x1]['split']('');let answer=0x0;let Wnum=0x0;for(let i=0x0;i<Ci['length'];i++){if(Ci[i]==='W'){Wnum++;}}if(Wnum===0x0)return console['log'](0x0);for(let i=Wnum-0x1;i<Ci['length'];i++){if(Ci[i]==='R'){answer++;}}console['log'](answer);}MainD(require('fs')['readFileSync']('/dev/stdin','utf8'));

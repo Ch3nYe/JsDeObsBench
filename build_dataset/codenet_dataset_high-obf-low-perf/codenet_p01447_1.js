@@ -1,0 +1,1 @@
+console.log(Math.ceil(Math.log(+require("fs").readFileSync("/dev/stdin","utf-8"))/Math.log(3)))

@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');var a=parseInt(input[0x0]['split']('\x20')[0x0],0xa);var b=parseInt(input[0x0]['split']('\x20')[0x1],0xa);var s=input[0x1];var regex=new RegExp('^[0-9]{'+a+'}-[0-9]{'+b+'}$','g');var f=s['match'](regex);console['log'](f==null?'No':'Yes');}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

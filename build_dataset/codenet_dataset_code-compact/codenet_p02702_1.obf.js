@@ -1,0 +1,1 @@
+const Main=()=>{let line=require('fs')['readFileSync']('/dev/stdin','utf8');const mod={};let count=0x0;for(let i=line['length'];0x0<i;i--){const n=parseInt(line,0xa);const m=n%0x7e3;if(mod[m]||m===0x0){count++;}mod[m]=!![];line=line['slice'](0x1);}console['log'](count);};Main();

@@ -1,0 +1,1 @@
+function Main(input){inputs=input['split']('\x0a');const N=Number(inputs[0x0]);const arr=[];for(let i=0x1;i<=N;i++){if(i%0x3!==0x0&&i%0x5!==0x0){arr['push'](i);}}const sum=arr['reduce']((prev,current)=>{return prev+current;});console['log'](sum);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

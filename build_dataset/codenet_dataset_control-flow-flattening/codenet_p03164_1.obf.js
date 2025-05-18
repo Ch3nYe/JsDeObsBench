@@ -1,0 +1,43 @@
+var MAX_VALUE = 0x3e8;
+var inputRaw = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var rows = inputRaw['trim']()['split']('\x0a');
+var row1 = rows[0x0]['split']('\x20')['map'](Number);
+var N = row1[0x0];
+var W = row1[0x1];
+var list = rows['slice'](0x1)['map'](r => r['split']('\x20')['map'](Number));
+var dp = Array['from']({ 'length': N + 0x1 }, _ => Array(N * MAX_VALUE + 0x1)['fill'](0x0));
+dp[0x0] = Array(N * MAX_VALUE + 0x1)['fill'](Infinity);
+dp[0x0][0x0] = 0x0;
+function solve() {
+    var WHamVG = {
+        'wTpMH': function (x, y) {
+            return x * y;
+        },
+        'hadnh': function (x, y) {
+            return x + y;
+        },
+        'XAwyc': function (x, y) {
+            return x - y;
+        },
+        'PGEXn': function (x, y) {
+            return x <= y;
+        }
+    };
+    for (var i = 0x0; i < N; i++) {
+        for (var j = 0x0; j <= WHamVG['wTpMH'](N, MAX_VALUE); j++) {
+            if (list[i][0x1] <= j) {
+                var a = WHamVG['hadnh'](dp[i][WHamVG['XAwyc'](j, list[i][0x1])], list[i][0x0]);
+                var b = dp[i][j];
+                dp[i + 0x1][j] = Math['min'](a, b);
+            } else {
+                dp[i + 0x1][j] = dp[i][j];
+            }
+        }
+    }
+    var result = 0x0;
+    for (var i = 0x0; WHamVG['PGEXn'](i, N * MAX_VALUE); i++)
+        if (dp[N][i] <= W)
+            result = i;
+    return result;
+}
+console['log'](solve());

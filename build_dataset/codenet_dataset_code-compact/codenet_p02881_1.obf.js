@@ -1,0 +1,1 @@
+'use strict';function main(input){const N=parseInt(input);let distance=N-0x1;for(let a=0x2;a<=Math['sqrt'](N);++a){let b=N/a;if(Number['isInteger'](b)&&a+b-0x2<distance){distance=a+b-0x2;}}console['log'](distance);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

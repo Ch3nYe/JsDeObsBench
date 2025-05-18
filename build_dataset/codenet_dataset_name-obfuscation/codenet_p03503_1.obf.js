@@ -1,0 +1,27 @@
+'use strict';
+function main(_0x58fa54) {
+    const _0x2057c0 = _0x58fa54['split']('\x0a');
+    const _0x2e552e = parseInt(_0x2057c0['shift']());
+    const _0x2a30c1 = [];
+    for (let _0x50b5a8 = 0x0; _0x50b5a8 < _0x2e552e; _0x50b5a8++) {
+        _0x2a30c1['push'](_0x2057c0[_0x50b5a8]['split']('\x20')['map'](_0x543365 => parseInt(_0x543365)));
+    }
+    const _0x13efb9 = [];
+    for (let _0x3e054f = 0x0; _0x3e054f < _0x2e552e; _0x3e054f++) {
+        _0x13efb9['push'](_0x2057c0[_0x3e054f + _0x2e552e]['split']('\x20')['map'](_0x49b766 => parseInt(_0x49b766)));
+    }
+    let _0x5dd95f = -Infinity;
+    for (let _0x21e0de = 0x1; _0x21e0de < 0x400; _0x21e0de++) {
+        let _0x7e5799 = 0x0;
+        for (let _0x308cb1 = 0x0; _0x308cb1 < _0x2e552e; _0x308cb1++) {
+            let _0x3704d0 = _0x2a30c1[_0x308cb1];
+            let _0x4ec9f0 = (parseInt(_0x3704d0['join'](''), 0x2) & _0x21e0de)['toString'](0x2)['split']('')['map'](_0x165e92 => Number(_0x165e92))['reduce']((_0x1ac250, _0x52ece9) => _0x1ac250 + _0x52ece9, 0x0);
+            _0x7e5799 += _0x13efb9[_0x308cb1][_0x4ec9f0];
+        }
+        if (_0x7e5799 > _0x5dd95f) {
+            _0x5dd95f = _0x7e5799;
+        }
+    }
+    console['log'](_0x5dd95f);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{const [a,b,c]=arg['split']('\x0a')[0x0]['split']('\x20');console['log'](b-a==c-b?'YES':'NO');};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

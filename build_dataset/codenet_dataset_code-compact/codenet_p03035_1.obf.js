@@ -1,0 +1,1 @@
+function main(input){const nums=input['split']('\x20')['map'](num=>parseInt(num,0xa));console['log'](nums[0x0]>=0xd?nums[0x1]:nums[0x0]>=0x6?nums[0x1]/0x2:0x0);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

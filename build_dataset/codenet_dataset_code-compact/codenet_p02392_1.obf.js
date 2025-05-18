@@ -1,0 +1,1 @@
+process['stdin']['resume']();process['stdin']['setEncoding']('utf8');process['stdin']['on']('data',function(x){var args=x['split']('\x20')['map'](Number);var a=args[0x0];var b=args[0x1];var c=args[0x2];console['log']('%s',a<b&&b<c?'Yes':'No');});

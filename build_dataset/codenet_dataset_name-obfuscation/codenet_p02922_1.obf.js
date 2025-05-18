@@ -1,0 +1,16 @@
+'use strict';
+const Main = _0x2648d5 => {
+    let _0x55a1cc = _0x2648d5['trim']()['split']('\x20')['map'](_0x573a02 => parseInt(_0x573a02, 0xa));
+    let _0x21ca1e = _0x55a1cc[0x0];
+    let _0x32a44a = _0x55a1cc[0x1];
+    let _0x1cac44 = 0x1;
+    if (_0x21ca1e >= _0x32a44a) {
+        _0x1cac44 = 0x1;
+    } else {
+        for (let _0x4de37d = 0x1; (_0x21ca1e - 0x1) * _0x4de37d + 0x1 < _0x32a44a; _0x4de37d++) {
+            _0x1cac44 += 0x1;
+        }
+    }
+    console['log'](_0x1cac44);
+};
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

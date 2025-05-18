@@ -1,0 +1,1 @@
+'use strict';function Main(input){const S=input['split']('\x0a')[0x0];if(S['length']<=0x2){console['log'](S);}else{console['log'](S['split']('')['reverse']()['join'](''));}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

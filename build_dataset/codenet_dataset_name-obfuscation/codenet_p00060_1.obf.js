@@ -1,0 +1,26 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+Arr['forEach'](function (_0x5d8300) {
+    var _0x46e93d = _0x5d8300['split']('\x20')['map'](Number);
+    var _0x1f0322 = [
+        0x1,
+        0x2,
+        0x3,
+        0x4,
+        0x5,
+        0x6,
+        0x7,
+        0x8,
+        0x9,
+        0xa
+    ];
+    _0x1f0322 = _0x1f0322['filter'](function (_0x274dfc) {
+        return _0x274dfc != _0x46e93d[0x0] || _0x274dfc != _0x46e93d[0x1] || _0x274dfc != _0x46e93d[0x2];
+    });
+    var _0x2665a9 = 0x0;
+    var _0x36d1c8 = 0x0;
+    _0x1f0322['forEach'](function (_0x4844f4) {
+        _0x46e93d[0x0] + _0x46e93d[0x1] + _0x4844f4 <= 0x14 ? _0x2665a9++ : _0x36d1c8++;
+    });
+    console['log'](_0x2665a9 >= _0x36d1c8 ? 'YES' : 'NO');
+});

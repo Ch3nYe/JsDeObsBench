@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var Arr=input['trim']()['split']('\x0a')['map'](Number);Arr['forEach'](function(v){var arr=[0x0,v];for(var i=0x2;i<=0xa;i++){arr[i]=i%0x2==0x0?arr[i-0x1]*0x2:arr[i-0x1]/0x3;}var sum=arr['reduce'](function(a,b){return a+b;});console['log'](sum['toFixed'](0x8));});

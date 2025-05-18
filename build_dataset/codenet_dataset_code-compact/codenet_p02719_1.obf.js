@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');tmp=input[0x0]['split']('\x20');var N=Number(tmp[0x0]);var K=Number(tmp[0x1]);if(K===0x1)return console['log'](0x0);var current=Math['abs'](N-K);N=current;while(current>=N){N=current;current=Math['abs'](N-K);}console['log'](current);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+'use strict';const main=arg=>{arg=arg['trim']()['split']('\x0a');const L=parseInt(arg[0x0]['split']('\x20')[0x0]);const R=parseInt(arg[0x0]['split']('\x20')[0x1]);const d=parseInt(arg[0x0]['split']('\x20')[0x2]);let answer=0x0;for(let i=L;i<=R;i++){if(i%d===0x0)answer++;}console['log'](answer);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

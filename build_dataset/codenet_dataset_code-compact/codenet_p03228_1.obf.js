@@ -1,0 +1,1 @@
+'use strict';function Main(input){const tmp=input['split']('\x20');let A=parseInt(tmp[0x0],0xa);let B=parseInt(tmp[0x1],0xa);const K=tmp[0x2];for(let i=0x0;i<K;i++){if(i%0x2==0x0){if(A%0x2==0x1){A--;}B+=A/0x2;A/=0x2;}else{if(B%0x2==0x1){B--;}A+=B/0x2;B/=0x2;}}console['log'](A,B);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

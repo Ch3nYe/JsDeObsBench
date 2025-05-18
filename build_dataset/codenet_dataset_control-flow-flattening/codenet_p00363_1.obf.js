@@ -1,0 +1,11 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var [w, h, c] = input['trim']()['split']('\x20');
+w = w - 0x0;
+h = h - 0x0;
+var ans = [];
+ans['push']('+' + '-'['repeat'](w - 0x2) + '+');
+for (var i = 0x0; i < h - 0x2; i++)
+    ans['push']('|' + '.'['repeat'](w - 0x2) + '|');
+ans['push']('+' + '-'['repeat'](w - 0x2) + '+');
+ans[Math['floor'](h / 0x2)] = '|' + '.'['repeat']((w - 0x3) / 0x2) + c + '.'['repeat']((w - 0x3) / 0x2) + '|';
+console['log'](ans['join']('\x0a')['trim']());

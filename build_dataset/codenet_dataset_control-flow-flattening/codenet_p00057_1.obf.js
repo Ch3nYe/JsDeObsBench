@@ -1,0 +1,7 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+for (var i = 0x0; i < Arr['length']; i++) {
+    var n = Arr[i] - 0x0 + 0x1;
+    var x = 0x1 / 0x2 * n * (n - 0x1);
+    console['log'](x + 0x1);
+}

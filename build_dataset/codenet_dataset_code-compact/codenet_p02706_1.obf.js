@@ -1,0 +1,1 @@
+const main=inputs=>{var array=inputs[0x0]['split']('\x20');var array2=inputs[0x1]['split']('\x20');var N=array[0x0]-0x0;var M=array[0x1]-0x0;var sum=0x0;for(var i=0x0;i<M;i++){sum=sum+Number(array2[i]);}console['log'](N-sum<0x0?-0x1:N-sum);};main(require('fs')['readFileSync']('/dev/stdin','UTF-8')['trim']()['split']('\x0a'));

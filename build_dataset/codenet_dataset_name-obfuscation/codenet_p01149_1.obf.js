@@ -1,0 +1,38 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+input = input['replace'](/T|J|Q|K/g, '10');
+input = input['replace'](/A/g, '11');
+var arr = input['trim']()['split']('\x0a');
+var n = arr['shift']() - 0x0;
+while (n--) {
+    var a = arr['shift']()['split']('\x20')['map'](Number);
+    var b = arr['shift']()['split']('\x20')['map'](Number);
+    var flag = ![];
+    var sum = a[0x0] + a[0x1];
+    if (a[0x0] == 0xb || a[0x1] == 0xb)
+        flag = !![];
+    if (sum == 0x15) {
+        console['log']('blackjack');
+        continue;
+    }
+    var ans = '';
+    for (var i = 0x0; i < b['length']; i++) {
+        if (sum <= 0x10) {
+            if (b[i] == 0xb)
+                flag = !![];
+            if (b[i] == 0xb && sum + 0xb > 0x15)
+                b[i] = 0x1;
+            sum += b[i];
+        } else if (sum == 0x11 && flag) {
+            if (b[i] == 0xb)
+                flag = !![];
+            if (b[i] == 0xb && sum + 0xb > 0x15)
+                b[i] = 0x1;
+            sum += b[i];
+        } else {
+            break;
+        }
+    }
+    if (sum > 0x15)
+        sum = 'bust';
+    console['log'](sum);
+}

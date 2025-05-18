@@ -1,0 +1,1 @@
+'use strict';function main(input){let line=input['split'](/\r?\n/g);let arr=line[0x0]['split']('\x20');const N=parseInt(arr[0x0]),K=parseInt(arr[0x1]);let cnt=0x1;while(K**cnt<N)cnt++;console['log'](cnt);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,1 @@
+'use strict';function Main(input){input=input['split']('\x0a');var volume=input/0x3*input/0x3*input/0x3;console['log'](volume['toFixed'](0xc));}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

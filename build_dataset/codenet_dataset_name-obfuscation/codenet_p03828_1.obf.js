@@ -1,0 +1,26 @@
+'use strict';
+const pf = (_0x329478, _0x18c098) => {
+    for (let _0x3170ed = 0x2; _0x3170ed <= _0x329478; _0x3170ed++) {
+        while (_0x329478 % _0x3170ed === 0x0) {
+            _0x329478 /= _0x3170ed;
+            if (!(_0x3170ed in _0x18c098))
+                _0x18c098[_0x3170ed] = 0x0;
+            _0x18c098[_0x3170ed]++;
+        }
+    }
+    return _0x18c098;
+};
+function main(_0x250c07) {
+    _0x250c07 = Number(_0x250c07['trim']());
+    const _0x29ab1f = 0x3b9aca00 + 0x7;
+    let _0x375fef = {};
+    let _0x204c15 = 0x1;
+    for (let _0x4147c = 0x1; _0x4147c <= _0x250c07; _0x4147c++) {
+        _0x375fef = pf(_0x4147c, _0x375fef);
+    }
+    Object['keys'](_0x375fef)['forEach'](_0xb4a4c5 => {
+        _0x204c15 = _0x204c15 * (_0x375fef[_0xb4a4c5] + 0x1) % _0x29ab1f;
+    });
+    console['log'](_0x204c15);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

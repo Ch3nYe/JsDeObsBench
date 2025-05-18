@@ -1,0 +1,1 @@
+function Main(input){var input=input['split']('\x0a');var i1=input[0x0]['split']('\x20');var i2=input[0x1]['split']('\x20');var d1=new Date('2019/'+i1[0x0]+'/'+i1[0x1]);var d2=new Date('2019/'+i2[0x0]+'/'+i2[0x1]);if(d1['getMonth']()==d2['getMonth']()){console['log'](0x0);}else{console['log'](0x1);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

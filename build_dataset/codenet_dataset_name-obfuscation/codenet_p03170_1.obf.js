@@ -1,0 +1,28 @@
+'use strict';
+(function (_0x567621) {
+    _0x567621 = _0x567621['trim']()['split'](/\s+/)['map'](_0x42fd38 => _0x42fd38 - 0x0);
+    const _0x2507ab = _0x567621['shift']();
+    const _0x50e635 = _0x567621['shift']();
+    const _0x4f1f5b = _0x567621;
+    const _0x2c0e39 = new Array(_0x50e635 + 0x2)['fill']('tbd');
+    _0x2c0e39[_0x50e635 + 0x1] = !![];
+    for (let _0x3c37ed = _0x50e635 + 0x1; _0x3c37ed >= 0x0; _0x3c37ed--) {
+        if (_0x2c0e39[_0x3c37ed])
+            if (_0x2c0e39[_0x3c37ed - 0x1] === !![]) {
+                _0x3c37ed--;
+                continue;
+            }
+        for (let _0x13a70e = 0x1; _0x13a70e <= _0x4f1f5b[0x0]; _0x13a70e++)
+            if (_0x3c37ed - _0x13a70e >= 0x0)
+                if (_0x2c0e39[_0x3c37ed - _0x13a70e] === 'tbd')
+                    _0x2c0e39[_0x3c37ed - _0x13a70e] = ![];
+        if (!_0x2c0e39[_0x3c37ed])
+            for (let _0x58dd65 = 0x0; _0x58dd65 < _0x2507ab; _0x58dd65++)
+                if (_0x3c37ed - _0x4f1f5b[_0x58dd65] >= 0x0)
+                    _0x2c0e39[_0x3c37ed - _0x4f1f5b[_0x58dd65]] = !![];
+    }
+    if (_0x2c0e39[0x0])
+        console['log']('First');
+    else
+        console['log']('Second');
+}(require('fs')['readFileSync']('/dev/stdin', 'utf8')));

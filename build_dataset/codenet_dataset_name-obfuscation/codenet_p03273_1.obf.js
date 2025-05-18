@@ -1,0 +1,31 @@
+function main(_0x45a075) {
+    _0x45a075 = _0x45a075['split'](/\s/);
+    let _0x535886 = parseInt(_0x45a075[0x0]);
+    let _0x2a50c0 = parseInt(_0x45a075[0x1]);
+    let _0x49699a = [];
+    for (let _0x1d758d = 0x2; _0x1d758d < 0x2 + _0x535886; _0x1d758d++)
+        _0x49699a['push'](_0x45a075[_0x1d758d]);
+    function _0x2a4ad3(_0x4a262d, _0x5932cc) {
+        let _0x5898a1 = 0x0;
+        for (let _0x12e24d = 0x0; _0x12e24d < _0x535886; _0x12e24d++)
+            if (_0x49699a[_0x12e24d][_0x4a262d] == '#') {
+                _0x5898a1++;
+                break;
+            }
+        for (let _0x394212 = 0x0; _0x394212 < _0x2a50c0; _0x394212++)
+            if (_0x49699a[_0x5932cc][_0x394212] == '#') {
+                _0x5898a1++;
+                break;
+            }
+        return _0x5898a1 == 0x2;
+    }
+    for (let _0x1ca5be = 0x0; _0x1ca5be < _0x535886; _0x1ca5be++) {
+        ans = '';
+        for (let _0x33e476 = 0x0; _0x33e476 < _0x2a50c0; _0x33e476++)
+            if (_0x2a4ad3(_0x33e476, _0x1ca5be))
+                ans = ans + _0x49699a[_0x1ca5be][_0x33e476];
+        if (ans != '')
+            console['log'](ans);
+    }
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

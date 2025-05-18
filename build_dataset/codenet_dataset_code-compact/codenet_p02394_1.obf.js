@@ -1,0 +1,1 @@
+function main(input){let numarray=input['split']('\x20')['map'](Number);let W,H,x,y,r;W=numarray[0x0];H=numarray[0x1];x=numarray[0x2];y=numarray[0x3];r=numarray[0x4];if(x<r||y<r||x+r>W||y+r>H){console['log']('No');}else{console['log']('Yes');}}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

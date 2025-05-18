@@ -1,0 +1,1 @@
+'use strict';const main=input=>{const lines=input['split']('\x0a');if(lines[0x0]['length']===0x1){console['log'](lines[0x0]);return;}const len9=lines[0x0]['length']-0x1;const head=parseInt(lines[0x0][0x0])-0x1;console['log'](head+len9*0x9);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

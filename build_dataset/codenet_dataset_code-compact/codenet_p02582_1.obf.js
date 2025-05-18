@@ -1,0 +1,1 @@
+function main(input){input=input['trim']();let list=input['split']('');let answer=0x0;for(let i=0x0;i<list['length'];i++){if(list[i]==='R'){if(answer===0x0){answer++;}else if(list[i-0x1]==='R'){answer++;}}}console['log'](answer);}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

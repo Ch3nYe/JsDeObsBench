@@ -1,0 +1,1 @@
+require("fs").readFileSync("/dev/stdin","utf8").split(/\s/).map(function(i){(j=+i)?console.log(j<=48?'light fly':j<=51?'fly':j<=54?'bantam':j<=57?'feather':j<=60?'light':j<=64?'light welter':j<=69?'welter':j<=75?'light middle':j<=81?'middle':j<=91?'light heavy':'heavy'):0})

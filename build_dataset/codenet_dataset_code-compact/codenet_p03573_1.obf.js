@@ -1,0 +1,1 @@
+function Main(input){const numbers=input['split']('\x20')['map'](n=>Number(n));const a=numbers[0x0];const b=numbers[0x1];const c=numbers[0x2];if(a===b){console['log'](c);}else if(b===c){console['log'](a);}else{console['log'](b);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

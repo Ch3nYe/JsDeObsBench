@@ -1,0 +1,18 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var a = arr[0x0];
+var b = arr[0x1];
+var str = '';
+for (var i = 0x0; i < a['length']; i++) {
+    var flag = !![];
+    ;
+    for (var j = 0x0; j < b['length']; j++) {
+        if (a[i + j] != b[j]) {
+            flag = ![];
+            break;
+        }
+    }
+    if (flag)
+        str += i + '\x0a';
+}
+console['log'](str);

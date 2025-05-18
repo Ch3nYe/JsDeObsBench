@@ -1,0 +1,1 @@
+function Main(input){var counter=function(str,seq){return str['split'](seq)['length']-0x1;};lines=input['split']('\x0a');var s=lines[0x0];var bw=counter(s,'BW');var wb=counter(s,'WB');console['log'](bw+wb);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

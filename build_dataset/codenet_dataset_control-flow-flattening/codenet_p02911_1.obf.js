@@ -1,0 +1,31 @@
+'use strict';
+let arg_str = require('fs')['readFileSync']('/dev/stdin', 'UTF-8');
+arg_str = arg_str['split']('\x0a');
+const arg_str_0 = arg_str[0x0]['split']('\x20');
+const N = arg_str_0[0x0];
+const K = arg_str_0[0x1];
+const Q = arg_str_0[0x2];
+const A_array = arg_str['slice'](0x1);
+let result_val = [];
+for (let i = 0x0; i < N; i++) {
+    result_val[i] = K;
+}
+A_array['forEach']((item, index) => {
+    const NWtyZM = {
+        'lOonh': function (x, y) {
+            return x < y;
+        },
+        'oiybh': function (x, y) {
+            return x != y;
+        },
+        'bPVYL': function (x, y) {
+            return x - y;
+        }
+    };
+    for (let i = 0x0; NWtyZM['lOonh'](i, N); i++) {
+        if (NWtyZM['oiybh'](NWtyZM['bPVYL'](item, 0x1), i)) {
+            result_val[i]--;
+        }
+    }
+});
+result_val['map'](x => x > 0x0 ? console['log']('Yes') : console['log']('No'));

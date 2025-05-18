@@ -1,0 +1,40 @@
+function equal(_0x116774, _0x5708f7) {
+    var _0x46af22 = Object['getOwnPropertyNames'](_0x116774);
+    var _0x304ba3 = Object['getOwnPropertyNames'](_0x5708f7);
+    if (_0x46af22['length'] != _0x304ba3['length'])
+        return ![];
+    for (var _0x3003a2 = 0x0; _0x3003a2 < _0x46af22['length']; _0x3003a2++)
+        if (_0x116774[_0x46af22[_0x3003a2]] !== _0x5708f7[_0x46af22[_0x3003a2]])
+            return ![];
+    return !![];
+}
+function pi(_0x5249ce) {
+    return parseInt(_0x5249ce, 0xa);
+}
+var six = [
+    0x6,
+    0x5,
+    0x4,
+    0x3,
+    0x2,
+    0x1
+]['map'](_0x1ca1a8 => Math['pow'](0x6, _0x1ca1a8));
+var nine = [
+    0x5,
+    0x4,
+    0x3,
+    0x2,
+    0x1
+]['map'](_0x4afbe9 => Math['pow'](0x9, _0x4afbe9));
+function count(_0x104dfe) {
+    if (_0x104dfe < 0x6)
+        return _0x104dfe;
+    if (_0x104dfe < 0x9)
+        return 0x1 + (_0x104dfe - 0x6);
+    return Math['min'](count(_0x104dfe - six['find'](_0x306088 => _0x306088 <= _0x104dfe)) + 0x1, count(_0x104dfe - nine['find'](_0x93657 => _0x93657 <= _0x104dfe)) + 0x1);
+}
+function main(_0x4f0a74) {
+    var _0xae25d3 = pi(_0x4f0a74);
+    console['log'](count(_0xae25d3));
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

@@ -1,0 +1,1 @@
+function Main(input){input=String(input);var len=input['length'];var first=input['substring'](0x0,0x1);if(len<0x4){var mid=0x1;}else{var mid=len-0x2;}var last=input['substring'](len-0x1,len);console['log']('%s',first+String(mid)+last);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

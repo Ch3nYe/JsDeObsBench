@@ -1,0 +1,1 @@
+'use strict';function Main(input){const ab=input['split']('\x20');console['log']((parseFloat(ab[0x0])+parseFloat(ab[0x1]))/0x2);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

@@ -1,0 +1,6 @@
+let [a, b] = require('fs')['readFileSync']('/dev/stdin', 'utf8')['split']('\x20')['map'](Number);
+if (a == 0x1)
+    a = 0xe;
+if (b == 0x1)
+    b = 0xe;
+console['log'](a == b ? 'Draw' : a > b ? 'Alice' : 'Bob');

@@ -1,0 +1,1 @@
+function Main(s){s=s['trim']();const l=s['length'];if(l&0x1^s[0x0]===s[l-0x1])console['log']('First');else console['log']('Second');}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

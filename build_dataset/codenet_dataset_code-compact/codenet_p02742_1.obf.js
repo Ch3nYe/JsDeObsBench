@@ -1,0 +1,1 @@
+'use strict';const Main=input=>{const tmp=input['trim']()['split']('\x20');const H=parseInt(tmp[0x0]);const W=parseInt(tmp[0x1]);let result=0x0;if(H%0x2!=0x0&&W%0x2!=0x0){result=Math['ceil'](H*W/0x2);}else{result=H*W/0x2;}console['log'](result);return result;};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

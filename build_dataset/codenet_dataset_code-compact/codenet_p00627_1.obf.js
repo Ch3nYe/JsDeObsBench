@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var Arr=input['trim']()['split']('\x0a')['map'](Number);while(Arr['length']!=0x0){var n=Arr['shift']()/0x4;if(n==0x0)break;var sum=0x0;while(n!=0x0){sum+=Arr['shift']();n--;}console['log'](sum);}

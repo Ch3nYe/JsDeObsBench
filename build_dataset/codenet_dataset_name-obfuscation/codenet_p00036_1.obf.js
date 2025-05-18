@@ -1,0 +1,4 @@
+require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']()['split']('\x0a\x0a')['map'](function (_0x136395) {
+    c = _0x136395['replace'](/\s/g, '')['split']('')['join']('');
+    console['log'](c['indexOf']('1111') != -0x1 ? 'C' : c['indexOf']('111') != -0x1 ? 'F' : c['indexOf']('1101') != -0x1 ? 'D' : c['indexOf']('101') != -0x1 ? 'B' : c['indexOf']('1000001') != -0x1 ? 'G' : c['indexOf']('10000001') != -0x1 ? 'A' : 'E');
+});

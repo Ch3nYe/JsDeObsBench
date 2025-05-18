@@ -1,0 +1,1 @@
+var input=require('fs')['readFileSync']('/dev/stdin','utf8');var arr=input['trim']()['split']('\x0a');var a=arr[0x0];var b=arr[0x1];var len=b['length']-0x1;var reg=new RegExp(b,'g');var ans=[];while(reg['test'](a)){reg['lastIndex']-=len;ans['push'](reg['lastIndex']-0x1);}if(ans['length']!=0x0)console['log'](ans['join']('\x0a'));

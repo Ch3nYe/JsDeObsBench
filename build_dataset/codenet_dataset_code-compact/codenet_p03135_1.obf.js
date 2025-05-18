@@ -1,0 +1,1 @@
+function main(input){const nums=input['trim']()['split'](/\s/)['map'](str=>{return Number(str);});console['log']((nums[0x0]/nums[0x1])['toFixed'](0xa));}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

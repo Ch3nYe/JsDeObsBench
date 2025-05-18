@@ -1,0 +1,5 @@
+console['log']('0\x200');
+console['log']('1\x202');
+console['log']('2\x202');
+console['log']('3\x201');
+console['log']('4\x203');

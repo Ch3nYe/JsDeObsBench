@@ -1,0 +1,1 @@
+function Main(input){var A=parseInt(input[0x0],0xa);var B=parseInt(input[0x1],0xa);var C=parseInt(input[0x2],0xa);if(A<B){if(A<C&&C<B){console['log']('Yes');}else{console['log']('No');}}else{if(B<C&&C<A){console['log']('Yes');}else{console['log']('No');}}}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']()['split'](/\n|\s/));

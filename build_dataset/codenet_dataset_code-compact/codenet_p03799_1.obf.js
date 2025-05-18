@@ -1,0 +1,1 @@
+function Main(input){var inputArr=input['split']('\x20');var sNum=Number(inputArr[0x0]);var cNum=Number(inputArr[0x1]);var result=0x0;if(sNum>cNum/0x2){result+=Math['floor'](cNum/0x2);}else{result+=sNum;cNum-=result*0x2;result+=Math['floor'](cNum/0x4);}console['log'](result);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

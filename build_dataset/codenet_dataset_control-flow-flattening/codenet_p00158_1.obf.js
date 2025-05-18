@@ -1,0 +1,16 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var n = Arr['shift']() - 0x0;
+    if (n == 0x0)
+        break;
+    var cnt = 0x0;
+    while (n != 0x1) {
+        cnt++;
+        if (n % 0x2 == 0x0)
+            n = n / 0x2;
+        else
+            n = 0x3 * n + 0x1;
+    }
+    console['log'](cnt);
+}

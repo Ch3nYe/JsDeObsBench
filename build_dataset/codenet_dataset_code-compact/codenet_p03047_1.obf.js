@@ -1,0 +1,1 @@
+function Main(input){var str=input['trim']();var h=str['split']('\x20');var n=h[0x0];var k=h[0x1];var kekka=0x0;var kekka=n-k+0x1;console['log'](kekka);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

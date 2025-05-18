@@ -1,0 +1,20 @@
+process['stdin']['resume']();
+process['stdin']['setEncoding']('utf8');
+x = require('fs')['readFileSync']('/dev/stdin', 'utf8')['trim']()['split'](/\s/);
+for (i = 0x0; i < x['length']; i += 0x2) {
+    count = 0x0;
+    y = x[i];
+    if (y + x[i + 0x1] == 0x0)
+        break;
+    for (; y <= x[i + 0x1]; y++) {
+        if (y % 0x190 == 0x0 || y % 0x4 == 0x0 && y % 0x64 != 0x0) {
+            console['log'](String(y)['trim']());
+            count++;
+        }
+    }
+    if (i != 0x0 || i == x['length'] - 0x1)
+        console['log']();
+    if (count == 0x0) {
+        console['log']('NA\x0a');
+    }
+}

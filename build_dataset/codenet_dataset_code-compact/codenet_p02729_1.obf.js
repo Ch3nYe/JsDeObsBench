@@ -1,0 +1,1 @@
+function Main(input){var a=input[0x0]['split']('\x20')['map'](v=>v-0x0);if(a[0x0]+a[0x1]==0x0)console['log'](0x0);else console['log'](~~(a[0x0]*(a[0x0]-0x1)/0x2+a[0x1]*(a[0x1]-0x1)/0x2));}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']()['split']('\x0a'));

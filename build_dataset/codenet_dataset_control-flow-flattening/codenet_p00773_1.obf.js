@@ -1,0 +1,24 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var Arr = input['trim']()['split']('\x0a');
+while (!![]) {
+    var xys = Arr['shift']()['split']('\x20')['map'](Number);
+    var x = xys[0x0];
+    var y = xys[0x1];
+    var s = xys[0x2];
+    if (x == 0x0 && y == 0x0 && s == 0x0)
+        break;
+    var max = 0x0;
+    for (var i = 0x1; i <= s - 0x1; i++) {
+        for (var j = 0x1; j <= s - 0x1; j++) {
+            var a = Math['floor'](i * (0x64 + x) / 0x64) + Math['floor'](j * (0x64 + x) / 0x64);
+            if (a > s)
+                break;
+            if (a == s) {
+                var b = Math['floor'](i * (0x64 + y) / 0x64) + Math['floor'](j * (0x64 + y) / 0x64);
+                max = Math['max'](max, b);
+                break;
+            }
+        }
+    }
+    console['log'](max);
+}

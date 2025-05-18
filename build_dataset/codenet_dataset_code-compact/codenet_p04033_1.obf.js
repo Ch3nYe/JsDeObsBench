@@ -1,0 +1,1 @@
+const main=input=>{const data=input['split'](/\n|\s/)['map'](a=>parseInt(a,0xa));const a=data[0x0];const b=data[0x1];if(a<=0x0&&0x0<=b){return'Zero';}if((b-a)%0x2||a>0x0){return'Positive';}else{return'Negative';}};console['log'](main(require('fs')['readFileSync']('/dev/stdin','utf8')));

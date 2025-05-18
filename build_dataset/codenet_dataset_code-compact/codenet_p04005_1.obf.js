@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x20')['map'](Number);if(input[0x0]%0x2==0x0&&input[0x1]%0x2==0x0&&input[0x2]%0x2==0x0){console['log'](0x0);}else{input=input['sort'](function(a,b){return a-b;});console['log'](input[0x1]*input[0x0]);}}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

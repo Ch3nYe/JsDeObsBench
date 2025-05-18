@@ -1,0 +1,20 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var [h, w] = arr['shift']()['split']('\x20')['map'](Number);
+var yx = [];
+for (var i = 0x0; i < h; i++) {
+    yx[i] = arr['shift']()['split']('\x20')['map'](_0x5d628e => 0x1 - (_0x5d628e - 0x0));
+}
+for (var y = 0x1; y < h; y++) {
+    for (var x = 0x1; x < w; x++) {
+        if (yx[y][x] == 0x1)
+            yx[y][x] = Math['min'](yx[y - 0x1][x], yx[y][x - 0x1], yx[y - 0x1][x - 0x1]) + 0x1;
+    }
+}
+var max = 0x0;
+for (var y = 0x0; y < h; y++) {
+    for (var x = 0x0; x < w; x++) {
+        max = Math['max'](max, yx[y][x]);
+    }
+}
+console['log'](max * max);

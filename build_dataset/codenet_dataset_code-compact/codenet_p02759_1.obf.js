@@ -1,0 +1,1 @@
+'use strict';function main(input){input=input['split']('\x0a');const a=parseInt(input[0x0],0xa);console['log'](Math['round'](a/0x2));}main(require('fs')['readFileSync']('/dev/stdin','utf8'));

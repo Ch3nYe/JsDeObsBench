@@ -1,0 +1,3 @@
+require('fs')['readFileSync']('/dev/stdin', 'utf8')['split'](/\s/)['map'](function (_0x41cc0a) {
+    (j = +_0x41cc0a) ? console['log'](j <= 0x30 ? 'light\x20fly' : j <= 0x33 ? 'fly' : j <= 0x36 ? 'bantam' : j <= 0x39 ? 'feather' : j <= 0x3c ? 'light' : j <= 0x40 ? 'light\x20welter' : j <= 0x45 ? 'welter' : j <= 0x4b ? 'light\x20middle' : j <= 0x51 ? 'middle' : j <= 0x5b ? 'light\x20heavy' : 'heavy') : 0x0;
+});

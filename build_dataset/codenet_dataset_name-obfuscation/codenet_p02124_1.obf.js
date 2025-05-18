@@ -1,0 +1,4 @@
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var x = arr['shift']() - 0x0;
+console['log']('ai1333' + '3'['repeat'](x / 0x64));

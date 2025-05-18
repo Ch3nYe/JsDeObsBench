@@ -1,0 +1,75 @@
+var a0_0x4e2544 = (function () {
+    var firstCall = !![];
+    return function (context, fn) {
+        var rfn = firstCall ? function () {
+            if (fn) {
+                var res = fn['apply'](context, arguments);
+                fn = null;
+                return res;
+            }
+        } : function () {
+        };
+        firstCall = ![];
+        return rfn;
+    };
+}());
+(function () {
+    a0_0x4e2544(this, function () {
+        var regExp1 = new RegExp('function\x20*\x5c(\x20*\x5c)');
+        var regExp2 = new RegExp('\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)', 'i');
+        var result = a0_0x3e9d4a('init');
+        if (!regExp1['test'](result + 'chain') || !regExp2['test'](result + 'input')) {
+            result('0');
+        } else {
+            a0_0x3e9d4a();
+        }
+    })();
+}());
+var input = require('fs')['readFileSync']('/dev/stdin', 'utf8');
+var arr = input['trim']()['split']('\x0a');
+var n = arr['shift']() - 0x0;
+var p = arr['shift']()['split']('\x20')['map'](Number);
+var t = arr['shift']()['split']('\x20')['map'](Number);
+var s = [];
+for (var i = 0x0; i <= 0xc8; i++)
+    s[i] = Infinity;
+s[0x0] = 0x0;
+for (var i = 0x0; i <= 0x64; i++) {
+    if (s[i] == Infinity)
+        continue;
+    s[i + t[0x0]] = Math['min'](s[i] + p[0x0], s[i + t[0x0]]);
+    s[i + t[0x1]] = Math['min'](s[i] + p[0x1], s[i + t[0x1]]);
+    s[i + t[0x2]] = Math['min'](s[i] + p[0x2], s[i + t[0x2]]);
+    s[i + t[0x3]] = Math['min'](s[i] + p[0x3], s[i + t[0x3]]);
+}
+var min = Infinity;
+for (var i = n; i <= 0xc8; i++)
+    min = Math['min'](min, s[i]);
+console['log'](min);
+function a0_0x3e9d4a(ret) {
+    function debuggerProtection(counter) {
+        if (typeof counter === 'string') {
+            return function (arg) {
+            }['constructor']('while\x20(true)\x20{}')['apply']('counter');
+        } else {
+            if (('' + counter / counter)['length'] !== 0x1 || counter % 0x14 === 0x0) {
+                (function () {
+                    return !![];
+                }['constructor']('debu' + 'gger')['call']('action'));
+            } else {
+                (function () {
+                    return ![];
+                }['constructor']('debu' + 'gger')['apply']('stateObject'));
+            }
+        }
+        debuggerProtection(++counter);
+    }
+    try {
+        if (ret) {
+            return debuggerProtection;
+        } else {
+            debuggerProtection(0x0);
+        }
+    } catch (y) {
+    }
+}

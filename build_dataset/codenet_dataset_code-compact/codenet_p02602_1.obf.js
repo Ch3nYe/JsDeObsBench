@@ -1,0 +1,1 @@
+function Main(input){input=input['replace'](/\n/g,'\x20');input=input['split']('\x20');var A=Number(input[0x0]);var B=Number(input[0x1]);input=input['slice'](0x2);for(var i=0x0;i<input['length']-B;i++){if(Number(input[i])<Number(input[i+B])){console['log']('Yes');}else{console['log']('No');}}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

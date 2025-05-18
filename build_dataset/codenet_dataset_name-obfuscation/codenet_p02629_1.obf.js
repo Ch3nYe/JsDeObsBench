@@ -1,0 +1,12 @@
+function Main(_0x1f2b84) {
+    const _0x50cec6 = _0x1f2b84['split']('\x0a')['map'](_0x44bfa6 => parseInt(_0x44bfa6, 0xa));
+    const _0x3a48ab = _0x50cec6[0x0];
+    function _0x2d70fb(_0x21af82) {
+        let _0x4408ce = _0x21af82 % 0x1a;
+        let _0xa28f95 = Math['floor'](_0x21af82 / 0x1a);
+        let _0x484000 = _0x4408ce != 0x0 ? String['fromCharCode'](0x40 + _0x4408ce) : (--_0xa28f95, 'Z');
+        return _0x484000 = _0xa28f95 != 0x0 ? _0x2d70fb(_0xa28f95) + _0x484000 : _0x484000;
+    }
+    console['log'](_0x2d70fb(_0x3a48ab)['toLowerCase']());
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

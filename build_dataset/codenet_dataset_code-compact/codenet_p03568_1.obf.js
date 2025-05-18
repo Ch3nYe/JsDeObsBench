@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x0a');var n=Math['pow'](0x3,input[0x0]);var sum=0x1;var arr=input[0x1]['split']('\x20')['map'](Number);arr['forEach'](function(val){if(val%0x2==0x0)sum*=0x2;});console['log'](n-sum);}Main(require('fs')['readFileSync']('/dev/stdin','utf8')['trim']());

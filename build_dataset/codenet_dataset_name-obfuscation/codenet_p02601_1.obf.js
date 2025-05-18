@@ -1,0 +1,32 @@
+'use strict';
+function main(_0x5907ff) {
+    _0x5907ff = _0x5907ff['trim']()['split']('\x0a');
+    const _0x2ebcbc = _0x5907ff[0x0]['split']('\x20');
+    const _0x3b03e4 = parseInt(_0x5907ff[0x1]);
+    let _0x1398b4 = [];
+    for (let _0x4d8ebd in _0x2ebcbc) {
+        _0x1398b4['push'](parseInt(_0x2ebcbc[_0x4d8ebd]));
+    }
+    for (let _0x44bb43 = 0x0; _0x44bb43 < _0x3b03e4; _0x44bb43++) {
+        if (_0x1398b4[0x0] >= _0x1398b4[0x1]) {
+            _0x1398b4[0x1] = _0x1398b4[0x1] * 0x2;
+            continue;
+        }
+        if (_0x1398b4[0x1] >= _0x1398b4[0x2]) {
+            _0x1398b4[0x2] = _0x1398b4[0x2] * 0x2;
+        }
+    }
+    if (_0x1398b4[0x0] < _0x1398b4[0x1] && _0x1398b4[0x1] < _0x1398b4[0x2]) {
+        console['log']('Yes');
+    } else {
+        console['log']('No');
+    }
+}
+function numberSort(_0x4d4227) {
+    _0x4d4227['sort'](f);
+    return _0x4d4227;
+}
+var f = function (_0x544fcc, _0x5755e7) {
+    return _0x544fcc - _0x5755e7;
+};
+main(require('fs')['readFileSync']('/dev/stdin', 'utf-8'));

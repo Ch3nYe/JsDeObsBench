@@ -3,14 +3,13 @@ from codebleu import calc_codebleu
 from evaluators.eval_code_with_docker import create_docker_container, restart_container, stop_docker_container, compile_and_run_JS_code_in_docker
 from build_dataset.data import TEST_CMD_TAG, read_solution, save_solution
 from tqdm import tqdm
-import code_bert_score
 import subprocess
-import esprima
 import logging
 import json
 import re
 import os
 
+CACHE = defaultdict(dict)
 
 def find_whole_word(word, text):
     pattern = r'\b{}\b'.format(re.escape(word))
@@ -40,16 +39,29 @@ class Evaluator:
 
 class ComplexityEvaluator(Evaluator):
     def calc_metrics_with_escomplex(self, code: str) -> dict:
-        run_process = subprocess.run("escomplex --json", input=code.encode(), shell=True, capture_output=True)
-        assert run_process.returncode == 0 and run_process.stderr.decode()=="", f"[!] Failed to run escomplex,\n{run_process.stderr.decode()}"
-        metrics = json.loads(run_process.stdout.decode())
+        if code in CACHE:
+            run_process_str = CACHE[code]['escomplex']
+            run_process2_str = CACHE[code]['halstead']
+            metrics = json.loads(run_process_str)
+            metrics2 = json.loads(run_process2_str)
+        else:
+            run_process = subprocess.run("escomplex --json", input=code.encode(), shell=True, capture_output=True)
+            assert run_process.returncode == 0 and run_process.stderr.decode()=="", f"[!] Failed to run escomplex,\n{run_process.stderr.decode()}"
+            run_process2 = subprocess.run("halstead", input=code.encode(), shell=True, capture_output=True)
+            assert run_process2.returncode == 0 and run_process2.stderr.decode()=="", f"[!] Failed to run halstead,\n{run_process2.stderr.decode()}"
+            metrics = json.loads(run_process.stdout.decode())
+            metrics2 = json.loads(run_process2.stdout.decode())
         return {
             "physical_loc": metrics['aggregate']['sloc']['physical'],
             "logical_loc": metrics['aggregate']['sloc']['logical'],
+            "maintainability": metrics['maintainability'],
             "func_mean_loc": metrics['loc'],
             "func_mean_halstead": metrics['effort'],
             "func_mean_cyclomatic": metrics['cyclomatic'],
             "func_num": len(metrics['functions']),
+            "halstead_effort": metrics2['aggregate']['halstead']['effort'],
+            "halstead_length": metrics2['aggregate']['halstead']['length'],
+            "cyclomatic": metrics2['aggregate']['cyclomatic'],
             }
 
     def evaluate(self, data) -> dict:
@@ -62,14 +74,18 @@ class ComplexityEvaluator(Evaluator):
         obf_metrics = self.calc_metrics_with_escomplex(obfuscated_code)
         deobf_metrics = self.calc_metrics_with_escomplex(deobfuscated_code)
         difference_score = abs(1 - deobf_metrics['logical_loc'] / ori_metrics['logical_loc'])
-        simplification_score = 1 - (deobf_metrics['logical_loc'] / obf_metrics['logical_loc'])
-        decrease_cyclomatic = 1 - deobf_metrics['func_mean_cyclomatic']/obf_metrics['func_mean_cyclomatic']
-        decrease_halstead = 1 - deobf_metrics['func_mean_halstead']/obf_metrics['func_mean_halstead']
+        length_score = 1 - (deobf_metrics['logical_loc'] / obf_metrics['logical_loc'])
+        new_decrease_cyclomatic = 1 - deobf_metrics['cyclomatic']/obf_metrics['cyclomatic']
+        new_decrease_halstead_len = 1 - deobf_metrics['halstead_length']/obf_metrics['halstead_length']
+        new_decrease_halstead_effort = 1 - deobf_metrics['halstead_effort']/obf_metrics['halstead_effort']
+        increase_maintainability = deobf_metrics['maintainability']/obf_metrics['maintainability'] - 1
         result = {
             "difference_score": difference_score,
-            "simplification_score": simplification_score,
-            "decrease_cyclomatic": decrease_cyclomatic,
-            "decrease_halstead": decrease_halstead,
+            "length_score": length_score,
+            "increase_maintainability": increase_maintainability,
+            "new_decrease_cyclomatic": new_decrease_cyclomatic,
+            "new_decrease_halstead_len": new_decrease_halstead_len,
+            "new_decrease_halstead_effort": new_decrease_halstead_effort,
         }
         data['code_complexity'] = result
         return result
@@ -80,85 +96,22 @@ class CodeBLEUEvaluator(Evaluator):
             data.pop("code_bleu")
         reference = data.get('original')
         prediction = data.get('deobfuscated')
-        language = data.get('language')
-        language = "JavaScript"
-        assert language.lower() == "javascript", "[!] Only support JavaScript for now"
-        language = {
-            "C":"c", 
-            "C++":"cpp", 
-            "Python":"python",
-            "JavaScript":"javascript",}[language] # algin with codebleu
+        language = "javascript"
         result = calc_codebleu(references=[reference], predictions=[prediction], 
                                lang=language, weights=(0.25, 0.25, 0.25, 0.25))
         data['code_bleu'] = result
         return result
-        # {
-        #     "codebleu": code_bleu_score,
-        #     "ngram_match_score": ngram_match_score,
-        #     "weighted_ngram_match_score": weighted_ngram_match_score,
-        #     "syntax_match_score": syntax_match_score,
-        #     "dataflow_match_score": dataflow_match_score,
-        # }
 
 
-class CodeBertScoreEvaluator(Evaluator):
-    def __init__(self, device=None, batch_size=64) -> None:
-        '''
-        @device: str, device to run the model, e.g., "cuda:0", "cpu", None for auto
-        @batch_size: int, batch size to run the similarity model
-        '''
-        super().__init__()
-        self.device = device
-        self.batch_size = batch_size
-
-    def evaluate(self, data) -> dict:
-        if "code_bert_score" in data:
-            data.pop("code_bert_score")
-        reference = data.get('original')
-        prediction = data.get('deobfuscated')
-        language = data.get('language')
-        language = "JavaScript"
-        assert language.lower() in ["javascript","js"], "[!] Only support JavaScript for now"
-        result = code_bert_score.score(cands=[prediction], refs=[reference], lang=language)
-        result = [float(i) for i in result] # tensor to float
-        #result = {"precision":result[0],"recall":result[1],"F1":result[2],"F3":result[3]}
-        result = {"precision":result[0],"recall":result[1],"F1":result[2]}
-        data['code_bert_score'] = result
-        return result
-    
-    def evaluate_dataset(self, data_list) -> dict:
-        for data in data_list:
-            if "code_bert_score" in data:
-                data.pop("code_bert_score")
-        references = [data['original'] for data in data_list]
-        predictions = [data.get('deobfuscated') for data in data_list]
-        language = data_list[0].get('language')
-        language = "JavaScript"
-        assert language.lower() in ["javascript","js"], "[!] Only support JavaScript for now"
-        result = code_bert_score.score(cands=predictions, refs=references, lang=language, device=self.device)
-        # print(result)
-        result = [i.tolist() for i in result] # tensor to float
-        for data, p, r, f in zip(data_list, result[0], result[1], result[2]):
-            data['code_bert_score'] = {
-                "precision": p,
-                "recall": r,
-                "F1": f,
-                #"F3": f3,
-            }
-        result = {
-            "precision": sum(result[0]) / len(result[0]), 
-            "recall": sum(result[1]) / len(result[1]), 
-            "F1": sum(result[2]) / len(result[2]), 
-            #"F3": sum(result[3]) / len(result[3]), 
-            }
-        return result
-    
 class SyntaxEvaluator(Evaluator):
     def is_valid_js(self, code: str) -> bool:
         if code is None or code.strip() == "":
             return False
         run_process = subprocess.run("escomplex --json", input=code.encode(), shell=True, capture_output=True)
-        if run_process.returncode == 0 and run_process.stderr.decode()=="":
+        run_process2 = subprocess.run("halstead", input=code.encode(), shell=True, capture_output=True)
+        if run_process.returncode == 0 and run_process.stderr.decode()=="" and run_process2.returncode == 0 and run_process2.stderr.decode()=="":
+            CACHE[code]['escomplex'] = run_process.stdout.decode()
+            CACHE[code]['halstead'] = run_process.stdout.decode()
             return True
         else:
             return False
@@ -172,11 +125,14 @@ class SyntaxEvaluator(Evaluator):
         else:
             try:
                 run_process = subprocess.run("escomplex --json", input=prediction.encode(), shell=True, capture_output=True)
-                if run_process.returncode == 0 and run_process.stderr.decode()=="":
+                run_process2 = subprocess.run("halstead", input=prediction.encode(), shell=True, capture_output=True)
+                if run_process.returncode == 0 and run_process.stderr.decode()=="" and run_process2.returncode == 0 and run_process2.stderr.decode()=="":
+                    CACHE[prediction]['escomplex'] = run_process.stdout.decode()
+                    CACHE[prediction]['halstead'] = run_process.stdout.decode()
                     result = 1
                 else:
                     result = 0
-            except esprima.Error:
+            except Exception as e:
                 result = 0
         data['syntax_pass'] = result
         return {'pass': result}
@@ -187,7 +143,7 @@ class SafeCodeEvaluator(Evaluator):
     RESTART_CONTAINER_INTERVAL = 100
     def __init__(self, 
                  contrainer_name="eval_js_container", 
-                 docker_image="node:latest",
+                 docker_image="node:18.19.0",
                  default_timeout=2) -> None:
         super().__init__()
         self.container_name = create_docker_container(
@@ -235,7 +191,12 @@ class SafeCodeEvaluator(Evaluator):
         return res
 
     def evaluate(self, data) -> dict:
-        test_cases = data.get('test_cases')
+        if "exe_pass" in data:
+            data.pop("exe_pass")
+        test_cases = data.get('test_cases', None)
+        if test_cases == None:
+            data['exe_pass'] = 0
+            return {'pass': 0}
         if type(test_cases) == str:
             res = self.execute_npm_test(data)
         elif type(test_cases) == list:
@@ -250,8 +211,14 @@ class SafeCodeEvaluator(Evaluator):
     
 def evaluate_deobfuscation(prediction_file: str, 
                            save_with_metrics: bool = True,
-                           contrainer_name: str = "eval_js_container",
-                        timeout: float = 5.0):
+                           contrainer_name: str = "eval_js_container"):
+    if save_with_metrics:
+        fp, ext = os.path.splitext(prediction_file)
+        save_to = fp+'.metrics'+ext
+        if os.path.exists(save_to):
+            logging.info(f"[!] Delete: {save_to}")
+            os.remove(save_to)
+
     logging.info("[+] Start evaluation...")
     # add prediction into problems
     dataset = read_solution(prediction_file)
@@ -261,11 +228,13 @@ def evaluate_deobfuscation(prediction_file: str,
     complexity_evaluator = ComplexityEvaluator()
     safe_code_evaluator = SafeCodeEvaluator(contrainer_name=contrainer_name)
     code_bleu_evaluator = CodeBLEUEvaluator()
-    code_bert_score_evaluator = CodeBertScoreEvaluator(device="cuda:0")
     
     # evaluate
     metrics = defaultdict(float)
     syntax_pass_cnt = 0
+
+    # drop data with invalid obf code, if already checked in obfuscation stage, can be skipped
+    dataset = [data for data in tqdm(dataset,desc="filter") if syntax_evaluator.is_valid_js(data['obfuscated']) and syntax_evaluator.is_valid_js(data['original'])]
 
     # eval syntax
     for data in tqdm(dataset, desc="syntax evaluation"):
@@ -274,21 +243,7 @@ def evaluate_deobfuscation(prediction_file: str,
     logging.warning(f"[+] Syntax pass rate: {syntax_pass_cnt}/{len(dataset)} = {syntax_pass_cnt / len(dataset)}")
     
     # !!!The following metrics are only calculated for the code that passes the syntax check!!!
-
-    # eval codebertscore, use batch speed up
-    logging.info(f'[+] Start codebertscore evaluation, using device={code_bert_score_evaluator.device}')
-    metrics_cbs = defaultdict(float)
-    temp_dataset = [d for d in dataset if d['syntax_pass']]
-    res_cbs = code_bert_score_evaluator.evaluate_dataset(temp_dataset)
-    temp_dataset = {d['task_id']:d['code_bert_score'] for d in temp_dataset}
-    for d in dataset:
-        if d['task_id'] in temp_dataset:
-            d['code_bert_score'] = temp_dataset[d['task_id']]
-    for submetric, v in res_cbs.items():
-        metrics_cbs[f'code_bert_score_{submetric}'] = v
-    logging.info(json.dumps(metrics_cbs, indent=4))
-
-    logging.info('[+] Start other evaluation...')
+    logging.info('[+] Start following evaluations...')
     for data in tqdm(dataset, desc="evaluation"):
         if data['syntax_pass']==0: # jump other metrics if syntax check not pass
             continue
@@ -311,9 +266,6 @@ def evaluate_deobfuscation(prediction_file: str,
     
     # add syntax pass rate
     metrics['syntax_pass'] = syntax_pass_cnt / len(dataset)
-
-    # add codebertscore metrics
-    metrics.update(metrics_cbs)
     
     # move syntax_pass to the first
     syntax_pass = metrics.pop('syntax_pass')

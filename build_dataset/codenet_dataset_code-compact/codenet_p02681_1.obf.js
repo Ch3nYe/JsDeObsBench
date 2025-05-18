@@ -1,0 +1,1 @@
+'use strict';const Main=input=>{const tmp=input['trim']()['split']('\x0a');const S=tmp[0x0];const T=tmp[0x1];let result='Yes';const tmpStr=T['replace'](S,'');if(T['slice'](-0x1)===tmpStr&&tmpStr['length']===0x1){result='Yes';}else{result='No';}console['log'](result);return result;};Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

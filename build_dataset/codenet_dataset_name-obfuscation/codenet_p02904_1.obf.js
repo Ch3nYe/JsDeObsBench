@@ -1,0 +1,17 @@
+function Main(_0x4944d5) {
+    var _0x23f639 = _0x4944d5['split']('\x0a')[0x0]['split']('\x20')[0x0] - 0x0;
+    var _0x837226 = _0x4944d5['split']('\x0a')[0x0]['split']('\x20')[0x1] - 0x0;
+    var _0x41da82 = _0x4944d5['split']('\x0a')[0x1]['split']('\x20')['map'](_0x5e9844 => _0x5e9844 - 0x0);
+    var _0x2a37cc = [];
+    for (var _0xdeea0a = 0x0; _0xdeea0a < _0x23f639 - _0x837226 + 0x1; _0xdeea0a++) {
+        var _0x1bcecc = _0x41da82['slice'](_0xdeea0a, _0xdeea0a + _0x837226);
+        _0x1bcecc['sort'](compareNumbers);
+        _0x2a37cc[_0xdeea0a] = _0x41da82['slice'](0x0, _0xdeea0a)['concat'](_0x1bcecc)['concat'](_0x41da82['slice'](_0xdeea0a + _0x837226))['toString']();
+    }
+    var _0x5046c3 = new Set(_0x2a37cc);
+    console['log'](_0x5046c3['size']);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));
+function compareNumbers(_0x34304a, _0x196d1f) {
+    return _0x34304a - _0x196d1f;
+}

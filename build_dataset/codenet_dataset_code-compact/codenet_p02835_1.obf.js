@@ -1,0 +1,1 @@
+function Main(input){input=input['split']('\x20');tmp=parseInt(input[0x0])+parseInt(input[0x1])+parseInt(input[0x2]);if(tmp>0x15){console['log']('bust');}else{console['log']('win');}}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

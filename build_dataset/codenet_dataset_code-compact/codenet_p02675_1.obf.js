@@ -1,0 +1,1 @@
+function Main(input){input=''+input+'';input=input['substr'](input['length']-0x1,0x1);var d='';if(input==0x2||input==0x4||input==0x5||input==0x7||input==0x9){d='hon';}if(input==0x0||input==0x1||input==0x6||input==0x8){d='pon';}if(input==0x3){d='bon';}console['log'](d);}Main(require('fs')['readFileSync']('/dev/stdin','utf8'));

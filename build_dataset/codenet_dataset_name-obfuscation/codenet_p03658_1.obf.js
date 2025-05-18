@@ -1,0 +1,20 @@
+'use strict';
+const Main = _0x184c70 => {
+    let _0x520448 = _0x184c70['trim']()['split']('\x0a');
+    let _0x39fe09 = Number(_0x520448[0x0]['split']('\x20')[0x0]);
+    let _0x3aedb7 = Number(_0x520448[0x0]['split']('\x20')[0x1]);
+    let _0xf89770 = [];
+    for (let _0x3f5132 = 0x0; _0x3f5132 < _0x39fe09; _0x3f5132++) {
+        _0xf89770['push'](_0x520448[0x1]['split']('\x20')[_0x3f5132]);
+    }
+    const _0x1fe480 = (_0x24899f, _0x15148a) => {
+        return _0x15148a - _0x24899f;
+    };
+    _0xf89770['sort'](_0x1fe480);
+    let _0xe39871 = 0x0;
+    for (let _0x41ec35 = 0x0; _0x41ec35 < _0x3aedb7; _0x41ec35++) {
+        _0xe39871 += Number(_0xf89770[_0x41ec35]);
+    }
+    console['log'](_0xe39871);
+};
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

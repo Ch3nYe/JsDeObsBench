@@ -1,0 +1,10 @@
+function Main(_0x5192c0) {
+    _0x5192c0 = _0x5192c0['split']('\x0a');
+    _0x5192c0 = _0x5192c0[0x0];
+    var _0x43ddb3 = '';
+    for (var _0x43aa06 = 0x1; _0x43aa06 <= _0x5192c0['length']; _0x43aa06 = _0x43aa06 + 0x2) {
+        _0x43ddb3 += _0x5192c0[_0x43aa06 - 0x1];
+    }
+    console['log'](_0x43ddb3);
+}
+Main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));

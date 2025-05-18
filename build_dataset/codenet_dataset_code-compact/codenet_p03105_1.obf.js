@@ -1,0 +1,1 @@
+const main=input=>{const In=input['split']('\x20')['map'](n=>Number(n));const o1=In[0x0]>In[0x1]?0x0:In[0x1]/In[0x0];console['log'](o1>=In[0x2]?In[0x2]:o1);};main(require('fs')['readFileSync']('/dev/stdin','utf8'));

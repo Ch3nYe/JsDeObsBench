@@ -1,0 +1,7 @@
+'use strict';
+function main(s) {
+    const nums = s['split']('\x0a')[0x0]['split']('\x20')['map'](n => Number(n));
+    const ans = Math['max'](...nums) - Math['min'](...nums);
+    console['log'](ans);
+}
+main(require('fs')['readFileSync']('/dev/stdin', 'utf8'));
