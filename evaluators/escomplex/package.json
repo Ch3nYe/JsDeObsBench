@@ -1,0 +1,83 @@
+{
+  "name": "escomplex",
+  "version": "2.0.0-alpha",
+  "description": "Software complexity analysis of JavaScript-family abstract syntax trees.",
+  "homepage": "https://github.com/jared-stilwell/escomplex",
+  "bugs": "https://github.com/jared-stilwell/escomplex/issues",
+  "license": "MIT",
+  "author": "Phil Booth <pmbooth@gmail.com> (https://github.com/philbooth)",
+  "main": "./src",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jared-stilwell/escomplex.git"
+  },
+  "maintainers": [
+    {
+      "name": "Jared Stilwell",
+      "email": "jared.k.stilwell@gmail.com",
+      "url": "https://github.com/jared-stilwell"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Will Boyd",
+      "url": "https://github.com/lonekorean"
+    },
+    {
+      "name": "Addison Higham",
+      "url": "https://github.com/addisonj"
+    }
+  ],
+  "keywords": [
+    "escomplex",
+    "complexity",
+    "simplicity",
+    "cyclomatic",
+    "halstead",
+    "maintainability",
+    "dependencies",
+    "static",
+    "analysis",
+    "metrics"
+  ],
+  "dependencies": {
+    "typhonjs-escomplex": "^0.1.0",
+    "debug": "^2.6.2",
+    "escomplex": "^2.0.0-alpha",
+    "espree": "^3.4.3",
+    "esprima": "^4.0.0",
+    "lodash.assign": "^4.2.0",
+    "lodash.isfunction": "^3.0.8",
+    "lodash.isnil": "^4.0.0",
+    "lodash.isnumber": "^3.0.3",
+    "lodash.isobject": "^3.0.2",
+    "lodash.isstring": "^4.0.1",
+    "lodash.merge": "^4.6.0",
+    "lodash.negate": "^3.0.2",
+    "minimatch": "^3.0.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.32",
+    "acorn": "^5.0.0",
+    "chai": "4.1.0",
+    "mocha": "^3.4.2",
+    "mockery": "2.1.0",
+    "sinon": "^2.0.0",
+    "spooks": "2.0.0",
+    "standard": "^10.0.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "mocha --ui tdd --reporter dot --colors"
+  },
+  "standard": {
+    "globals": [
+      "suite",
+      "test",
+      "setup",
+      "teardown"
+    ]
+  }
+}
