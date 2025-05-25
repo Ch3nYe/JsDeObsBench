@@ -4,11 +4,11 @@ JsDeObsBench is a dedicated benchmark designed to rigorously evaluate the effect
 
 * [🔥] Paper: [「review-version-for-CCS-2025」](jsdeobfbench-ccs2025a-paper.pdf)
 
-* [🔥] Leaderboard: [jsdeobf.github.io will be publicly accessible after the conference](https://jsdeobf.github.io/)
+* [🔥] Leaderboard: [jsdeobf.github.io](https://jsdeobf.github.io/)
 
 ## Environment Dependence
 
-Set PYTHONPATH: 
+First of all, set PYTHONPATH: 
 `export PYTHONPATH="${PYTHONPATH}:/path/to/this-project"`
 
 ### Python Packages
