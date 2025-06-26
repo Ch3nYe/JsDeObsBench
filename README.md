@@ -2,7 +2,7 @@
 
 JsDeObsBench is a dedicated benchmark designed to rigorously evaluate the effectiveness of LLMs in the context of JS deobfuscation. We here release the utils for building the test dataset and conducting evaluation, which also facilates the evaluation of new LLMs and summarize the results into a leaderboard format.
 
-* [🔥] Paper: [「review-version-for-CCS-2025」](jsdeobfbench-ccs2025a-paper.pdf)
+* [🔥] Paper: [arXiv:2506.20170](https://arxiv.org/abs/2506.20170)
 
 * [🔥] Leaderboard: [jsdeobf.github.io](https://jsdeobf.github.io/)
 
