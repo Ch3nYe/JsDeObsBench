@@ -75,7 +75,7 @@ def read_scores(res_file_path) -> np.ndarray:
 
 def read_scores_by_transformation(model_name, transformation, shot="oneshot"):
     """read score for a single transformation"""
-    if model_name in ["js-deobfuscator", "synchrony"]: # baseline tools
+    if model_name in ["js-deobfuscator", "synchrony", "webcrack"]: # baseline tools
         file_path = f"results/codenet_javascript-obfuscator_{transformation}/{model_name}.metrics.jsonl"
     else: # LLMs
         file_path = f"results/codenet_javascript-obfuscator_{transformation}/{model_name}.{shot}.metrics.jsonl"
@@ -83,7 +83,7 @@ def read_scores_by_transformation(model_name, transformation, shot="oneshot"):
 
 def read_combination_scores(model_name, combination="C77-0", shot="oneshot"):
     """read score for combination of transformations"""
-    if model_name in ["js-deobfuscator", "synchrony"]: # baseline tools
+    if model_name in ["js-deobfuscator", "synchrony", "webcrack"]: # baseline tools
         file_path = f"results/codenet_javascript-obfuscator_combinations/{combination}/{model_name}.metrics.jsonl"
     else: # LLMs
         file_path = f"results/codenet_javascript-obfuscator_combinations/{combination}/{model_name}.{shot}.metrics.jsonl"
@@ -171,6 +171,14 @@ def main():
         # {
         #     "name": "synchrony",
         #     "link": "https://github.com/relative/synchrony",
+        #     "open-data": "None",
+        #     "is-expert": True,
+        #     "prompt": "None",
+        #     "size": 0.0
+        # },
+        # {
+        #     "name": "webcrack",
+        #     "link": "https://github.com/j4k0xb/webcrack",
         #     "open-data": "None",
         #     "is-expert": True,
         #     "prompt": "None",
