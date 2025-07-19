@@ -36,7 +36,33 @@ def deobfuscate_with_javascript_deobfuscator(dataset_jsonl_path):
         looper.set_postfix(fail_cnt=fail_cnt)
     return dataset
 
-        
+def deobfuscate_with_webcrack(dataset_jsonl_path):
+    dataset = read_dataset(dataset_jsonl_path)
+    deobfuscator_cmd = "webcrack --no-unpack --no-jsx {input} > {output}"
+    fail_cnt = 0
+    looper = tqdm(dataset, desc="webcrack")
+    for data in looper:
+        filename = data['filename']
+        obf_code = data['obfuscated']
+        obf_path = os.path.join(deobf_temp_path, f"{filename}.obf.js")
+        with open(obf_path, "w") as f:
+            f.write(obf_code)
+        deobf_path = os.path.join(deobf_temp_path, f"{filename}.deobf.js")
+        cmd = deobfuscator_cmd.format(input=obf_path, output=deobf_path)
+        run_process = subprocess.run(cmd, shell=True, capture_output=True)
+        if run_process.returncode != 0:
+            logging.error(run_process.stderr.decode())
+            raise Exception(f"[!] Failed to deobfuscate {obf_path}")
+        if os.path.exists(deobf_path):
+            with open(deobf_path, "r") as f:
+                deobf_code = f.read()
+        else:
+            deobf_code = ""
+            fail_cnt += 1
+        data['deobfuscated'] = deobf_code
+        looper.set_postfix(fail_cnt=fail_cnt)
+    return dataset
+
 def deobfuscate_with_synchrony(dataset_jsonl_path):
     dataset = read_dataset(dataset_jsonl_path)
     deobfuscator_cmd = "synchrony {input} -o {output}"
@@ -94,6 +120,8 @@ if __name__ == "__main__":
         dataset = deobfuscate_with_javascript_deobfuscator(dataset_jsonl_path)
     elif deobfuscator == "synchrony":
         dataset = deobfuscate_with_synchrony(dataset_jsonl_path)
+    elif deobfuscator == "webcrack":
+        dataset = deobfuscate_with_webcrack(dataset_jsonl_path)
     else:
         raise NotImplementedError(f"[!] deobfuscator {deobfuscator} not implemented")
 
