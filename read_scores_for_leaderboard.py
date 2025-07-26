@@ -162,7 +162,7 @@ def main():
         # },
         # {
         #     "name": "js-deobfuscator",
-        #     "link": "https://github.com/js-deobfuscator/deobfuscator",
+        #     "link": "https://github.com/ben-sb/javascript-deobfuscator",
         #     "open-data": "None",
         #     "is-expert": True,
         #     "prompt": "None",
